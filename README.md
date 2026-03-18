@@ -1,42 +1,52 @@
-# sv
+# kerjao.id - Surat Resign Generator
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Aplikasi web *client-side* tanpa *state* (stateless) untuk membuat draf Surat Pengunduran Diri (Resign) secara instan. Dibangun menggunakan **Svelte 5** dan **SvelteKit** yang dioptimalkan dengan **TailwindCSS v4**, tanpa database dan tanpa penyimpanan data pengguna di server, memastikan privasi 100%.
 
-## Creating a project
+## Fitur Utama
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Pembuatan Cepat:** Perubahan pada input formulir akan seketika terlihat pada pratinjau surat (menggunakan kereaktifan Svelte 5 Runes).
+- **Beragam Pola Bahasa:** Menyediakan 3 gaya bahasa penulisan (Formal, Profesional, Santai).
+- **Privasi Terjamin:** Semua proses penyusunan teks terjadi langsung di perangkat (*browser*) pengguna. Tidak ada data yang dikirim maupun disimpan pada basis data (*database*).
+- **Tanpa Login:** Langsung bisa digunakan secara gratis.
+- **Salin dan Cetak:** Salin teks langsung ke *clipboard* atau cetak ke dokumen format PDF menggunakan fungsi cetak bawaan *browser* (*print layout* telah disesuaikan agar bersih).
+- **SEO Ready:** Disematkan atribut meta dan dukungan konten artikel statis untuk meningkatkan pengindeksan organik pencarian.
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Stack Teknologi
 
-To recreate this project with the same configuration:
+- **Framework:** Svelte 5 & SvelteKit
+- **Styling:** Tailwind CSS v4 (termasuk *Typography* & *Forms*)
+- **Linting & Formatting:** ESLint & Prettier
+- **Testing:** Vitest & Playwright
 
-```sh
-# recreate this project
-pnpm dlx sv@0.12.8 create --template minimal --types ts --add eslint vitest="usages:component,unit" playwright prettier tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:vercel" devtools-json paraglide="languageTags:en, id+demo:yes" mcp="ide:claude-code,cursor,gemini,opencode,vscode+setup:remote" --install pnpm kerjao.id
-```
+## Pengembangan Lokal
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+Setelah proyek dikloning, pastikan `pnpm` terpasang. Instal dependensi dengan perintah:
 
 ```sh
-npm run build
+pnpm install
 ```
 
-You can preview the production build with `npm run preview`.
+Mulai *development server*:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+pnpm run dev
+
+# atau jalankan dan langsung buka halaman aplikasi di peramban
+pnpm run dev -- --open
+```
+
+Buka halaman rute `/surat-resign` untuk memuat fitur generator surat resign.
+
+## Membangun Produksi (Build)
+
+Untuk memaketkan versi siap rilis (*production*) menggunakan Vercel Adapter:
+
+```sh
+pnpm run build
+```
+
+Pratinjau hasil *build* lokal dengan:
+
+```sh
+pnpm run preview
+```
