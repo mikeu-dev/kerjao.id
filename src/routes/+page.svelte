@@ -91,6 +91,45 @@
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+			<!-- Tool 0: CV ATS-Friendly -->
+			<a
+				href="/cv-maker"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-rose-300/80 bg-rose-50/30 p-8 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-400 hover:shadow-xl dark:border-rose-700/80 dark:bg-rose-900/10 dark:hover:border-rose-600"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-rose-500/20 blur-2xl transition-all group-hover:bg-rose-500/30"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-100 text-rose-600 ring-1 ring-rose-500/20 ring-inset dark:bg-rose-500/20 dark:text-rose-400 dark:ring-rose-500/30"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-rose-600 dark:text-white dark:group-hover:text-rose-400"
+				>
+					CV ATS-Friendly <span
+						class="ml-2 inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-semibold text-red-800 dark:bg-red-900 dark:text-red-200"
+						>Top</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Generator CV satu kolom ala Harvard. Dijamin 99% lolos seleksi robot pelacak pelamar (ATS)
+					HRD perusahaan Multinasional.
+				</p>
+			</a>
+
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"

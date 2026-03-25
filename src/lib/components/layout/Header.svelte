@@ -104,6 +104,11 @@
 									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 									>Surat Izin Cuti</a
 								>
+								<a
+									href="/cv-maker"
+									class="mt-1 font-bold text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+									>CV ATS-Friendly ✨</a
+								>
 							</div>
 						</div>
 
