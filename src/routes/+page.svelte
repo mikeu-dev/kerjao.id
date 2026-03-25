@@ -451,7 +451,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 11: Surat Resign -->
+			<!-- Tool 11: Surat Penawaran Harga (Quotation) -->
+			<a
+				href="/surat-penawaran"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-blue-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-blue-500/10 blur-2xl transition-all group-hover:bg-blue-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-500/10 ring-inset dark:bg-blue-500/10 dark:text-blue-400 dark:ring-blue-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
+				>
+					Surat Penawaran Harga
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Rancang proposal Quotation B2B (Penawaran Harga) resmi secara instan. Hadir dengan tabel
+					kalkulasi otomatis dan narasi profesional.
+				</p>
+			</a>
+
+			<!-- Tool 12: Surat Resign -->
 			<a
 				href="/surat-resign"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
