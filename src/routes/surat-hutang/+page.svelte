@@ -2,6 +2,8 @@
 	import HutangForm from '$lib/components/hutang/HutangForm.svelte';
 	import HutangPreview from '$lib/components/hutang/HutangPreview.svelte';
 	import HutangActions from '$lib/components/hutang/HutangActions.svelte';
+	import SeoContent from '$lib/components/hutang/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { HutangData } from '$lib/utils/surat-hutang';
 	import { SvelteDate } from 'svelte/reactivity';
 
@@ -31,17 +33,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Perjanjian Hutang Piutang (Loan Agreement) | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat Surat Perjanjian Hutang Piutang (Loan Agreement) resmi bermaterai yang mengikat secara hukum. Amankan uang pinjaman dan cegah sengketa hutang."
-	/>
-	<meta
-		name="keywords"
-		content="surat perjanjian hutang, hutang piutang, surat peminjaman uang, contoh surat utang, buat surat hutang, loan agreement indonesia, jaminan hutang"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Perjanjian Hutang Piutang Bermaterai | Kerjao"
+	description="Buat Surat Perjanjian Hutang Piutang bermaterai resmi. Amankan dana pinjaman perorangan/bisnis, cegah sengketa dengan format legal perdata."
+	keywords="surat perjanjian hutang, hutang piutang, pinjam uang, loan agreement"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -144,6 +140,11 @@
 				<HutangActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

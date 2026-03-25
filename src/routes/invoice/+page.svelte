@@ -2,6 +2,8 @@
 	import InvoiceForm from '$lib/components/invoice/InvoiceForm.svelte';
 	import InvoicePreview from '$lib/components/invoice/InvoicePreview.svelte';
 	import InvoiceActions from '$lib/components/invoice/InvoiceActions.svelte';
+	import SeoContent from '$lib/components/invoice/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateInvoiceId, type InvoiceData } from '$lib/utils/invoice';
 
 	let data = $state<InvoiceData>({
@@ -34,17 +36,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Invoice Generator Online Gratis | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat tagihan atau Invoice profesional untuk klien kamu secara instan dan gratis. Cocok untuk Freelancer dan Agensi Kreatif Indonesia."
-	/>
-	<meta
-		name="keywords"
-		content="invoice generator, buat invoice, invoice freelancer, tagihan online, kerjao.id invoice"
-	/>
-</svelte:head>
+<Meta
+	title="Invoice Generator Online Gratis - Buat Tagihan Profesional | Kerjao"
+	description="Buat tagihan atau Invoice profesional untuk klien kamu secara instan dan gratis. Cocok untuk Freelancer dan Agensi. Konversi langsung menjadi PDF."
+	keywords="invoice generator, buat invoice, tagihan online otomatis, aplikasi pembuat faktur"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -158,6 +154,11 @@
 				<InvoiceActions {data} />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

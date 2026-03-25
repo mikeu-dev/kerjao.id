@@ -2,6 +2,8 @@
 	import KuasaForm from '$lib/components/kuasa/KuasaForm.svelte';
 	import KuasaPreview from '$lib/components/kuasa/KuasaPreview.svelte';
 	import KuasaActions from '$lib/components/kuasa/KuasaActions.svelte';
+	import SeoContent from '$lib/components/kuasa/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { KuasaData } from '$lib/utils/kuasa';
 
 	let data = $state<KuasaData>({
@@ -19,17 +21,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Kuasa (Power of Attorney) Generator | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan cetak Surat Kuasa khusus secara instan untuk pengambilan dokumen, BPKB, Paspor, NPWP, atau perwakilan keuangan di bank."
-	/>
-	<meta
-		name="keywords"
-		content="surat kuasa, contoh surat kuasa pengambilan bpkb, surat kuasa bank, power of attorney indonesia, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Kuasa Resmi Online Gratis Cetak PDF | Kerjao"
+	description="Generator Surat Kuasa resmi untuk pengambilan dokumen, BPKB, bank, atau paspor. Tinggal isi langsung cetak berformat baku. Tanpa login."
+	keywords="buat surat kuasa, surat kuasa bank, surat kuasa bpkb, generator surat kuasa"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -131,6 +127,11 @@
 				<KuasaActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

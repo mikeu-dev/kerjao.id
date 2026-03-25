@@ -2,6 +2,8 @@
 	import PenawaranForm from '$lib/components/penawaran/PenawaranForm.svelte';
 	import PenawaranPreview from '$lib/components/penawaran/PenawaranPreview.svelte';
 	import PenawaranActions from '$lib/components/penawaran/PenawaranActions.svelte';
+	import SeoContent from '$lib/components/penawaran/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { PenawaranData } from '$lib/utils/penawaran';
 	import { SvelteDate } from 'svelte/reactivity';
 
@@ -36,17 +38,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Penawaran Harga (Quotation) | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan susun proposal Surat Penawaran Harga (Quotation) B2B resmi secara cepat. Tambahkan rincian tabel, diskon khusus, dan catatan termin."
-	/>
-	<meta
-		name="keywords"
-		content="surat penawaran harga, contoh quotation, form penawaran b2b, invoice maker indonesia, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Penawaran Harga (Quotation) B2B Instan | Kerjao"
+	description="Susun proposal Surat Penawaran Harga (Quotation) otomatis. Lengkapi dengan tabel produk, diskon, dan catatan pajak. Convert ke PDF gratis."
+	keywords="surat penawaran harga, contoh quotation, form penawaran b2b"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -148,6 +144,11 @@
 				<PenawaranActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

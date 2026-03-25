@@ -2,6 +2,8 @@
 	import KalkulatorForm from '$lib/components/kalkulator/KalkulatorForm.svelte';
 	import SlipGajiPreview from '$lib/components/kalkulator/SlipGajiPreview.svelte';
 	import KalkulatorActions from '$lib/components/kalkulator/KalkulatorActions.svelte';
+	import SeoContent from '$lib/components/kalkulator/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { calculateGaji, type GajiData } from '$lib/utils/calculateGaji';
 
 	let data = $state<GajiData>({
@@ -18,17 +20,11 @@
 	let result = $derived(calculateGaji(data));
 </script>
 
-<svelte:head>
-	<title>Kalkulator Gaji & Take Home Pay (THP) | kerjao.id</title>
-	<meta
-		name="description"
-		content="Hitung Gaji Bersih (Take Home Pay) kamu dengan mudah. Cek potongan Pajak PPh 21 dan BPJS Ketenagakerjaan & Kesehatan secara akurat."
-	/>
-	<meta
-		name="keywords"
-		content="kalkulator gaji, hitung thp, take home pay, kalkulator pph 21 ter 2024, bpjs ketenagakerjaan, bpjs kesehatan, slip gaji"
-	/>
-</svelte:head>
+<Meta
+	title="Kalkulator Gaji & Take Home Pay (THP) - Potongan BPJS PPh | Kerjao"
+	description="Hitung Gaji Bersih (Take Home Pay) kamu dengan mudah secara gratis. Simulasi potongan Pajak PPh 21 TER terbaru dan BPJS Ketenagakerjaan & Kesehatan."
+	keywords="kalkulator gaji, hitung thp, take home pay, kalkulator pph 21 ter 2024, slip gaji otomatis"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -144,35 +140,7 @@
 		<div
 			class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800"
 		>
-			<h3 class="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
-				Bagaimana Cara Hitung Gaji Bersih?
-			</h3>
-			<div
-				class="prose max-w-none text-slate-600 prose-slate dark:text-slate-400 dark:prose-invert"
-			>
-				<p>
-					Gaji Bersih atau <em>Take-Home Pay</em> (THP) merupakan upah final yang dibawa pulang oleh pekerja
-					setelah dikurangi kewajiban-kewajiban sesuai perundang-undangan di Indonesia:
-				</p>
-				<ul class="mt-4 list-disc space-y-2 pl-5">
-					<li>
-						<strong>BPJS Ketenagakerjaan (JHT & JP):</strong> Secara total, pekerja menanggung 3% pemotongan
-						(2% Jaminan Hari Tua dan 1% Jaminan Pensiun).
-					</li>
-					<li>
-						<strong>BPJS Kesehatan:</strong> Pekerja terdaftar wajib menanggung potongan sebesar 1% dari
-						nilai Gaji Pokok & Tunjangan Tetap (dengan batas upah tertinggi Rp12.000.000).
-					</li>
-					<li>
-						<strong>PPh 21 (Pajak Penghasilan):</strong> Potongan bervariasi bergantung pada status Pernikahan/PTKP
-						dan nilai penghasilan bruto sesuai skema TER terbaru 2024.
-					</li>
-				</ul>
-				<p class="mt-4 text-sm text-slate-500 italic">
-					*Catatan: Kalkulator ini memberikan nilai estimasi THP. Implementasi potongan pajak (PPh
-					21 TER) di perusahaan Anda mungkin memiliki sedikit penyesuaian perhitungan bulanan.
-				</p>
-			</div>
+			<SeoContent />
 		</div>
 	</div>
 </div>

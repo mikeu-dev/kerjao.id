@@ -2,6 +2,8 @@
 	import KwitansiForm from '$lib/components/kwitansi/KwitansiForm.svelte';
 	import KwitansiPreview from '$lib/components/kwitansi/KwitansiPreview.svelte';
 	import KwitansiActions from '$lib/components/kwitansi/KwitansiActions.svelte';
+	import SeoContent from '$lib/components/kwitansi/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateKwitansiNumber, type KwitansiData } from '$lib/utils/kwitansi';
 
 	let data = $state<KwitansiData>({
@@ -22,17 +24,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Buat Kwitansi Kosong / Digital | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan cetak Kwitansi pembayaran kosong secara instan. Dilengkapi dengan fitur kalkulasi otomatis 'Terbilang' ejaan Rupiah ke huruf kata."
-	/>
-	<meta
-		name="keywords"
-		content="kwitansi pemabayaran, kwitansi online, cara buat kwitansi, kwitansi kosong, terbilang rupiah, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Kwitansi Digital - Set Nominal Auto Cek Terbilang Huruf | Kerjao"
+	description="Buat dan cetak Kwitansi pembayaran uang secara instan. Dilengkapi dengan fitur kalkulasi otomatis mengubah ejaan Rupiah ke huruf kata nyata."
+	keywords="kwitansi pemabayaran, kwitansi online, cara buat kwitansi, bukti pembayaran gratis"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -146,6 +142,11 @@
 				<KwitansiActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

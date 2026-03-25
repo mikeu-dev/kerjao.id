@@ -2,6 +2,8 @@
 	import PeringatanForm from '$lib/components/peringatan/PeringatanForm.svelte';
 	import PeringatanPreview from '$lib/components/peringatan/PeringatanPreview.svelte';
 	import PeringatanActions from '$lib/components/peringatan/PeringatanActions.svelte';
+	import SeoContent from '$lib/components/peringatan/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSPNumber, type PeringatanData } from '$lib/utils/peringatan';
 
 	let data = $state<PeringatanData>({
@@ -27,17 +29,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Peringatan Karyawan (SP1/SP2/SP3) Generator | kerjao.id</title>
-	<meta
-		name="description"
-		content="Pembuat draf Surat Peringatan (SP 1, 2, atau 3) instan untuk kebutuhan HRD atau UMKM. Dilengkapi tata bahasa format pemutusan kerja yang sesuai."
-	/>
-	<meta
-		name="keywords"
-		content="surat peringatan karyawan, contoh SP1, cara membuat SP karyawan, surat teguran HRD, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Peringatan Karyawan (SP 1, 2, 3) Online | Kerjao"
+	description="Cetak draf Surat Peringatan (SP 1, 2, atau 3) karyawan dengan instan. Dilengkapi tata bahasa mutlak pemutusan kerja HRD yang sesuai hukum."
+	keywords="surat peringatan karyawan, contoh sp1, sp2, surat teguran hrd"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -139,6 +135,11 @@
 				<PeringatanActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

@@ -2,6 +2,8 @@
 	import LamaranForm from '$lib/components/lamaran/LamaranForm.svelte';
 	import LamaranPreview from '$lib/components/lamaran/LamaranPreview.svelte';
 	import LamaranActions from '$lib/components/lamaran/LamaranActions.svelte';
+	import SeoContent from '$lib/components/lamaran/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { LamaranData } from '$lib/utils/lamaran';
 
 	let data = $state<LamaranData>({
@@ -28,17 +30,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Buat Surat Lamaran Kerja Profesional | kerjao.id</title>
-	<meta
-		name="description"
-		content="Tulis dan cetak Surat Lamaran Kerja (Job Application Letter) formal berbahasa Indonesia dengan instan. Tingkatkan peluang karirmu sekarang!"
-	/>
-	<meta
-		name="keywords"
-		content="surat lamaran kerja, job application letter, buat surat lamaran online, kerjao.id lamaran"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Lamaran Kerja Online Gratis & Otomatis | Kerjao"
+	description="Bikin surat lamaran kerja (Cover Letter) Bahasa Indonesia resmi, cepat, dan otomatis. Tinggal isi form, langsung unduh PDF siap lamar."
+	keywords="buat surat lamaran kerja, surat lamaran kerja otomatis, generator surat lamaran, contoh surat lamaran form"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -154,6 +150,11 @@
 				<LamaranActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

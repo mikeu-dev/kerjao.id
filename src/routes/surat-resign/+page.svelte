@@ -3,6 +3,7 @@
 	import ResignPreview from '$lib/components/resign/ResignPreview.svelte';
 	import ResignActions from '$lib/components/resign/ResignActions.svelte';
 	import SeoContent from '$lib/components/resign/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateLetter, type ResignData } from '$lib/utils/generateLetter';
 
 	let data = $state<ResignData>({
@@ -20,17 +21,11 @@
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 
-<svelte:head>
-	<title>Surat Resign Generator Online | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat surat resign profesional, formal, dan praktis secara gratis. Tidak perlu login, 100% aman dan langsung di perangkat Anda."
-	/>
-	<meta
-		name="keywords"
-		content="surat resign, surat pengunduran diri, generator surat resign, contoh surat resign, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Surat Resign Generator Online Gratis, Cepat & Aman | Kerjao"
+	description="Buat surat resign (Pengunduran Diri) profesional secara instan. 100% diproses di browser tanpa database untuk menjaga kerahasiaan Anda."
+	keywords="surat resign, pengunduran diri, contoh surat resign, otomatis generator"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->

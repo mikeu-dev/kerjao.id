@@ -2,6 +2,8 @@
 	import POForm from '$lib/components/po/POForm.svelte';
 	import POPreview from '$lib/components/po/POPreview.svelte';
 	import POActions from '$lib/components/po/POActions.svelte';
+	import SeoContent from '$lib/components/po/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { POData } from '$lib/utils/po';
 	import { SvelteDate } from 'svelte/reactivity';
 
@@ -46,17 +48,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Purchase Order (PO) Generator | kerjao.id</title>
-	<meta
-		name="description"
-		content="Gunakan generator Purchase Order (Surat Pemesanan Pembelian) B2B ini untuk mengamankan stok barang. Hitung kuantitas, ongkir, pajak, & PDF instan."
-	/>
-	<meta
-		name="keywords"
-		content="purchase order, contoh po, buat po gratis, cara membuat purchase order, surat pemesanan barang b2b"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Purchase Order (PO) Online Gratis - Generator B2B | Kerjao"
+	description="Gunakan generator Purchase Order (Surat Pemesanan Pembelian) B2B ini untuk mengamankan stok barang. Hitung kuantitas, ongkir, pajak, & PDF instan."
+	keywords="purchase order, contoh po, buat po gratis, surat pemesanan barang"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -160,6 +156,11 @@
 				<POActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

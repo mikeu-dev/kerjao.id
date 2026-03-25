@@ -2,6 +2,8 @@
 	import PaklaringForm from '$lib/components/paklaring/PaklaringForm.svelte';
 	import PaklaringPreview from '$lib/components/paklaring/PaklaringPreview.svelte';
 	import PaklaringActions from '$lib/components/paklaring/PaklaringActions.svelte';
+	import SeoContent from '$lib/components/paklaring/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSuratNumber, type PaklaringData } from '$lib/utils/paklaring';
 
 	let data = $state<PaklaringData>({
@@ -27,17 +29,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Buat Surat Keterangan Kerja (Paklaring) | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan cetak Surat Keterangan Kerja atau Paklaring online secara instan. Alat profesional bagi karyawan dan HRD untuk pencairan BPJS Ketenagakerjaan."
-	/>
-	<meta
-		name="keywords"
-		content="surat paklaring, surat keterangan kerja, pencairan bpjs ketenagakerjaan, paklaring online hrd, kerjao.id paklaring"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Keterangan Kerja (Paklaring) Online Bebas Ribet | Kerjao"
+	description="Bikin Surat Pengalaman Kerja (Paklaring) langsung jadi. Cocok untuk klaim BPJS Ketenagakerjaan atau karier. Format HRD baku."
+	keywords="buat surat paklaring, surat pengalaman kerja, generator paklaring, paklaring bpjs"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -152,6 +148,11 @@
 				<PaklaringActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

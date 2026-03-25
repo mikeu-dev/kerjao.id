@@ -2,6 +2,8 @@
 	import IzinForm from '$lib/components/izin/IzinForm.svelte';
 	import IzinPreview from '$lib/components/izin/IzinPreview.svelte';
 	import IzinActions from '$lib/components/izin/IzinActions.svelte';
+	import SeoContent from '$lib/components/izin/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { IzinData } from '$lib/utils/izin';
 
 	let data = $state<IzinData>({
@@ -20,17 +22,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Izin Cuti & Tidak Masuk Kerja | kerjao.id</title>
-	<meta
-		name="description"
-		content="Bikin Surat Permohonan Izin / Cuti Karyawan (karena sakit, urusan keluarga, atau liburan) langsung ke HRD dalam hitungan detik."
-	/>
-	<meta
-		name="keywords"
-		content="surat izin sakit, contoh surat cuti karyawan, surat izin tidak masuk kerja, izin hrd, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Izin Cuti & Tidak Masuk Kerja Otomatis | Kerjao"
+	description="Butuh libur atau sedang sakit? Bikin Surat Izin Tidak Masuk Kerja atau Izin Cuti untuk HRD. Bahasa rapi, baku, dan siap diunduh PDF."
+	keywords="surat izin cuti, surat tidak masuk kerja, izin sakit kerja, generator surat izin"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -132,6 +128,11 @@
 				<IzinActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

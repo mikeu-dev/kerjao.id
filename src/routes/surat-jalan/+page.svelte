@@ -2,6 +2,8 @@
 	import JalanForm from '$lib/components/jalan/JalanForm.svelte';
 	import JalanPreview from '$lib/components/jalan/JalanPreview.svelte';
 	import JalanActions from '$lib/components/jalan/JalanActions.svelte';
+	import SeoContent from '$lib/components/jalan/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { JalanData } from '$lib/utils/surat-jalan';
 	import { SvelteDate } from 'svelte/reactivity';
 
@@ -40,17 +42,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Jalan (Delivery Note) Generator | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan cetak Surat Jalan logistik pengiriman barang (Delivery Note) untuk keperluan pengiriman supir/armada ke gudang klien. Cepat, instan, gratis."
-	/>
-	<meta
-		name="keywords"
-		content="surat jalan, delivery note, tanda terima barang, surat pengiriman barang, template surat jalan gudang, cetak surat jalan"
-	/>
-</svelte:head>
+<Meta
+	title="Generator Surat Jalan Barang (Delivery Note) Gratis | Kerjao"
+	description="Buat cetakan Surat Jalan pengiriman logistik / Delivery Note untuk armada gudang klien Anda dengan form otomatis PDF."
+	keywords="surat jalan barang, delivery note, resi pengiriman logistik, tanda terima barang"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -153,6 +149,11 @@
 				<JalanActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

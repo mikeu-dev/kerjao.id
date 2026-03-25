@@ -2,6 +2,8 @@
 	import PerjanjianForm from '$lib/components/perjanjian/PerjanjianForm.svelte';
 	import PerjanjianPreview from '$lib/components/perjanjian/PerjanjianPreview.svelte';
 	import PerjanjianActions from '$lib/components/perjanjian/PerjanjianActions.svelte';
+	import SeoContent from '$lib/components/perjanjian/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { PerjanjianData } from '$lib/utils/perjanjian';
 
 	let data = $state<PerjanjianData>({
@@ -22,17 +24,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Surat Perjanjian Kerja Sama / MoU Freelance | kerjao.id</title>
-	<meta
-		name="description"
-		content="Lindungi hak dan kewajiban proyek freelance-mu. Buat Surat Perjanjian Kerja Sama (MoU) atau Kontrak Kerja Freelance otomatis dan instan siap cetak."
-	/>
-	<meta
-		name="keywords"
-		content="surat perjanjian kerjasama, contoh kontrak kerja freelance, surat mou, surat perjanjian proyek, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Surat Perjanjian Kontrak Kerja Freelance (MoU) | Kerjao"
+	description="Buat draf Surat Perjanjian Kerja / Kontrak Freelance (MoU) lengkap secara otomatis. Amankan proyek Anda dengan hukum perdata praktis."
+	keywords="surat perjanjian kerja sama, kontrak kerja freelance, surat mou, generator surat perjanjian proyek"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -134,6 +130,11 @@
 				<PerjanjianActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 

@@ -7,33 +7,24 @@ Aplikasi web _client-side_ tanpa _state_ (stateless) yang menyediakan 15 perkaka
 Saat ini platform memuat rangkaian aplikasi mikro gratis berikut:
 
 **Surat & Karir:**
+
 1. Surat Lamaran Kerja (Cover Letter)
 2. Surat Pengunduran Diri (Resign)
 3. Surat Kuasa
 4. Surat Keterangan Kerja (Paklaring)
 5. Surat Izin Cuti
 
-**Bisnis & HR:**
-6. Kontrak Kerja Freelance (MoU / Perjanjian)
-7. Surat Peringatan Karyawan (SP 1, 2, 3)
-8. Surat Perjanjian Hutang Piutang
-9. Surat Jalan (Delivery Note)
-10. Surat Penawaran Harga B2B (Quotation)
-11. Purchase Order (PO)
+**Bisnis & HR:** 6. Kontrak Kerja Freelance (MoU / Perjanjian) 7. Surat Peringatan Karyawan (SP 1, 2, 3) 8. Surat Perjanjian Hutang Piutang 9. Surat Jalan (Delivery Note) 10. Surat Penawaran Harga B2B (Quotation) 11. Purchase Order (PO)
 
-**Keuangan:**
-12. Kalkulator Gaji & THP
-13. Invoice Generator Digital
-14. Kwitansi Digital
-15. Slip Gaji (Pay Slip)
+**Keuangan:** 12. Kalkulator Gaji & THP 13. Invoice Generator Digital 14. Kwitansi Digital 15. Slip Gaji (Pay Slip)
 
 ## ✨ Fitur Utama
 
 - **Pembuatan Cepat:** Masukkan data di form dan surat akan diperbarui seketika menggunakan kereaktifan tinggi dari _Svelte 5 Runes_.
 - **Privasi Terjamin:** Semua proses penyusunan teks dan kalkulasi data terjadi mutlak di _browser_ milik pengguna. Tidak ada transmisi informasi pribadi apa pun ke server.
-- **Standar Estetik Premium:** *Glassmorphic design* dengan antarmuka pengguna *(UI)* dan *User Experience (UX)* setara kelas bisnis (SaaS profesional modern). Output cetak PDF dikalibrasi ketat ke standar kertas *portrait* dan *landscape* ukuran A4/A5 resmi.
+- **Standar Estetik Premium:** _Glassmorphic design_ dengan antarmuka pengguna _(UI)_ dan _User Experience (UX)_ setara kelas bisnis (SaaS profesional modern). Output cetak PDF dikalibrasi ketat ke standar kertas _portrait_ dan _landscape_ ukuran A4/A5 resmi.
 - **Tanpa Login & Berlangganan:** Digunakan secara instan di peramban, gratis 100% dan bebas dari gangguan birokrasi pendaftaran asuransi/akun.
-- **Salin dan Cetak:** Ekspor surat dan hasil generator dengan menyimpan halaman web sebagai dokumen PDF, memanfaatkan manipulasi model tata letak cetak (*print-friendly* CSS) dari utilitas internal antarmuka.
+- **Salin dan Cetak:** Ekspor surat dan hasil generator dengan menyimpan halaman web sebagai dokumen PDF, memanfaatkan manipulasi model tata letak cetak (_print-friendly_ CSS) dari utilitas internal antarmuka.
 
 ## 🛠 Stack Teknologi
 
@@ -59,7 +50,7 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
-Buka halaman rute utama (`/`) untuk mengeksplorasi panel *Mega Menu Header* yang mewadahi seluk-beluk seluruh navigasi generator mandiri di Kerjao.id.
+Buka halaman rute utama (`/`) untuk mengeksplorasi panel _Mega Menu Header_ yang mewadahi seluk-beluk seluruh navigasi generator mandiri di Kerjao.id.
 
 ## 📦 Panduan Build Production
 

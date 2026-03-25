@@ -2,6 +2,8 @@
 	import SlipForm from '$lib/components/slip/SlipForm.svelte';
 	import SlipPreview from '$lib/components/slip/SlipPreview.svelte';
 	import SlipActions from '$lib/components/slip/SlipActions.svelte';
+	import SeoContent from '$lib/components/slip/SeoContent.svelte';
+	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { SlipData } from '$lib/utils/slip';
 
 	// Generate some default ids
@@ -26,17 +28,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Slip Gaji Generator | kerjao.id</title>
-	<meta
-		name="description"
-		content="Buat dan cetak Slip Gaji (Pay Slip) karyawan profesional untuk UMKM dan Perusahaan dengan hitungan THP otomatis."
-	/>
-	<meta
-		name="keywords"
-		content="slip gaji karyawan, contoh slip gaji, pay slip generator, bukti pembayaran gaji, umkm, kerjao.id"
-	/>
-</svelte:head>
+<Meta
+	title="Buat Slip Gaji Karyawan Online - Template Profesional | Kerjao"
+	description="Buat dan cetak dokumen Slip Gaji (Pay Slip) karyawan resmi untuk UMKM dan Perusahaan. Terintegrasi rincian Take Home Pay dan asuransi otomatis."
+	keywords="slip gaji karyawan, contoh slip gaji, pay slip generator, bukti pembayaran gaji online"
+/>
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 	<!-- Header -->
@@ -138,6 +134,11 @@
 				<SlipActions />
 			</div>
 		</div>
+	</div>
+
+	<!-- SEO Article -->
+	<div class="mt-16 print:hidden">
+		<SeoContent />
 	</div>
 </div>
 
