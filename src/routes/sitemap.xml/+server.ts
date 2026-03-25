@@ -6,6 +6,7 @@ export async function GET() {
 		'/surat-perintah-kerja',
 		'/surat-jual-beli',
 		'/surat-nda',
+		'/surat-kontrak-kerja',
 		'/artikel',
 		'/kalkulator-gaji',
 		'/invoice',

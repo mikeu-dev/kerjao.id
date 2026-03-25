@@ -31,4 +31,22 @@
 
 	<!-- Canonical -->
 	<link rel="canonical" href={url} />
+
+	<!-- Schema.org JSON-LD -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "{title}",
+			"description": "{description}",
+			"applicationCategory": "BusinessApplication",
+			"operatingSystem": "All",
+			"url": "{url}",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "IDR"
+			}
+		}
+	</script>
 </svelte:head>

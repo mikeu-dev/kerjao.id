@@ -285,6 +285,44 @@
 				</p>
 			</a>
 
+			<!-- Tool 0.9: Surat Kontrak Kerja (PKWT) -->
+			<a
+				href="/surat-kontrak-kerja"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-blue-200/80 bg-blue-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-xl dark:border-blue-700/80 dark:bg-blue-900/10 dark:hover:border-blue-600"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-blue-500/10 blur-2xl transition-all group-hover:bg-blue-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-500/20 ring-inset dark:bg-blue-500/10 dark:text-blue-400 dark:ring-blue-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
+				>
+					Kontrak Kerja <span
+						class="ml-2 inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+						>Resmi</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Generator kontrak PKWT / PKWTT (Tetap) sesuai standar UU Cipta Kerja. Lengkap dengan pasal gaji dan sanksi.
+				</p>
+			</a>
+
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"

@@ -164,6 +164,7 @@
 										<a href="/surat-perjanjian" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Perjanjian</a>
 										<a href="/surat-sewa" class="hover:text-indigo-600 dark:hover:text-indigo-400">Sewa Properti</a>
 										<a href="/surat-perintah-kerja" class="hover:text-indigo-600 dark:hover:text-indigo-400">Perintah Kerja (SPK)</a>
+										<a href="/surat-kontrak-kerja" class="hover:text-indigo-600 dark:hover:text-indigo-400">Kontrak Kerja (PKWT)</a>
 										<a href="/surat-jalan" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Jalan</a>
 									</div>
 								</div>

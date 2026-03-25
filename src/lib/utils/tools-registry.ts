@@ -167,5 +167,13 @@ export const toolsRegistry: ToolMetadata[] = [
 		category: 'Bisnis & HR',
 		icon: '🤐',
 		tags: ['nda', 'secret', 'hukum', 'kerjasama']
+	},
+	{
+		name: 'Kontrak Kerja (PKWT/TT)',
+		description: 'Draf perjanjian kerja resmi standar UU Cipta Kerja.',
+		path: '/surat-kontrak-kerja',
+		category: 'Bisnis & HR',
+		icon: '📜',
+		tags: ['kontrak', 'kerja', 'karyawan', 'hrd']
 	}
 ];
