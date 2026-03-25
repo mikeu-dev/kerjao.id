@@ -29,6 +29,10 @@
 		class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-600 sm:gap-6 dark:text-slate-300"
 	>
 		<a
+			href="/purchase-order"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Purchase Order</a
+		>
+		<a
 			href="/surat-penawaran"
 			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 			>Surat Penawaran B2B</a
