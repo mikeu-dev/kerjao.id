@@ -379,7 +379,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 9: Surat Resign -->
+			<!-- Tool 9: Surat Izin Cuti Generator -->
+			<a
+				href="/surat-izin"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-teal-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-teal-500/10 blur-2xl transition-all group-hover:bg-teal-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 ring-1 ring-teal-500/10 ring-inset dark:bg-teal-500/10 dark:text-teal-400 dark:ring-teal-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-teal-600 dark:text-white dark:group-hover:text-teal-400"
+				>
+					Surat Izin Cuti
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Sakit mendadak atau butuh rehat liburan? Susun surat permohonan absen formal untuk
+					atasan/HRD dalam hitungan detik.
+				</p>
+			</a>
+
+			<!-- Tool 10: Surat Resign -->
 			<a
 				href="/surat-resign"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
