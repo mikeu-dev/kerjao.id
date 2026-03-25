@@ -23,6 +23,8 @@ export interface InvoiceData {
 
 	notes: string;
 	paymentInfo: string; // e.g., Bank details
+	signature?: string;
+	lang?: 'id' | 'en';
 }
 
 export interface InvoiceTotals {

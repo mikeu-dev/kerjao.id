@@ -12,6 +12,9 @@ export interface NDAData {
 	jangkaWaktu: string; // Masa berlaku kerahasiaan (misal: 2 tahun)
 	tanggal: string;
 	lokasi: string;
+	ttdPihak1?: string;
+	ttdPihak2?: string;
+	lang?: 'id' | 'en';
 }
 
 export function generateNDANumber() {

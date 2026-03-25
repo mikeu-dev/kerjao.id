@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { InvoiceData } from '$lib/utils/invoice';
+	import SignaturePad from '$lib/components/ui/SignaturePad.svelte';
 
 	let { data = $bindable() }: { data: InvoiceData } = $props();
+
+	if (!data.lang) data.lang = 'id';
+// ... rest of functions
 
 	function addItem() {
 		data.items = [
@@ -27,6 +31,26 @@
 			<h3 class="font-bold text-slate-800 dark:text-white">Detail Invoice</h3>
 			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Atribut penagihan Anda.</p>
 		</div>
+		
+		<div class="mb-4">
+			<label class="mb-1.5 block text-xs font-semibold text-slate-500 uppercase">Bahasa Dokumen</label>
+			<div class="flex gap-2 max-w-[300px]">
+				<button 
+					type="button"
+					onclick={() => data.lang = 'id'}
+					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'id' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
+				>
+					🇮🇩 ID
+				</button>
+				<button 
+					type="button"
+					onclick={() => data.lang = 'en'}
+					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'en' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
+				>
+					🇺🇸 EN
+				</button>
+			</div>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -37,6 +61,7 @@
 				<input
 					type="text"
 					id="invoiceNumber"
+					name="invoiceNumber"
 					bind:value={data.invoiceNumber}
 					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white"
 				/>
@@ -336,6 +361,15 @@
 					placeholder="Terima kasih atas kerjasamanya!"
 				></textarea>
 			</div>
+		</div>
+	</div>
+
+	<hr class="border-slate-200 dark:border-slate-800" />
+
+	<div class="space-y-4 border-l-4 border-slate-900 pl-4">
+		<h3 class="font-bold text-slate-800 dark:text-white">Tanda Tangan Pengirim</h3>
+		<div class="max-w-[400px]">
+			<SignaturePad bind:value={data.signature} label="Tanda Tangan Digital" />
 		</div>
 	</div>
 </div>

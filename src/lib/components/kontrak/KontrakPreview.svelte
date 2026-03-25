@@ -1,12 +1,15 @@
 <script lang="ts">
 	import type { KontrakData } from '$lib/utils/kontrak-kerja';
+	import { translations } from '$lib/utils/translations';
 
-	let { data, themeColor = '#4f46e5' }: { data: KontrakData; themeColor?: string } = $props();
+	let { data, themeColor = '#4f46e5' }: { data: KontrakData & { lang?: 'id' | 'en' }; themeColor?: string } = $props();
+
+	const t = $derived(translations[data.lang || 'id']);
 
 	const formatDate = (dateStr?: string) => {
 		if (!dateStr) return '.................';
 		const date = new Date(dateStr);
-		return date.toLocaleDateString('id-ID', {
+		return date.toLocaleDateString(data.lang === 'en' ? 'en-US' : 'id-ID', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
@@ -14,9 +17,9 @@
 	};
 
 	const formatCurrency = (amount: number) => {
-		return new Intl.NumberFormat('id-ID', {
+		return new Intl.NumberFormat(data.lang === 'en' ? 'en-US' : 'id-ID', {
 			style: 'currency',
-			currency: 'IDR',
+			currency: data.lang === 'en' ? 'USD' : 'IDR',
 			minimumFractionDigits: 0
 		}).format(amount);
 	};
@@ -103,38 +106,54 @@
 		</div>
 
 		<div>
-			<h3 class="font-bold border-b mb-2 pb-1" style="border-color: {themeColor}44">PASAL 4: WAKTU KERJA DAN ISTIRAHAT</h3>
+			<h3 class="font-bold border-b mb-2 pb-1" style="border-color: {themeColor}44">PASAL 4: {t.pasal4}</h3>
 			<p>
-				Waktu kerja Karyawan adalah 40 (empat puluh) jam seminggu, yang diatur sesuai dengan kebijakan operasional Pengusaha (misal: Senin-Jumat atau Shift). Karyawan berhak atas istirahat mingguan, cuti tahunan, dan hari libur nasional sesuai peraturan perusahaan dan undang-undang yang berlaku.
+				{data.lang === 'en' 
+					? 'The Employee\'s working time is 40 (forty) hours per week, which is regulated in accordance with the Employer\'s operational policy (e.g., Monday-Friday or Shift). The Employee is entitled to weekly rest, annual leave, and national holidays in accordance with company regulations and applicable laws.'
+					: 'Waktu kerja Karyawan adalah 40 (empat puluh) jam seminggu, yang diatur sesuai dengan kebijakan operasional Pengusaha (misal: Senin-Jumat atau Shift). Karyawan berhak atas istirahat mingguan, cuti tahunan, dan hari libur nasional sesuai peraturan perusahaan dan undang-undang yang berlaku.'}
 			</p>
 		</div>
 
 		<div>
-			<h3 class="font-bold border-b mb-2 pb-1" style="border-color: {themeColor}44">PASAL 5: KEWAJIBAN DAN DISIPLIN</h3>
+			<h3 class="font-bold border-b mb-2 pb-1" style="border-color: {themeColor}44">PASAL 5: {t.pasal5}</h3>
 			<p>
-				Karyawan wajib mematuhi seluruh Peraturan Perusahaan (PP) atau Perjanjian Kerja Bersama (PKB), menjaga kerahasiaan data Pengusaha, dan melaksanakan tugas dengan integritas tinggi. Pelanggaran terhadap peraturan dapat dikenakan sanksi berupa Surat Peringatan (SP) hingga pemutusan hubungan kerja.
+				{data.lang === 'en'
+					? 'The Employee is obliged to comply with all Company Regulations (PP) or Collective Labor Agreements (PKB), maintain the confidentiality of the Employer\'s data, and perform duties with high integrity. Violations of the regulations may be subject to sanctions in the form of Warning Letters (SP) up to termination of employment.'
+					: 'Karyawan wajib mematuhi seluruh Peraturan Perusahaan (PP) atau Perjanjian Kerja Bersama (PKB), menjaga kerahasiaan data Pengusaha, dan melaksanakan tugas dengan integritas tinggi. Pelanggaran terhadap peraturan dapat dikenakan sanksi berupa Surat Peringatan (SP) hingga pemutusan hubungan kerja.'}
 			</p>
 		</div>
 
 		<div class="rounded-lg bg-slate-50 p-4 border-l-4" style="border-color: {themeColor}">
-			<p class="font-bold mb-1 italic">Disclaimer Hukum:</p>
+			<p class="font-bold mb-1 italic">{data.lang === 'en' ? 'Legal Disclaimer:' : 'Disclaimer Hukum:'}</p>
 			<p class="text-[9px] text-slate-500 italic">
-				Dokumen ini dihasilkan secara otomatis oleh Kerjao.id. Para Pihak disarankan untuk meninjau kembali pasal-pasal di atas agar sesuai dengan kebutuhan spesifik operasional dan memastikan kepatuhan terhadap UU Cipta Kerja terbaru. Kerjao tidak bertanggung jawab atas sengketa hukum di kemudian hari.
+				{data.lang === 'en' 
+					? 'This document is generated automatically by Kerjao.id. The Parties are advised to review the clauses above to suit specific operational needs and ensure compliance with the latest Labor Laws. Kerjao is not responsible for any future legal disputes.'
+					: 'Dokumen ini dihasilkan secara otomatis oleh Kerjao.id. Para Pihak disarankan untuk meninjau kembali pasal-pasal di atas agar sesuai dengan kebutuhan spesifik operasional dan memastikan kepatuhan terhadap UU Cipta Kerja terbaru. Kerjao tidak bertanggung jawab atas sengketa hukum di kemudian hari.'}
 			</p>
 		</div>
 	</div>
 
 	<!-- Signatures -->
 	<div class="mt-16 grid grid-cols-2 gap-12 text-center text-[11px] sm:text-xs">
-		<div class="space-y-20">
+		<div class="space-y-4">
 			<p class="font-bold">PENGUSAHA</p>
+			{#if data.ttdPengusaha}
+				<img src={data.ttdPengusaha} alt="TTD Pengusaha" class="mx-auto block h-16 w-32 object-contain grayscale" />
+			{:else}
+				<div class="h-16 w-32"></div>
+			{/if}
 			<div class="space-y-1">
 				<p class="font-bold underline uppercase">{data.perusahaan.wakil || '.................'}</p>
 				<p class="text-[10px] text-slate-500">{data.perusahaan.jabatanWakil || '.................'}</p>
 			</div>
 		</div>
-		<div class="space-y-20">
+		<div class="space-y-4">
 			<p class="font-bold">KARYAWAN</p>
+			{#if data.ttdKaryawan}
+				<img src={data.ttdKaryawan} alt="TTD Karyawan" class="mx-auto block h-16 w-32 object-contain grayscale" />
+			{:else}
+				<div class="h-16 w-32"></div>
+			{/if}
 			<div class="space-y-1">
 				<p class="font-bold underline uppercase">{data.karyawan.nama || '.................'}</p>
 				<p class="text-[10px] text-slate-500">Karyawan</p>

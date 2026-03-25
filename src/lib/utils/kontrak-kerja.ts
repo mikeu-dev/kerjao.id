@@ -31,6 +31,8 @@ export interface KontrakData {
 	lokasiKerja: string;
 	tanggalTtd: string;
 	nomorSurat: string;
+	ttdPengusaha?: string;
+	ttdKaryawan?: string;
 }
 
 export function generateKontrakNumber() {
