@@ -451,7 +451,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 13: Surat Jalan / Delivery Note -->
+			<!-- Tool 14: Surat Hutang Piutang -->
+			<a
+				href="/surat-hutang"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-amber-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-amber-500/10 blur-2xl transition-all group-hover:bg-amber-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 ring-1 ring-amber-500/10 ring-inset dark:bg-amber-500/10 dark:text-amber-400 dark:ring-amber-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-amber-600 dark:text-white dark:group-hover:text-amber-400"
+				>
+					Surat Hutang Piutang
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Lindungi aset finansial Anda. Buat kontrak pinjam-meminjam uang bermaterai yang dilengkapi
+					pasal jatuh tempo dan penyitaan jaminan hukum.
+				</p>
+			</a>
+
+			<!-- Tool 15: Surat Jalan / Delivery Note -->
 			<a
 				href="/surat-jalan"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-violet-700"

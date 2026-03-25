@@ -29,6 +29,11 @@
 		class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-600 sm:gap-6 dark:text-slate-300"
 	>
 		<a
+			href="/surat-hutang"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+			>Surat Hutang Piutang</a
+		>
+		<a
 			href="/surat-jalan"
 			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Surat Jalan</a
 		>
