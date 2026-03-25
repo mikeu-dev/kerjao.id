@@ -98,6 +98,11 @@
 									>Surat Kuasa</a
 								>
 								<a
+									href="/surat-jual-beli"
+									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+									>Jual Beli (SPJB)</a
+								>
+								<a
 									href="/paklaring"
 									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 									>Surat Paklaring</a

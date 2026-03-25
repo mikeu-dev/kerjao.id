@@ -4,6 +4,7 @@ export async function GET() {
 		'/cv-maker',
 		'/surat-sewa',
 		'/surat-perintah-kerja',
+		'/surat-jual-beli',
 		'/artikel',
 		'/kalkulator-gaji',
 		'/invoice',
