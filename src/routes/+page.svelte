@@ -451,7 +451,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 11: Purchase Order -->
+			<!-- Tool 13: Surat Jalan / Delivery Note -->
+			<a
+				href="/surat-jalan"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-violet-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-violet-500/10 blur-2xl transition-all group-hover:bg-violet-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-50 text-violet-600 ring-1 ring-violet-500/10 ring-inset dark:bg-violet-500/10 dark:text-violet-400 dark:ring-violet-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-violet-600 dark:text-white dark:group-hover:text-violet-400"
+				>
+					Surat Jalan (Delivery)
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Lindungi pengiriman barang Anda dengan bukti serah terima sah. Tersedia pencatatan armada,
+					supir, dan 3 kolom tanda tangan resmi.
+				</p>
+			</a>
+
+			<!-- Tool 14: Purchase Order -->
 			<a
 				href="/purchase-order"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-emerald-700"
