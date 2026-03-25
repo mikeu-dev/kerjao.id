@@ -4,16 +4,16 @@
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 
 <svelte:head>
-	<title>Kerjao.id - Alat Karir Profesional</title>
+	<title>Kerjao.id - Kumpulan Alat Karir Profesional Indonesia</title>
 	<meta
 		name="description"
-		content="Kumpulan tools instan, cerdas, dan gratis untuk membantu perjalanan karir profesionalmu."
+		content="Kumpulan tools instan, cerdas, dan gratis: Surat Resign, Kalkulator Gaji PPh 21, Invoice Generator, dan Surat Paklaring untuk karir profesionalmu."
 	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <main
-	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-16 pb-28 text-center sm:pt-24 lg:pt-32"
+	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-16 pb-20 text-center sm:pt-24 lg:pt-32"
 >
 	<!-- Pill Tag -->
 	<div
@@ -42,20 +42,19 @@
 	<p
 		class="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-400"
 	>
-		Kumpulan dokumen kreatif, otomatisasi form, serta perkakas cerdas yang membantumu melangkah di
-		dunia profesional lebih mudah, cepat, dan aman.
+		Kumpulan perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
+		cepat, dan aman. Mulai dari kalkulasi gaji hingga dokumen HRD instan.
 	</p>
 
 	<!-- CTA Buttons -->
 	<div class="flex w-full flex-col items-center justify-center gap-5 sm:w-auto sm:flex-row">
-		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 		<a
-			href="/surat-resign"
+			href="#koleksi-alat"
 			class="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-indigo-600 px-8 py-4 font-semibold text-white shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)] transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-700 hover:shadow-[0_0_60px_-15px_rgba(79,70,229,0.7)] hover:ring-2 hover:ring-indigo-500 sm:w-auto dark:hover:ring-offset-slate-950"
 		>
-			<span class="relative z-10 text-[1.05rem]">Coba Surat Resign Generator</span>
+			<span class="relative z-10 text-[1.05rem]">Jelajahi Perkakas</span>
 			<div
-				class="relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-1"
+				class="relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-y-1"
 			>
 				<svg
 					class="h-4 w-4"
@@ -64,7 +63,7 @@
 					stroke="currentColor"
 					stroke-width="2.5"
 				>
-					<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
 				</svg>
 			</div>
 			<!-- Glossy overlay -->
@@ -72,20 +71,175 @@
 				class="absolute inset-0 bg-linear-to-b from-white/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
 			></div>
 		</a>
-
-		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-		<a
-			href="#keunggulan"
-			class="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-8 py-4 font-semibold text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-slate-50 hover:shadow-md sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-700"
-		>
-			<span class="text-[1.05rem]">Lihat Keunggulan</span>
-		</a>
 	</div>
 </main>
 
+<!-- Koleksi Alat Section -->
+<section
+	id="koleksi-alat"
+	class="relative z-10 border-t border-slate-200/60 bg-slate-50/50 py-24 dark:border-slate-800/60 dark:bg-slate-900/20"
+>
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
+			<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+				Koleksi Perkakas <span class="text-indigo-600 dark:text-indigo-400">Kerjao</span>
+			</h2>
+			<p class="text-lg text-slate-600 dark:text-slate-400">
+				Pilih alat yang kamu butuhkan hari ini. Semuanya berjalan instan di perambanmu tanpa
+				membagikan data privasi ke server manapun.
+			</p>
+		</div>
+
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:gap-8">
+			<!-- Tool 1: Kalkulator Gaji -->
+			<a
+				href="/kalkulator-gaji"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-emerald-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-emerald-500/10 blur-2xl transition-all group-hover:bg-emerald-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-500/10 ring-inset dark:bg-emerald-500/10 dark:text-emerald-400 dark:ring-emerald-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-emerald-600 dark:text-white dark:group-hover:text-emerald-400"
+				>
+					Kalkulator Gaji & THP
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Simulasi perhitungan gaji bersih (Take-Home Pay) instan. Lengkap dengan potongan BPJS
+					Kes/KTK dan estimasi Pajak PPh 21 TER 2024.
+				</p>
+			</a>
+
+			<!-- Tool 2: Invoice Generator -->
+			<a
+				href="/invoice"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-blue-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-blue-500/10 blur-2xl transition-all group-hover:bg-blue-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-500/10 ring-inset dark:bg-blue-500/10 dark:text-blue-400 dark:ring-blue-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
+				>
+					Invoice Generator
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Solusi andalan freelancer. Buat dokumen tagihan yang elegan dan kalkulasi PPN/Diskon
+					secara reaktif, lalu unduh ke format PDF.
+				</p>
+			</a>
+
+			<!-- Tool 3: Surat Keterangan Kerja -->
+			<a
+				href="/paklaring"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-orange-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-orange-500/10 blur-2xl transition-all group-hover:bg-orange-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-orange-600 ring-1 ring-orange-500/10 ring-inset dark:bg-orange-500/10 dark:text-orange-400 dark:ring-orange-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-orange-600 dark:text-white dark:group-hover:text-orange-400"
+				>
+					Surat Paklaring HRD
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Klaim JHT BPJS Ketenagakerjaan lebih mudah dengan generator Surat Keterangan Kerja standar
+					resmi, lengkap dengan perhitungan masa bakti instan.
+				</p>
+			</a>
+
+			<!-- Tool 4: Surat Resign -->
+			<a
+				href="/surat-resign"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-rose-500/10 blur-2xl transition-all group-hover:bg-rose-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-50 text-rose-600 ring-1 ring-rose-500/10 ring-inset dark:bg-rose-500/10 dark:text-rose-400 dark:ring-rose-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-rose-600 dark:text-white dark:group-hover:text-rose-400"
+				>
+					Surat Pengunduran Diri
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Persiapkan *exit* dengan mulus. Alat yang membantu menyusun tata bahasa formal surat
+					resign dalam hitungan detik untuk HRD, bebas dari kebingungan.
+				</p>
+			</a>
+		</div>
+	</div>
+</section>
+
 <!-- Features / Keunggulan Section -->
 <section
-	id="keunggulan"
 	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-24 backdrop-blur-3xl dark:border-slate-800/60 dark:bg-slate-900/40"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -94,8 +248,7 @@
 				Dirancang untuk Profesionalitas
 			</h2>
 			<p class="text-lg text-slate-600 dark:text-slate-400">
-				Setiap alat dipikirkan secara mendalam untuk memberikan efisiensi luar biasa bagi pekerja
-				modern Indonesia.
+				Tanpa langganan bulanan dan memprioritaskan privasi absolut.
 			</p>
 		</div>
 
@@ -123,7 +276,7 @@
 				<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Eksekusi Instan</h3>
 				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
 					Semua pemrosesan kami optimasi di sisi peramban (browser) kamu. Cepat, instan, dan bebas
-					lag karena tidak butuh proses server berbelit.
+					lag karena tidak butuh proses panggilan server berbelit.
 				</p>
 			</div>
 
@@ -153,8 +306,8 @@
 				</div>
 				<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Keamanan Mutlak</h3>
 				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
-					Tidak butuh akun dan kami tidak menyimpan satupun data tulisanmu. Formulir surat 100% aman
-					mengudara di perambanmu sendiri.
+					Kerahasiaan gaji dan identitasmu terjamin. Tidak ada satupun teks yang disimpan lintas
+					sesi pengguna; 100% aman berkat teknologi lokal browser.
 				</p>
 			</div>
 
@@ -182,10 +335,10 @@
 						/>
 					</svg>
 				</div>
-				<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Estetika Premium</h3>
+				<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Estetika Tinggi</h3>
 				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
-					Dirancang dengan komponen cantik, menyesuaikan otomatis mode sistem, dan memberi
-					pengalaman elegan setiap kali digunakan.
+					Memberi rasa percaya diri saat mencetak ke PDF. Dokumen hasil dibuat mengikuti tata bahasa
+					baku dan proporsi resmi A4 yang estetik.
 				</p>
 			</div>
 		</div>
