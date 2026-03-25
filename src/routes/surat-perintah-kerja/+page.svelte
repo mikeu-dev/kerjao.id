@@ -3,6 +3,7 @@
 	import SpkPreview from '$lib/components/spk/SpkPreview.svelte';
 	import SpkActions from '$lib/components/spk/SpkActions.svelte';
 	import SeoContent from '$lib/components/spk/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSpkNumber, type SPKData } from '$lib/utils/spk';
 
@@ -94,6 +95,9 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<!-- Related Tools -->
+	<RelatedTools currentPath="/surat-perintah-kerja" category="Bisnis & HR" />
 </div>
 
 <style>

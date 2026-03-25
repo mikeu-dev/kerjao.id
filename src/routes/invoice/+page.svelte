@@ -3,6 +3,7 @@
 	import InvoicePreview from '$lib/components/invoice/InvoicePreview.svelte';
 	import InvoiceActions from '$lib/components/invoice/InvoiceActions.svelte';
 	import SeoContent from '$lib/components/invoice/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateInvoiceId, type InvoiceData } from '$lib/utils/invoice';
 
@@ -160,6 +161,9 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<!-- Related Tools -->
+	<RelatedTools currentPath="/invoice" category="Keuangan" />
 </div>
 
 <style>

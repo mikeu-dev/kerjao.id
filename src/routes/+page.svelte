@@ -247,6 +247,44 @@
 				</p>
 			</a>
 
+			<!-- Tool 0.8: Surat NDA -->
+			<a
+				href="/surat-nda"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-indigo-200/80 bg-indigo-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-400 hover:shadow-xl dark:border-indigo-700/80 dark:bg-indigo-900/10 dark:hover:border-indigo-600"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-indigo-500/10 blur-2xl transition-all group-hover:bg-indigo-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-500/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+				>
+					NDA Kerahasiaan <span
+						class="ml-2 inline-flex items-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+						>Legal</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Lindungi rahasia bisnis dan ide proyek Anda. Perjanjian standar hukum untuk pengembang, startup, dan kolaborasi.
+				</p>
+			</a>
+
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"

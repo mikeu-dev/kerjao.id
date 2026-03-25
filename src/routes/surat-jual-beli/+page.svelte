@@ -3,6 +3,7 @@
 	import JualBeliPreview from '$lib/components/jual-beli/JualBeliPreview.svelte';
 	import JualBeliActions from '$lib/components/jual-beli/JualBeliActions.svelte';
 	import SeoContent from '$lib/components/jual-beli/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSJBId, type JualBeliData } from '$lib/utils/jual-beli';
 
@@ -82,6 +83,9 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<!-- Related Tools -->
+	<RelatedTools currentPath="/surat-jual-beli" category="Personal & Umum" />
 </div>
 
 <style>

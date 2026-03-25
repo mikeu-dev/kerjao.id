@@ -3,6 +3,7 @@
 	import SewaPreview from '$lib/components/sewa/SewaPreview.svelte';
 	import SewaActions from '$lib/components/sewa/SewaActions.svelte';
 	import SeoContent from '$lib/components/sewa/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { SewaData } from '$lib/utils/sewa';
 
@@ -75,6 +76,9 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<!-- Related Tools -->
+	<RelatedTools currentPath="/surat-sewa" category="Bisnis & HR" />
 </div>
 
 <style>
