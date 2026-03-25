@@ -28,6 +28,24 @@
 	<div
 		class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-600 sm:gap-6 dark:text-slate-300"
 	>
+		<a href="/slip-gaji" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+			>Slip Gaji</a
+		>
+		<a href="/surat-izin" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+			>Surat Izin Cuti</a
+		>
+		<a
+			href="/surat-kuasa"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Surat Kuasa</a
+		>
+		<a
+			href="/surat-peringatan"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Surat Peringatan</a
+		>
+		<a
+			href="/surat-perjanjian"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Surat Perjanjian</a
+		>
 		<a href="/kwitansi" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 			>Buat Kwitansi</a
 		>
