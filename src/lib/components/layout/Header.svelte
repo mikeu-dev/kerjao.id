@@ -149,6 +149,11 @@
 									>Surat Hutang Piutang</a
 								>
 								<a
+									href="/surat-sewa"
+									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+									>Sewa Properti</a
+								>
+								<a
 									href="/surat-jalan"
 									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 									>Surat Jalan</a

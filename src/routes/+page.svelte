@@ -130,6 +130,45 @@
 				</p>
 			</a>
 
+			<!-- Tool 0.5: Sewa Properti -->
+			<a
+				href="/surat-sewa"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-indigo-200/80 bg-indigo-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-400 hover:shadow-xl dark:border-indigo-700/80 dark:bg-indigo-900/10 dark:hover:border-indigo-600"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-indigo-500/10 blur-2xl transition-all group-hover:bg-indigo-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-500/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+				>
+					Sewa Properti <span
+						class="ml-2 inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+						>Legal</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Generator Surat Perjanjian Sewa Menyewa (Rumah/Ruko/Kost) resmi. Lengkap dengan
+					pasal-pasal perlindungan hukum Pemilik & Penyewa.
+				</p>
+			</a>
+
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"

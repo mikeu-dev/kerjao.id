@@ -2,6 +2,7 @@ export async function GET() {
 	const staticPages = [
 		'',
 		'/cv-maker',
+		'/surat-sewa',
 		'/artikel',
 		'/kalkulator-gaji',
 		'/invoice',
