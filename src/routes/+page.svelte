@@ -307,7 +307,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 7: Surat Resign -->
+			<!-- Tool 7: Surat Peringatan Karyawan -->
+			<a
+				href="/surat-peringatan"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-amber-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-amber-500/10 blur-2xl transition-all group-hover:bg-amber-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 ring-1 ring-amber-500/10 ring-inset dark:bg-amber-500/10 dark:text-amber-400 dark:ring-amber-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-amber-600 dark:text-white dark:group-hover:text-amber-400"
+				>
+					Surat Peringatan (SP)
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Draf instan Surat Peringatan 1, 2, hingga 3 (Pemutusan Kerja) dengan tata bahasa HR yang
+					diakui. Rapikan barisan karyawan tanpa hambatan birokrasi.
+				</p>
+			</a>
+
+			<!-- Tool 8: Surat Resign -->
 			<a
 				href="/surat-resign"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
