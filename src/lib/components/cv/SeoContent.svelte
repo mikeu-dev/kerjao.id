@@ -1,40 +1,34 @@
-<article class="mx-auto prose prose-sm max-w-none text-slate-500 prose-slate dark:prose-invert">
-	<h2 class="text-lg font-bold text-slate-800 dark:text-slate-200">
-		Mengapa CV ATS-Friendly Sangat Penting di Tahun 2026?
-	</h2>
+<article class="prose max-w-none prose-rose dark:prose-invert">
+	<h2>Strategi CV ATS-Friendly: Lolos Seleksi Sistem di Tahun 2026</h2>
 	<p>
-		Applicant Tracking System (ATS) adalah *software* yang digunakan oleh 99% perusahaan menengah
-		hingga besar (termasuk BUMN dan Multinasional) untuk menyaring ribuan lamaran secara otomatis.
-		Jika CV Anda dipenuhi oleh desain estetik, kolom berlapis, atau meteran *skill* berbentuk
-		grafik, robot ATS **gagal membacanya** dan lamaran Anda otomatis ditolak sebelum dibaca oleh HRD
-		manusia.
+		Applicant Tracking System (ATS) adalah perangkat lunak filter otomatis yang digunakan oleh 99%
+		perusahaan BUMN dan Multinasional untuk menyaring ribuan lamaran. Jika CV Anda dipenuhi oleh
+		desain grafis berlebihan atau kolom berlapis, robot ATS <strong>gagal mengekstrak data</strong>
+		Anda, berujung pada penolakan otomatis tanpa pernah dilihat oleh mata HRD.
 	</p>
 
-	<h3 class="text-base font-semibold text-slate-800 dark:text-slate-200">
-		Standar Emas CV Harvard (Single Column)
-	</h3>
+	<h3>Prinsip Standar Emas CV Harvard</h3>
 	<p>
-		Kerjao.id merancang generator CV gratis ini secara eksklusif berpegang teguh pada aturan baku
-		Harvard Style. Desain satu kolom, tata letak rata kiri murni, dan ukuran huruf klasik menjamin:
+		Kerjao.id merancang generator CV ini secara eksklusif berpedoman pada <em>Harvard Style</em>
+		murni. Tata letak satu kolom rata kiri dan penggunaan tipe huruf klasik menjamin:
 	</p>
 	<ul>
 		<li>
-			<strong>Parsing Data Akurat:</strong> Nama, tanggal pengalaman kerja, dan kata kunci (keywords)
-			akan diekstrak sempurna ke dalam database perusahaan.
+			<strong>Parsing Data 100% Akurat:</strong> Nama, tanggal pengalaman kerja, dan kata kunci
+			kompetensi (keywords) akan terserap sempurna ke dalam database rekrutmen perusahaan.
 		</li>
 		<li>
-			<strong>Kenyamanan Psikologis Rekruter:</strong> HRD hanya punya waktu 6 detik untuk *scanning*.
-			Mereka tidak ingin mencari informasi Anda di tata letak yang zigzag.
+			<strong>Kenyamanan Kognitif Rekruter:</strong> HRD manusia hanya memiliki waktu rata-rata 6
+			detik untuk melakukan <em>screening</em>. Format satu kolom membantu mereka menemukan
+			informasi krusial secara linear tanpa distractions.
 		</li>
 	</ul>
 
-	<h3 class="text-base font-semibold text-slate-800 dark:text-slate-200">
-		Cara Menulis Poin Pengalaman (Bullet Points)
-	</h3>
+	<h3>Menulis Poin Pengalaman dengan Metode XYZ Google</h3>
 	<p>
-		Hindari menggunakan kalimat "Saya bertanggung jawab atas...". Gunakan metode X-Y-Z ala Google:
-		*"Mencapai [X] yang diukur dengan [Y], melalui tindakan [Z]"*. Contoh: "Merancang strategi SEO
-		(Z) yang meningkatkan traffic organik bulanan sebesar 40% (X) atau setara 20.000 pengunjung unik
-		(Y)." Alat pembuat CV ATS otomatis ini membantu Anda merapikan poin tersebut.
+		Jangan sekadar melampirkan daftar tugas. Gunakan formula: *"Mencapai [X] yang diukur dengan [Y],
+		melalui tindakan [Z]"*. Contoh: "Meningkatkan efisiensi operasional sebesar 25% (X) melalui
+		otomasi laporan bulanan (Z) yang menghemat 40 jam kerja tim (Y)." Generator CV kami akan
+		memastikan struktur poin-poin ini terrender rapi dan profesional.
 	</p>
 </article>

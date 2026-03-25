@@ -1,6 +1,8 @@
 export async function GET() {
-	const pages = [
+	const staticPages = [
 		'',
+		'/cv-maker',
+		'/artikel',
 		'/kalkulator-gaji',
 		'/invoice',
 		'/paklaring',
@@ -17,6 +19,15 @@ export async function GET() {
 		'/surat-penawaran',
 		'/surat-resign'
 	];
+
+	// Fetch dynamic articles for sitemap
+	const articlePaths = import.meta.glob('/src/lib/articles/*.{md,svx}', { eager: true });
+	const dynamicPages = Object.keys(articlePaths).map((path) => {
+		const slug = path.split('/').pop()?.split('.')[0];
+		return `/artikel/${slug}`;
+	});
+
+	const pages = [...staticPages, ...dynamicPages];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset

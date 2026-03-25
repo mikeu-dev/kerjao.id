@@ -29,6 +29,9 @@
 		<a href="/" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 			>Beranda</a
 		>
+		<a href="/artikel" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+			>Artikel Karir</a
+		>
 
 		<!-- Tools Dropdown (CSS Hover) -->
 		<div class="group relative">
