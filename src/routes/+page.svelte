@@ -4,10 +4,10 @@
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 
 <svelte:head>
-	<title>Kerjao.id - Kumpulan Alat Karir Profesional Indonesia</title>
+	<title>Kerjao.id - 15 Alat Karir & Bisnis Profesional Indonesia</title>
 	<meta
 		name="description"
-		content="Kumpulan tools instan, cerdas, dan gratis: Surat Resign, Kalkulator Gaji PPh 21, Invoice Generator, dan Surat Paklaring untuk karir profesionalmu."
+		content="Kumpulan 15 tools instan, cerdas, dan gratis: Kalkulator Gaji PPh 21, Invoice Generator, Surat Perjanjian, hingga Surat Lamaran siap pakai untuk profesional."
 	/>
 </svelte:head>
 
@@ -42,8 +42,8 @@
 	<p
 		class="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-400"
 	>
-		Kumpulan perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
-		cepat, dan aman. Mulai dari kalkulasi gaji hingga dokumen HRD instan.
+		Kumpulan 15 perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
+		cepat, dan aman. Mulai dari kalkulasi keuangan hingga dokumen HRD dan bisnis instan.
 	</p>
 
 	<!-- CTA Buttons -->
@@ -82,7 +82,7 @@
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
 			<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-				Koleksi Perkakas <span class="text-indigo-600 dark:text-indigo-400">Kerjao</span>
+				15 Koleksi Perkakas <span class="text-indigo-600 dark:text-indigo-400">Kerjao</span>
 			</h2>
 			<p class="text-lg text-slate-600 dark:text-slate-400">
 				Pilih alat yang kamu butuhkan hari ini. Semuanya berjalan instan di perambanmu tanpa
@@ -90,7 +90,7 @@
 			</p>
 		</div>
 
-		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:gap-8">
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"
