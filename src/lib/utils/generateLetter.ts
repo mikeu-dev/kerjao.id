@@ -22,7 +22,7 @@ export function generateLetter(data: ResignData): string {
 				month: 'long',
 				year: 'numeric'
 			}).format(date);
-		} catch (e) {
+		} catch {
 			tanggalStr = data.tanggal;
 		}
 	} else {
@@ -30,7 +30,7 @@ export function generateLetter(data: ResignData): string {
 		tanggalStr = '[Tanggal]';
 	}
 
-	let alasanBase = data.alasan === 'Lainnya' ? data.alasanCustom.trim() : data.alasan;
+	const alasanBase = data.alasan === 'Lainnya' ? data.alasanCustom.trim() : data.alasan;
 	const alasanText = alasanBase ? alasanBase.toLowerCase() : '[alasan Anda]';
 
 	if (data.tone === 'santai') {

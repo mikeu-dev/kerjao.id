@@ -80,7 +80,7 @@
 				bind:value={data.alasan}
 				class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-white"
 			>
-				{#each alasanOptions as opt}
+				{#each alasanOptions as opt (opt)}
 					<option value={opt}>{opt}</option>
 				{/each}
 			</select>
@@ -104,7 +104,9 @@
 
 		<!-- Tone -->
 		<div>
-			<span class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">Gaya Bahasa (Tone)</span>
+			<span class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+				>Gaya Bahasa (Tone)</span
+			>
 			<div class="flex space-x-4">
 				<label class="flex items-center">
 					<input
