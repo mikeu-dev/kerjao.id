@@ -235,7 +235,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 5: Surat Resign -->
+			<!-- Tool 5: Kwitansi Generator -->
+			<a
+				href="/kwitansi"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0a523a]/40 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-[#0a523a]/60"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-[#0a523a]/10 blur-2xl transition-all group-hover:bg-[#0a523a]/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0a523a]/10 text-[#0a523a] ring-1 ring-[#0a523a]/10 ring-inset dark:bg-[#0a523a]/20 dark:text-[#0a523a]/80 dark:ring-[#0a523a]/30"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-[#0a523a] dark:text-white dark:group-hover:text-[#0a523a]/90"
+				>
+					Kwitansi Digital
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Solusi bukti bayar instan ala buku kwitansi klasik. Terdapat fitur Terbilang yang mengubah
+					angka nominal nominal menjadi teks ejaan secara otomatis.
+				</p>
+			</a>
+
+			<!-- Tool 6: Surat Resign -->
 			<a
 				href="/surat-resign"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
