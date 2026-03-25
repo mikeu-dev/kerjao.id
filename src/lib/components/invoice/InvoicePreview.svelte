@@ -32,11 +32,11 @@
 >
 	<!-- Header -->
 	<div class="mb-12 flex flex-col items-start justify-between gap-8 sm:flex-row">
-		<div class="w-full break-words sm:w-1/2">
+		<div class="w-full wrap-break-word sm:w-1/2">
 			<h1 class="mb-2 text-4xl font-extrabold tracking-tight text-slate-900 uppercase">INVOICE</h1>
 			<p class="font-medium tracking-wide text-slate-500">#{data.invoiceNumber || 'INV-XXXXX'}</p>
 		</div>
-		<div class="relative w-full text-sm break-words sm:w-1/2 sm:text-right">
+		<div class="relative w-full text-sm wrap-break-word sm:w-1/2 sm:text-right">
 			<h2 class="mb-1 text-lg font-bold">{data.vendorName || 'Nama Perusahaan Anda'}</h2>
 			<div class="leading-relaxed whitespace-pre-wrap text-slate-500">
 				{data.vendorDetails || 'Alamat Perusahaan\nKota, Kode Pos\nTelepon'}

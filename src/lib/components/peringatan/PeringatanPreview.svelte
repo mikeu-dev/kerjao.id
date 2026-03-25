@@ -84,7 +84,7 @@
 		</p>
 		<!-- Box Pelanggaran -->
 		<div
-			class="mt-2 mb-4 border-l-4 border-slate-500 bg-slate-50 p-4 italic print:border-l-[4px] print:border-black print:bg-transparent"
+			class="mt-2 mb-4 border-l-4 border-slate-500 bg-slate-50 p-4 italic print:border-l-4 print:border-black print:bg-transparent"
 		>
 			{data.violationReason || 'Tidak Mematuhi Prosedur Keselamatan / Indisipliner Presensi...'}
 			{#if data.violationDate}

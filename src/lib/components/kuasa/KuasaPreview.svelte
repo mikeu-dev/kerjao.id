@@ -112,7 +112,7 @@
 		<p class="mb-4">Bertindak untuk dan atas nama PEMBERI KUASA guna:</p>
 		<!-- Box Deskripsi Area -->
 		<div
-			class="mb-6 min-h-[100px] border-l-4 border-slate-400 py-1 pl-4 pl-8 leading-relaxed whitespace-pre-wrap italic print:border-l-2 print:border-black"
+			class="mb-6 min-h-[100px] border-l-4 border-slate-400 py-1 pl-8 leading-relaxed whitespace-pre-wrap italic print:border-l-2 print:border-black"
 		>
 			{data.powerDescription ||
 				'........................................................................................................................................................................................................................................................................'}

@@ -27,7 +27,7 @@
 
 <!-- The visual wrapper mimicking physical Kwitansi books (Green hue, patterned background) -->
 <div
-	class="relative mx-auto w-full max-w-4xl border-[10px] border-[#0a523a] bg-[#f0f9f4] p-6 font-serif text-slate-900 shadow-2xl sm:p-10 print:m-0 print:border-none print:border-[#0a523a] print:shadow-none"
+	class="relative mx-auto w-full max-w-4xl border-10 border-[#0a523a] bg-[#f0f9f4] p-6 font-serif text-slate-900 shadow-2xl sm:p-10 print:m-0 print:border-none print:border-[#0a523a] print:shadow-none"
 >
 	<!-- Watermark patterned background -->
 	<div
@@ -92,7 +92,7 @@
 			<div class="flex flex-col gap-4">
 				<!-- Nominal -->
 				<div
-					class="rounded-br-2xl bg-gradient-to-r from-[#0a523a] to-[#127a58] px-6 py-3 shadow-inner shadow-black/20 print:shadow-none"
+					class="rounded-br-2xl bg-linear-to-r from-[#0a523a] to-[#127a58] px-6 py-3 shadow-inner shadow-black/20 print:shadow-none"
 				>
 					<p
 						class="font-mono text-2xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-3xl"
@@ -119,7 +119,7 @@
 
 				<div class="pointer-events-none flex h-16 w-full items-center justify-center opacity-30">
 					<div
-						class="absolute flex h-24 w-24 -rotate-12 items-center justify-center rounded-full border-[2px] border-[#0a523a] text-[#0a523a] opacity-30"
+						class="absolute flex h-24 w-24 -rotate-12 items-center justify-center rounded-full border-2 border-[#0a523a] text-[#0a523a] opacity-30"
 					>
 						<span class="text-[10px] font-bold tracking-widest uppercase">LUNAS</span>
 					</div>
