@@ -18,6 +18,8 @@
 	let letter = $derived(generateLetter(data));
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
+
 <svelte:head>
 	<title>Surat Resign Generator Online | kerjao.id</title>
 	<meta
@@ -30,78 +32,146 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-	<!-- Header -->
-	<div class="mb-10 text-center">
-		<h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-			Surat Resign Generator
-		</h1>
-		<p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 dark:text-gray-400">
-			Buat draf surat pengunduran diri dengan cepat, gratis, dan profesional.
-		</p>
+<div
+	class="relative min-h-screen overflow-hidden bg-slate-50 font-sans text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50 print:bg-white print:text-black"
+>
+	<!-- Background Ambient Shapes -->
+	<div class="pointer-events-none absolute inset-0 z-0 overflow-hidden print:hidden">
 		<div
-			class="mt-4 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
-		>
-			<svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-				><path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-				></path></svg
-			>
-			Data Anda aman, 100% diproses di browser tanpa disimpan.
-		</div>
+			class="absolute -top-[10%] -left-[10%] h-[40%] w-[50%] rounded-full bg-indigo-500/10 blur-[130px] dark:bg-indigo-600/15"
+		></div>
+		<div
+			class="absolute top-[20%] -right-[10%] h-[30%] w-[40%] rounded-full bg-purple-500/10 blur-[120px] dark:bg-purple-600/15"
+		></div>
+		<div
+			class="absolute -bottom-[20%] left-[20%] h-[50%] w-[50%] rounded-full bg-emerald-500/5 blur-[140px] dark:bg-emerald-600/10"
+		></div>
 	</div>
 
-	<!-- Main Content -->
-	<div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
-		<!-- Sidebar Form -->
-		<div class="flex flex-col gap-6 lg:col-span-4 xl:col-span-5">
-			<div
-				class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+	<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+		<!-- Header -->
+		<div class="mb-12 text-center print:hidden">
+			<a
+				href="/"
+				class="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-500 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
 			>
-				<h2 class="mb-6 text-lg font-medium text-gray-900 dark:text-white">Informasi Anda</h2>
-				<ResignForm bind:data />
-			</div>
-
-			<!-- Desktop Actions -->
+				<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+				</svg>
+				Kembali ke Beranda
+			</a>
+			<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+				<span class="bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"
+					>Surat Resign</span
+				> Generator
+			</h1>
+			<p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600 sm:text-xl dark:text-slate-400">
+				Buat draf surat pengunduran diri dengan cepat, gratis, dan profesional tanpa perlu ribet.
+			</p>
 			<div
-				class="hidden rounded-lg border border-gray-200 bg-gray-50 p-6 md:block dark:border-gray-700 dark:bg-gray-800/50 print:hidden"
+				class="animate-fade-in mt-6 inline-flex items-center rounded-full border border-indigo-500/20 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm ring-1 ring-indigo-500/10 ring-inset dark:border-indigo-400/20 dark:bg-indigo-900/40 dark:text-indigo-300"
 			>
-				<ResignActions {letter} />
+				<span class="relative mr-3 flex h-2 w-2">
+					<span
+						class="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"
+					></span>
+					<span class="relative inline-flex h-2 w-2 rounded-full bg-indigo-500"></span>
+				</span>
+				Aman & Privat: 100% diproses langsung di perambanmu.
 			</div>
 		</div>
 
-		<!-- Preview Area -->
-		<div class="flex flex-col gap-6 lg:col-span-8 xl:col-span-7">
-			<div
-				class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
-			>
-				<h2
-					class="mb-6 flex items-center justify-between text-lg font-medium text-gray-900 dark:text-white print:hidden"
+		<!-- Main Content -->
+		<div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+			<!-- Sidebar Form -->
+			<div class="flex flex-col gap-6 lg:col-span-5 xl:col-span-4 print:hidden">
+				<div
+					class="rounded-3xl border border-slate-200/60 bg-white/60 p-6 shadow-xl shadow-slate-200/20 backdrop-blur-xl sm:p-8 dark:border-slate-700/60 dark:bg-slate-800/60 dark:shadow-none"
 				>
-					<span>Pratinjau Surat</span>
-				</h2>
+					<div class="mb-6 flex items-center gap-3">
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-100 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400"
+						>
+							<svg
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+								/>
+							</svg>
+						</div>
+						<h2 class="text-xl font-bold text-slate-900 dark:text-white">Informasi Anda</h2>
+					</div>
 
-				<!-- Area for printing, removes padding & shadows globally in css -->
-				<div class="print-area">
-					<ResignPreview {letter} />
+					<ResignForm bind:data />
+				</div>
+
+				<!-- Desktop Actions -->
+				<div
+					class="hidden rounded-3xl border border-slate-200/60 bg-white/40 p-6 shadow-sm backdrop-blur-xl md:block dark:border-slate-700/60 dark:bg-slate-800/40"
+				>
+					<ResignActions {letter} />
 				</div>
 			</div>
 
-			<!-- Mobile Actions -->
-			<div
-				class="block rounded-lg border border-gray-200 bg-gray-50 p-6 md:hidden dark:border-gray-700 dark:bg-gray-800/50 print:hidden"
-			>
-				<ResignActions {letter} />
+			<!-- Preview Area -->
+			<div class="flex flex-col gap-6 lg:col-span-7 xl:col-span-8">
+				<div
+					class="relative rounded-3xl border border-slate-200/60 bg-slate-100/50 p-6 shadow-inner sm:p-8 dark:border-slate-700/60 dark:bg-slate-900/50 print:border-none print:bg-white print:p-0 print:shadow-none"
+				>
+					<h2
+						class="mb-6 flex items-center gap-3 text-xl font-bold text-slate-900 dark:text-white print:hidden"
+					>
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400"
+						>
+							<svg
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+								/>
+							</svg>
+						</div>
+						<span>Pratinjau Surat</span>
+					</h2>
+
+					<!-- Area for printing -->
+					<div class="print-area">
+						<ResignPreview {letter} />
+					</div>
+				</div>
+
+				<!-- Mobile Actions -->
+				<div
+					class="block rounded-3xl border border-slate-200/60 bg-white/40 p-6 shadow-sm backdrop-blur-xl md:hidden dark:border-slate-700/60 dark:bg-slate-800/40 print:hidden"
+				>
+					<ResignActions {letter} />
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- SEO Content -->
-	<div class="mt-20 print:hidden">
-		<SeoContent />
+		<!-- SEO Content -->
+		<div class="mt-24 print:hidden">
+			<SeoContent />
+		</div>
 	</div>
 </div>
 
