@@ -28,8 +28,7 @@
 </script>
 
 <div
-	class="relative mx-auto w-full bg-white p-10 font-serif leading-relaxed text-slate-900 shadow-2xl sm:p-14 print:m-0 print:p-0 print:text-black print:shadow-none"
-	style="min-height: 842px;"
+	class="relative mx-auto min-h-[1122px] w-full bg-white p-8 font-serif text-[14px] leading-relaxed text-slate-900 shadow-2xl sm:p-12 print:m-0 print:p-0 print:text-black print:shadow-none"
 >
 	<!-- Kop Surat -->
 	<div class="mb-8 border-b-4 border-slate-900 pb-6 text-center print:border-black">

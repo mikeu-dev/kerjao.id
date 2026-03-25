@@ -21,12 +21,13 @@
 
 <div class="space-y-8">
 	<!-- Pengirim (Vendor) -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Pihak Pengirim (Vendor / Anda)
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Pihak Pengirim (Vendor / Anda)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Identitas perusahaan Anda sebagai pihak penawar.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -104,12 +105,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Penerima (Client) -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Pihak Penerima (Calon Klien)
-		</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Pihak Penerima (Calon Klien)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Identitas entitas yang menerima penawaran.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -159,12 +161,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Konfigurasi Dokumen -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Konteks Penawaran (Header)
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Konteks Penawaran (Header)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Atribut persuratan dari penawaran ini.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label

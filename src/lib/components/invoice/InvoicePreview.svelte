@@ -27,8 +27,7 @@
 
 <!-- The wrapping container needs to look like an A4 paper -->
 <div
-	class="relative mx-auto w-full bg-white p-10 font-sans text-slate-900 shadow-2xl sm:p-14 print:m-0 print:p-0 print:shadow-none"
-	style="min-height: 842px;"
+	class="relative mx-auto min-h-[1122px] w-full bg-white p-8 font-sans text-[14px] leading-relaxed text-slate-900 shadow-2xl sm:p-12 print:m-0 print:p-0 print:shadow-none"
 >
 	<!-- Header -->
 	<div class="mb-12 flex flex-col items-start justify-between gap-8 sm:flex-row">

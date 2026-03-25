@@ -26,12 +26,13 @@
 
 <div class="space-y-8">
 	<!-- Identitas Perusahaan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Identitas Perusahaan (Kop Surat)
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Identitas Perusahaan (Kop Surat)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi perusahaan penerbit slip.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -67,12 +68,11 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Detail Slip Gaji -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Detail Slip & Periode
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Detail Slip & Periode</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Periode pembayaran gaji.</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 			<div>
 				<label
@@ -118,12 +118,13 @@
 	</div>
 
 	<!-- Identitas Karyawan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Data Karyawan
-		</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Data Karyawan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi karyawan penerima gaji.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label

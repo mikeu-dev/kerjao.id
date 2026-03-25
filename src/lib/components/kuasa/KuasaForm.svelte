@@ -6,12 +6,13 @@
 
 <div class="space-y-8">
 	<!-- PIHAK PERTAMA -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			PIHAK I (Pemberi Kuasa)
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">PIHAK I (Pemberi Kuasa)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Pihak yang memberikan wewenang (Anda).
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -75,13 +76,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- PIHAK KEDUA -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			PIHAK II (Penerima Kuasa)
-		</h3>
-		<p class="-mt-2 text-xs text-slate-500">Orang yang akan diberikan wewenang untuk bertindak.</p>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">PIHAK II (Penerima Kuasa)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Orang yang akan diberikan wewenang untuk bertindak.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -145,12 +146,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Wewenang & Deklarasi -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Tujuan Pendelegasian
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Tujuan Pendelegasian</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Deskripsi tindakan dan tanggal pendelegasian kuasa.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label

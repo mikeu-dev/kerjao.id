@@ -6,12 +6,13 @@
 
 <div class="space-y-8">
 	<!-- Identitas Transaksi -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Data Transaksi
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Data Transaksi</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Rincian nilai dan tujuan pembayaran.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -85,12 +86,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Info Penandatangan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Pengesahan (Penerima)
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Pengesahan (Penerima)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Pihak yang menerima dan menandatangani kwitansi.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label

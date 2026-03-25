@@ -6,12 +6,13 @@
 
 <div class="space-y-8">
 	<!-- Kop Surat & Nomor -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Kop Surat & Identitas
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Kop Surat & Identitas</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Identitas perusahaan penerbit paklaring.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -73,12 +74,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Data Karyawan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Informasi Karyawan
-		</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Informasi Karyawan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Detail riwayat kerja karyawan yang bersangkutan.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -154,12 +156,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Data Penandatangan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Pihak Penandatangan (HRD / Direksi)
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Pihak Penandatangan (HRD / Direksi)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Wakil perusahaan yang mensahkan surat paklaring ini.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label

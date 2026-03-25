@@ -6,12 +6,13 @@
 
 <div class="space-y-8">
 	<!-- Info Penerima (Perusahaan) -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Tujuan Lamaran (Perusahaan)
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Tujuan Lamaran (Perusahaan)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi HRD dan alamat perusahaan tujuan.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -81,12 +82,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Info Lowongan Kerja -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Posisi & Sumber Info
-		</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Posisi & Sumber Info</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Posisi apa yang dilamar dan sumber Anda mendapatkan informasi.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -122,12 +124,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Data Diri Pelamar -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Data Diri Anda (Pelamar)
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Data Diri Anda (Pelamar)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi pribadi, pendidikan terakhir, dan alamat pelamar.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -231,12 +234,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Lampiran dan Skill Tambahan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Kualifikasi & Lampiran
-		</h3>
+	<div class="space-y-4 border-l-4 border-amber-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Kualifikasi & Lampiran</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Deskripsi keahlian khusus dan file yang dilampirkan.
+			</p>
+		</div>
 
 		<div class="mb-4">
 			<label

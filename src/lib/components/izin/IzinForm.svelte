@@ -7,12 +7,13 @@
 
 <div class="space-y-8">
 	<!-- Pengaturan Umum Izin -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Tujuan Pengajuan
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Tujuan Pengajuan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Jenis izin dan tujuan pembuatan surat.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -64,12 +65,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Identitas Karyawan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Identitas Karyawan
-		</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Identitas Karyawan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi data diri Anda di perusahaan.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label
@@ -119,12 +121,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Detail Durasi & Alasan -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Durasi & Tujuan Absen
-		</h3>
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Durasi & Tujuan Absen</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Jadwal ketidakhadiran Anda dan penjelasannya.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -183,12 +186,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Ditujukan Kepada -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Penerima Surat (Atasan/HRD)
-		</h3>
+	<div class="space-y-4 border-l-4 border-amber-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Penerima Surat (Atasan/HRD)</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi ke manajer atau HRD terkait.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div class="sm:col-span-2">
 				<label

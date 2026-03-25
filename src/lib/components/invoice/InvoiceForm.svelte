@@ -22,12 +22,11 @@
 
 <div class="space-y-8">
 	<!-- Invoice Details Section -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Detail Invoice
-		</h3>
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Detail Invoice</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Atribut penagihan Anda.</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -79,12 +78,13 @@
 	<!-- Entities Section -->
 	<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
 		<!-- Vendor -->
-		<div class="space-y-4">
-			<h3
-				class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-			>
-				Pengirim (Anda)
-			</h3>
+		<div class="space-y-4 border-l-4 border-rose-500 pl-4">
+			<div>
+				<h3 class="font-bold text-slate-800 dark:text-white">Pengirim (Anda)</h3>
+				<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+					Pihak yang menagih pembayaran.
+				</p>
+			</div>
 			<div>
 				<label
 					for="vendorName"
@@ -116,12 +116,13 @@
 		</div>
 
 		<!-- Client -->
-		<div class="space-y-4">
-			<h3
-				class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-			>
-				Penerima (Klien)
-			</h3>
+		<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+			<div>
+				<h3 class="font-bold text-slate-800 dark:text-white">Penerima (Klien)</h3>
+				<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+					Pihak yang ditagih (pembayar).
+				</p>
+			</div>
 			<div>
 				<label
 					for="clientName"
@@ -156,12 +157,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Line Items Section -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Daftar Item
-		</h3>
+	<div class="space-y-4 border-l-4 border-amber-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Daftar Item</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Rincian produk atau jasa yang ditagihkan.
+			</p>
+		</div>
 
 		<div class="space-y-4">
 			{#each data.items as item (item.id)}
@@ -251,12 +253,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Financials Section -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Diskon & Pajak
-		</h3>
+	<div class="space-y-4 border-l-4 border-violet-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Diskon & Pajak</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Penyesuaian nominal akhir tagihan.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label
@@ -297,12 +300,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Additional Notes Section -->
-	<div class="space-y-4">
-		<h3
-			class="border-b border-slate-200 pb-2 font-bold text-slate-800 dark:border-slate-700/60 dark:text-white"
-		>
-			Keterangan Tambahan
-		</h3>
+	<div class="space-y-4 border-l-4 border-cyan-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Keterangan Tambahan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi pembayaran atau instruksi tambahan.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 			<div>
 				<label

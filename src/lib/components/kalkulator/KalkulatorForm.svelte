@@ -8,7 +8,13 @@
 
 <div class="space-y-6">
 	<!-- Pendapatan -->
-	<div class="space-y-5">
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
+		<div>
+			<h3 class="font-bold text-slate-800 dark:text-white">Rincian Pendapatan</h3>
+			<p class="mt-1 mb-4 text-xs text-slate-500 dark:text-slate-400">
+				Komponen pendapatan rutin bulanan.
+			</p>
+		</div>
 		<div>
 			<label
 				for="gajiPokok"
@@ -76,8 +82,13 @@
 	<hr class="border-slate-200 dark:border-slate-800" />
 
 	<!-- Potongan -->
-	<div class="space-y-4 pt-2">
-		<h3 class="text-base font-semibold text-slate-900 dark:text-white">Atur Potongan</h3>
+	<div class="space-y-4 border-l-4 border-rose-500 pt-2 pl-4">
+		<div>
+			<h3 class="text-base font-semibold text-slate-900 dark:text-white">Atur Potongan</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Pilih komponen yang akan dipotong dari gaji.
+			</p>
+		</div>
 
 		<label class="group relative flex cursor-pointer items-start">
 			<div class="flex h-6 items-center">

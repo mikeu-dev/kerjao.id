@@ -13,113 +13,124 @@
 	];
 </script>
 
-<div class="space-y-6">
-	<div class="space-y-5">
-		<!-- Nama -->
+<div class="space-y-8">
+	<!-- Data Pengunduran Diri -->
+	<div class="space-y-4 border-l-4 border-indigo-500 pl-4">
 		<div>
-			<label
-				for="nama"
-				class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
-			>
-				Nama Lengkap
-			</label>
-			<input
-				type="text"
-				id="nama"
-				bind:value={data.nama}
-				placeholder="contoh: Budi Santoso"
-				class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
-			/>
+			<h3 class="font-bold text-slate-800 dark:text-white">Data Pengunduran Diri</h3>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Informasi identitas, jabatan, dan alasan Anda.
+			</p>
 		</div>
-
-		<!-- Posisi -->
-		<div>
-			<label
-				for="posisi"
-				class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
-			>
-				Posisi / Jabatan
-			</label>
-			<input
-				type="text"
-				id="posisi"
-				bind:value={data.posisi}
-				placeholder="contoh: Software Engineer"
-				class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
-			/>
-		</div>
-
-		<!-- Perusahaan -->
-		<div>
-			<label
-				for="perusahaan"
-				class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
-			>
-				Nama Perusahaan
-			</label>
-			<input
-				type="text"
-				id="perusahaan"
-				bind:value={data.perusahaan}
-				placeholder="contoh: PT Maju Jaya"
-				class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
-			/>
-		</div>
-
-		<!-- Tanggal -->
-		<div>
-			<label
-				for="tanggal"
-				class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
-			>
-				Tanggal Pengunduran Diri
-			</label>
-			<input
-				type="date"
-				id="tanggal"
-				bind:value={data.tanggal}
-				class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
-			/>
-		</div>
-
-		<!-- Alasan -->
-		<div>
-			<label
-				for="alasan"
-				class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
-			>
-				Alasan Resign
-			</label>
-			<select
-				id="alasan"
-				bind:value={data.alasan}
-				class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
-			>
-				{#each alasanOptions as opt (opt)}
-					<option value={opt}>{opt}</option>
-				{/each}
-			</select>
-		</div>
-
-		<!-- Alasan Custom -->
-		{#if data.alasan === 'Lainnya'}
-			<div class="animate-fade-in">
+		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+			<!-- Nama -->
+			<div>
 				<label
-					for="alasanCustom"
+					for="nama"
 					class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
 				>
-					Tuliskan Alasan Anda
+					Nama Lengkap
 				</label>
 				<input
 					type="text"
-					id="alasanCustom"
-					bind:value={data.alasanCustom}
-					placeholder="contoh: pindah domisili"
+					id="nama"
+					bind:value={data.nama}
+					placeholder="contoh: Budi Santoso"
 					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
 				/>
 			</div>
-		{/if}
 
+			<!-- Posisi -->
+			<div>
+				<label
+					for="posisi"
+					class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
+				>
+					Posisi / Jabatan
+				</label>
+				<input
+					type="text"
+					id="posisi"
+					bind:value={data.posisi}
+					placeholder="contoh: Software Engineer"
+					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
+				/>
+			</div>
+
+			<!-- Perusahaan -->
+			<div>
+				<label
+					for="perusahaan"
+					class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
+				>
+					Nama Perusahaan
+				</label>
+				<input
+					type="text"
+					id="perusahaan"
+					bind:value={data.perusahaan}
+					placeholder="contoh: PT Maju Jaya"
+					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
+				/>
+			</div>
+
+			<!-- Tanggal -->
+			<div>
+				<label
+					for="tanggal"
+					class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
+				>
+					Tanggal Pengunduran Diri
+				</label>
+				<input
+					type="date"
+					id="tanggal"
+					bind:value={data.tanggal}
+					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
+				/>
+			</div>
+
+			<!-- Alasan -->
+			<div>
+				<label
+					for="alasan"
+					class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
+				>
+					Alasan Resign
+				</label>
+				<select
+					id="alasan"
+					bind:value={data.alasan}
+					class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
+				>
+					{#each alasanOptions as opt (opt)}
+						<option value={opt}>{opt}</option>
+					{/each}
+				</select>
+			</div>
+
+			<!-- Alasan Custom -->
+			{#if data.alasan === 'Lainnya'}
+				<div class="animate-fade-in">
+					<label
+						for="alasanCustom"
+						class="mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300"
+					>
+						Tuliskan Alasan Anda
+					</label>
+					<input
+						type="text"
+						id="alasanCustom"
+						bind:value={data.alasanCustom}
+						placeholder="contoh: pindah domisili"
+						class="block w-full rounded-xl border-slate-200 bg-white/50 px-4 py-2.5 shadow-sm transition-all duration-200 focus:border-indigo-500 focus:bg-white focus:ring-indigo-500 sm:text-sm dark:border-slate-700/60 dark:bg-slate-900/50 dark:text-white dark:focus:border-indigo-400 dark:focus:bg-slate-900 dark:focus:ring-indigo-400"
+					/>
+				</div>
+			{/if}
+		</div>
+	</div>
+	<hr class="border-slate-200 dark:border-slate-800" />
+	<div class="space-y-4 border-l-4 border-emerald-500 pl-4">
 		<!-- Tone -->
 		<div class="pt-2">
 			<span class="mb-3 block text-sm font-semibold text-slate-700 dark:text-slate-300">
