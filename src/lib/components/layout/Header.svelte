@@ -6,7 +6,6 @@
 <nav
 	class="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 lg:px-8 print:hidden"
 >
-	<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 	<a
 		href="/"
 		class="flex items-center gap-2 bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-2xl font-extrabold tracking-tighter text-transparent transition-transform hover:scale-[1.02]"
@@ -27,7 +26,10 @@
 		kerjao.id
 	</a>
 	<div class="flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
-		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+		<a
+			href="/kalkulator-gaji"
+			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Kalkulator Gaji</a
+		>
 		<a
 			href="/surat-resign"
 			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Surat Resign</a
