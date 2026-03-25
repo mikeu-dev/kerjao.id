@@ -175,5 +175,29 @@ export const toolsRegistry: ToolMetadata[] = [
 		category: 'Bisnis & HR',
 		icon: '📜',
 		tags: ['kontrak', 'kerja', 'karyawan', 'hrd']
+	},
+	{
+		name: 'Izin Orang Tua',
+		description: 'Surat pernyataan izin orang tua untuk berbagai keperluan.',
+		path: '/surat-izin-orang-tua',
+		category: 'Personal & Umum',
+		icon: '👨‍👩-👧',
+		tags: ['izin', 'ortu', 'wali', 'kegiatan']
+	},
+	{
+		name: 'Pengantar RT/RW',
+		description: 'Surat pengantar resmi untuk urusan birokrasi warga.',
+		path: '/surat-pengantar-rt-rw',
+		category: 'Personal & Umum',
+		icon: '🏘️',
+		tags: ['rt', 'rw', 'ktp', 'domisili']
+	},
+	{
+		name: 'Surat Pernyataan',
+		description: 'Template fleksibel untuk berbagai macam pernyataan.',
+		path: '/surat-pernyataan',
+		category: 'Personal & Umum',
+		icon: '✍️',
+		tags: ['pernyataan', 'janji', 'umum']
 	}
 ];

@@ -148,6 +148,7 @@
 										<a href="/surat-resign" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Resign</a>
 										<a href="/surat-kuasa" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Kuasa</a>
 										<a href="/surat-nda" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat NDA</a>
+										<a href="/surat-pernyataan" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Pernyataan</a>
 										<a href="/cv-maker" class="font-bold text-indigo-600">CV ATS ✨</a>
 									</div>
 								</div>
@@ -165,6 +166,8 @@
 										<a href="/surat-sewa" class="hover:text-indigo-600 dark:hover:text-indigo-400">Sewa Properti</a>
 										<a href="/surat-perintah-kerja" class="hover:text-indigo-600 dark:hover:text-indigo-400">Perintah Kerja (SPK)</a>
 										<a href="/surat-kontrak-kerja" class="hover:text-indigo-600 dark:hover:text-indigo-400">Kontrak Kerja (PKWT)</a>
+										<a href="/surat-izin-orang-tua" class="hover:text-indigo-600 dark:hover:text-indigo-400">Izin Orang Tua</a>
+										<a href="/surat-pengantar-rt-rw" class="hover:text-indigo-600 dark:hover:text-indigo-400">Pengantar RT/RW</a>
 										<a href="/surat-jalan" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Jalan</a>
 									</div>
 								</div>

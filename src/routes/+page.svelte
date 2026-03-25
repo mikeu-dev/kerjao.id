@@ -323,6 +323,60 @@
 				</p>
 			</a>
 
+			<!-- Tool 0.10: Surat Izin Orang Tua -->
+			<a
+				href="/surat-izin-orang-tua"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-rose-200/80 bg-rose-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-400 hover:shadow-xl dark:border-rose-700/80 dark:bg-rose-900/10 dark:hover:border-rose-600"
+			>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-rose-600 dark:text-white dark:group-hover:text-rose-400"
+				>
+					Izin Orang Tua <span
+						class="ml-2 inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-semibold text-rose-800 dark:bg-rose-900 dark:text-rose-200"
+						>Umum</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Buat surat izin orang tua untuk kerja atau sekolah secara otomatis.
+				</p>
+			</a>
+
+			<!-- Tool 0.11: Surat Pengantar RT/RW -->
+			<a
+				href="/surat-pengantar-rt-rw"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-emerald-200/80 bg-emerald-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-400 hover:shadow-xl dark:border-emerald-700/80 dark:bg-emerald-900/10 dark:hover:border-emerald-600"
+			>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-emerald-600 dark:text-white dark:group-hover:text-emerald-400"
+				>
+					Pengantar RT/RW <span
+						class="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-semibold text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200"
+						>Warga</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Dokumen dasar untuk pengurusan KTP, Domisili, dan urusan birokrasi lainnya.
+				</p>
+			</a>
+
+			<!-- Tool 0.12: Surat Pernyataan -->
+			<a
+				href="/surat-pernyataan"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-50/20 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-slate-400 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-900/10 dark:hover:border-slate-600"
+			>
+				<h3
+					class="mb-2 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+				>
+					Surat Pernyataan <span
+						class="ml-2 inline-flex items-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+						>Universal</span
+					>
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Template bebas untuk berbagai macam surat pernyataan resmi dengan materai.
+				</p>
+			</a>
+
 			<!-- Tool 1: Kalkulator Gaji -->
 			<a
 				href="/kalkulator-gaji"
