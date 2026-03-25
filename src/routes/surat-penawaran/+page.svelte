@@ -3,6 +3,7 @@
 	import PenawaranPreview from '$lib/components/penawaran/PenawaranPreview.svelte';
 	import PenawaranActions from '$lib/components/penawaran/PenawaranActions.svelte';
 	import SeoContent from '$lib/components/penawaran/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { PenawaranData } from '$lib/utils/penawaran';
 	import { SvelteDate } from 'svelte/reactivity';
@@ -44,7 +45,7 @@
 	keywords="surat penawaran harga, contoh quotation, form penawaran b2b"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -150,6 +151,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-penawaran" category="Bisnis & HR" />
 </div>
 
 <style>

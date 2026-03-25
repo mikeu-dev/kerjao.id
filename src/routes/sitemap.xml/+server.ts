@@ -1,31 +1,11 @@
+import { toolsRegistry } from '$lib/utils/tools-registry';
+
 export async function GET() {
+	const toolPaths = toolsRegistry.map((tool) => tool.path);
 	const staticPages = [
 		'',
-		'/cv-maker',
-		'/surat-sewa',
-		'/surat-perintah-kerja',
-		'/surat-jual-beli',
-		'/surat-nda',
-		'/surat-kontrak-kerja',
-		'/surat-izin-orang-tua',
-		'/surat-pengantar-rt-rw',
-		'/surat-pernyataan',
 		'/artikel',
-		'/kalkulator-gaji',
-		'/invoice',
-		'/paklaring',
-		'/surat-lamaran',
-		'/kwitansi',
-		'/surat-perjanjian',
-		'/surat-peringatan',
-		'/surat-kuasa',
-		'/surat-izin',
-		'/slip-gaji',
-		'/surat-hutang',
-		'/surat-jalan',
-		'/purchase-order',
-		'/surat-penawaran',
-		'/surat-resign'
+		...toolPaths
 	];
 
 	// Fetch dynamic articles for sitemap

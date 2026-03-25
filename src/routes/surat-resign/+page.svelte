@@ -3,6 +3,7 @@
 	import ResignPreview from '$lib/components/resign/ResignPreview.svelte';
 	import ResignActions from '$lib/components/resign/ResignActions.svelte';
 	import SeoContent from '$lib/components/resign/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateLetter, type ResignData } from '$lib/utils/generateLetter';
 
@@ -27,7 +28,7 @@
 	keywords="surat resign, pengunduran diri, contoh surat resign, otomatis generator"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<!-- We omit the "Kembali ke Beranda" link since the Global Header handles that now! -->
@@ -143,6 +144,8 @@
 	<div class="mt-24 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-resign" category="Karir" />
 </div>
 
 <style>

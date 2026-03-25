@@ -3,6 +3,7 @@
 	import KwitansiPreview from '$lib/components/kwitansi/KwitansiPreview.svelte';
 	import KwitansiActions from '$lib/components/kwitansi/KwitansiActions.svelte';
 	import SeoContent from '$lib/components/kwitansi/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateKwitansiNumber, type KwitansiData } from '$lib/utils/kwitansi';
 
@@ -30,7 +31,7 @@
 	keywords="kwitansi pemabayaran, kwitansi online, cara buat kwitansi, bukti pembayaran gratis"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -148,6 +149,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/kwitansi" category="Keuangan" />
 </div>
 
 <style>

@@ -3,6 +3,7 @@
 	import JalanPreview from '$lib/components/jalan/JalanPreview.svelte';
 	import JalanActions from '$lib/components/jalan/JalanActions.svelte';
 	import SeoContent from '$lib/components/jalan/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { JalanData } from '$lib/utils/surat-jalan';
 	import { SvelteDate } from 'svelte/reactivity';
@@ -48,7 +49,7 @@
 	keywords="surat jalan barang, delivery note, resi pengiriman logistik, tanda terima barang"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -155,6 +156,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-jalan" category="Bisnis & HR" />
 </div>
 
 <style>

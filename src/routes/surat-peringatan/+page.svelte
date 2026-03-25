@@ -3,6 +3,7 @@
 	import PeringatanPreview from '$lib/components/peringatan/PeringatanPreview.svelte';
 	import PeringatanActions from '$lib/components/peringatan/PeringatanActions.svelte';
 	import SeoContent from '$lib/components/peringatan/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSPNumber, type PeringatanData } from '$lib/utils/peringatan';
 
@@ -35,7 +36,7 @@
 	keywords="surat peringatan karyawan, contoh sp1, sp2, surat teguran hrd"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -141,6 +142,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-peringatan" category="Bisnis & HR" />
 </div>
 
 <style>

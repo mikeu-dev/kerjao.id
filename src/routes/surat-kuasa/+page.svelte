@@ -3,6 +3,7 @@
 	import KuasaPreview from '$lib/components/kuasa/KuasaPreview.svelte';
 	import KuasaActions from '$lib/components/kuasa/KuasaActions.svelte';
 	import SeoContent from '$lib/components/kuasa/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { KuasaData } from '$lib/utils/kuasa';
 
@@ -27,7 +28,7 @@
 	keywords="buat surat kuasa, surat kuasa bank, surat kuasa bpkb, generator surat kuasa"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -133,6 +134,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-kuasa" category="Personal & Umum" />
 </div>
 
 <style>

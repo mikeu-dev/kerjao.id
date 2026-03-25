@@ -3,6 +3,7 @@
 	import SlipGajiPreview from '$lib/components/kalkulator/SlipGajiPreview.svelte';
 	import KalkulatorActions from '$lib/components/kalkulator/KalkulatorActions.svelte';
 	import SeoContent from '$lib/components/kalkulator/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { calculateGaji, type GajiData } from '$lib/utils/calculateGaji';
 
@@ -26,7 +27,7 @@
 	keywords="kalkulator gaji, hitung thp, take home pay, kalkulator pph 21 ter 2024, slip gaji otomatis"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -135,7 +136,6 @@
 		</div>
 	</div>
 
-	<!-- SEO Explanation Box -->
 	<div class="mx-auto mt-20 max-w-4xl print:hidden">
 		<div
 			class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800"
@@ -143,6 +143,8 @@
 			<SeoContent />
 		</div>
 	</div>
+
+	<RelatedTools currentPath="/kalkulator-gaji" category="Keuangan" />
 </div>
 
 <style>

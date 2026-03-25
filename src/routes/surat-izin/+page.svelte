@@ -3,6 +3,7 @@
 	import IzinPreview from '$lib/components/izin/IzinPreview.svelte';
 	import IzinActions from '$lib/components/izin/IzinActions.svelte';
 	import SeoContent from '$lib/components/izin/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { IzinData } from '$lib/utils/izin';
 
@@ -28,7 +29,7 @@
 	keywords="surat izin cuti, surat tidak masuk kerja, izin sakit kerja, generator surat izin"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -134,6 +135,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/surat-izin" category="Personal & Umum" />
 </div>
 
 <style>

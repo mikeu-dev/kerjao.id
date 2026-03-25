@@ -3,6 +3,7 @@
 	import PaklaringPreview from '$lib/components/paklaring/PaklaringPreview.svelte';
 	import PaklaringActions from '$lib/components/paklaring/PaklaringActions.svelte';
 	import SeoContent from '$lib/components/paklaring/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import { generateSuratNumber, type PaklaringData } from '$lib/utils/paklaring';
 
@@ -35,7 +36,7 @@
 	keywords="buat surat paklaring, surat pengalaman kerja, generator paklaring, paklaring bpjs"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -154,6 +155,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/paklaring" category="Bisnis & HR" />
 </div>
 
 <style>

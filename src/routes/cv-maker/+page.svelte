@@ -6,6 +6,7 @@
 	import CvPreview from '$lib/components/cv/CvPreview.svelte';
 	import CvActions from '$lib/components/cv/CvActions.svelte';
 	import SeoContent from '$lib/components/cv/SeoContent.svelte';
+	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { CvData } from '$lib/utils/cv-maker';
 
@@ -34,7 +35,7 @@
 	keywords="cv ats friendly, buat cv online, generator cv gratis, harvard style resume"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<div
@@ -169,6 +170,8 @@
 	<div class="mt-16 print:hidden">
 		<SeoContent />
 	</div>
+
+	<RelatedTools currentPath="/cv-maker" category="Karir" />
 </div>
 
 <style>
