@@ -154,6 +154,11 @@
 									>Sewa Properti</a
 								>
 								<a
+									href="/surat-perintah-kerja"
+									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+									>Perintah Kerja (SPK)</a
+								>
+								<a
 									href="/surat-jalan"
 									class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 									>Surat Jalan</a

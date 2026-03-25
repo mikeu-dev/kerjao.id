@@ -3,6 +3,7 @@ export async function GET() {
 		'',
 		'/cv-maker',
 		'/surat-sewa',
+		'/surat-perintah-kerja',
 		'/artikel',
 		'/kalkulator-gaji',
 		'/invoice',
