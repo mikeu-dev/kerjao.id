@@ -25,7 +25,12 @@
 		</svg>
 		kerjao.id
 	</a>
-	<div class="flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
+	<div
+		class="flex items-center gap-4 text-sm font-semibold text-slate-600 sm:gap-6 dark:text-slate-300"
+	>
+		<a href="/invoice" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+			>Buat Invoice</a
+		>
 		<a
 			href="/kalkulator-gaji"
 			class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Kalkulator Gaji</a
