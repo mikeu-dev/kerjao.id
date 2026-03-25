@@ -199,7 +199,43 @@
 				</p>
 			</a>
 
-			<!-- Tool 4: Surat Resign -->
+			<!-- Tool 4: Surat Lamaran Kerja -->
+			<a
+				href="/surat-lamaran"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-teal-700"
+			>
+				<div
+					class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full bg-teal-500/10 blur-2xl transition-all group-hover:bg-teal-500/20"
+				></div>
+				<div
+					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 ring-1 ring-teal-500/10 ring-inset dark:bg-teal-500/10 dark:text-teal-400 dark:ring-teal-500/20"
+				>
+					<svg
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+						/>
+					</svg>
+				</div>
+				<h3
+					class="mb-2 text-2xl font-bold text-slate-900 transition-colors group-hover:text-teal-600 dark:text-white dark:group-hover:text-teal-400"
+				>
+					Surat Lamaran Kerja
+				</h3>
+				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
+					Tulis *Cover Letter* atau Surat Lamaran kerja formal dalam hitungan detik. Struktur tata
+					bahasa baku siap pakai membantu meningkatkan peluang dipanggil wawancara.
+				</p>
+			</a>
+
+			<!-- Tool 5: Surat Resign -->
 			<a
 				href="/surat-resign"
 				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/80 dark:hover:border-rose-700"
