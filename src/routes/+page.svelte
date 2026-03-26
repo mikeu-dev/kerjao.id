@@ -135,7 +135,7 @@
 
 <!-- Hero Section -->
 <main
-	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-20 pb-16 text-center sm:pt-24 lg:pt-20 lg:pt-32"
+	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-20 pb-16 text-center sm:pt-24 lg:pt-32"
 >
 	<!-- Pill Tag -->
 	<div
