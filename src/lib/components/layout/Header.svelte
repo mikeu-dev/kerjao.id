@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { browser } from '$app/environment';
+	import { resolve } from '$app/paths';
 	import { toolsRegistry } from '$lib/utils/tools-registry';
 
 	let isScrolled = $state(false);
@@ -188,7 +189,7 @@
 								</div>
 							</div>
 							<div class="mt-8 border-t border-slate-100 pt-6 dark:border-slate-800">
-								<a href="/" class="flex items-center justify-center gap-2 text-xs font-bold text-slate-400 hover:text-indigo-600">
+								<a href={resolve('/semua-alat')} class="flex items-center justify-center gap-2 text-xs font-bold text-slate-400 hover:text-indigo-600">
 									LIHAT SEMUA 20+ ALAT <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
 								</a>
 							</div>
