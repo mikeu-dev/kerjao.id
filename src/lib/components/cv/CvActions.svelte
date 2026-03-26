@@ -1,5 +1,5 @@
 <script lang="ts">
-	let printed = false;
+	let printed = $state(false);
 
 	function handlePrint() {
 		printed = true;

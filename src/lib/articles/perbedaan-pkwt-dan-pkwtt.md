@@ -1,8 +1,11 @@
----
-title: 'Perbedaan PKWT dan PKWTT: Panduan Kontrak Kerja Berdasarkan UU Cipta Kerja'
-description: 'Pahami hak Anda sebelum tanda tangan! Inilah perbedaan mendasar antara Karyawan Kontrak (PKWT) dan Karyawan Tetap (PKWTT) menurut regulasi ketenagakerjaan terbaru di Indonesia.'
-date: '2026-03-25'
----
+<script module>
+	export const metadata = {
+		title: 'Perbedaan PKWT dan PKWTT: Panduan Kontrak Kerja Berdasarkan UU Cipta Kerja',
+		description:
+			'Pahami hak Anda sebelum tanda tangan! Inilah perbedaan mendasar antara Karyawan Kontrak (PKWT) dan Karyawan Tetap (PKWTT) menurut regulasi ketenagakerjaan terbaru di Indonesia.',
+		date: '2026-03-25'
+	};
+</script>
 
 Mendapatkan tawaran pekerjaan (Offering Letter) adalah momen yang membahagiakan. Namun, sebelum Anda terburu-buru menandatangani kontrak kerja, ada satu hal sangat krusial yang wajib Anda pahami: **Apakah status Anda PKWT atau PKWTT?**
 

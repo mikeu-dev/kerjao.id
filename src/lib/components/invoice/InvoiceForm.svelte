@@ -33,7 +33,7 @@
 		</div>
 		
 		<div class="mb-4">
-			<label class="mb-1.5 block text-xs font-semibold text-slate-500 uppercase">Bahasa Dokumen</label>
+			<div class="mb-1.5 block text-xs font-semibold text-slate-500 uppercase">Bahasa Dokumen</div>
 			<div class="flex gap-2 max-w-[300px]">
 				<button 
 					type="button"
