@@ -3,7 +3,7 @@ export interface ToolMetadata {
 	description: string;
 	path: string;
 	category: 'Karir' | 'Bisnis & HR' | 'Keuangan' | 'Personal & Umum' | 'Edukasi';
-	icon: string;
+	icon: string; // Lucide icon name (e.g., 'Banknote', 'Briefcase')
 	tags: string[];
 	featured?: boolean;
 	color?: 'indigo' | 'rose' | 'blue' | 'emerald' | 'orange' | 'teal' | 'red' | 'amber' | 'cyan' | 'violet' | 'slate';
@@ -16,7 +16,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Simulasi perhitungan gaji bersih (Take-Home Pay) instan. Lengkap dengan potongan BPJS Kes/KTK dan estimasi Pajak PPh 21 TER 2024.',
 		path: '/kalkulator-gaji',
 		category: 'Keuangan',
-		icon: 'salary',
+		icon: 'Banknote',
 		tags: ['pajak', 'gaji', 'karyawan', 'pph21'],
 		featured: true,
 		color: 'emerald'
@@ -26,7 +26,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Generator CV satu kolom ala Harvard. Dijamin 99% lolos seleksi robot pelacak pelamar (ATS) HRD perusahaan Multinasional.',
 		path: '/cv-maker',
 		category: 'Karir',
-		icon: 'cv',
+		icon: 'FileUser',
 		tags: ['cv', 'resume', 'lamaran', 'ats'],
 		featured: true,
 		color: 'rose',
@@ -37,7 +37,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Solusi andalan freelancer. Buat dokumen tagihan yang elegan dan kalkulasi PPN/Diskon secara reaktif, lalu unduh ke format PDF.',
 		path: '/invoice',
 		category: 'Bisnis & HR',
-		icon: 'invoice',
+		icon: 'FileText',
 		tags: ['tagihan', 'pembayaran', 'freelance'],
 		featured: true,
 		color: 'blue'
@@ -47,7 +47,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Solusi bukti bayar instan ala buku kwitansi klasik dengan fitur Terbilang yang mengubah nominal menjadi teks ejaan otomatis.',
 		path: '/kwitansi',
 		category: 'Keuangan',
-		icon: 'receipt',
+		icon: 'Receipt',
 		tags: ['bukti', 'bayar', 'transaksi'],
 		featured: true,
 		color: 'emerald'
@@ -57,7 +57,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Draf surat pengunduran diri formal and sopan untuk pengajuan pengunduran diri dari perusahaan.',
 		path: '/surat-resign',
 		category: 'Karir',
-		icon: 'resign',
+		icon: 'LogOut',
 		tags: ['resign', 'keluar', 'kerja'],
 		color: 'indigo'
 	},
@@ -66,7 +66,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Tulis Cover Letter atau Surat Lamaran kerja formal dalam hitungan detik untuk meningkatkan peluang wawancara.',
 		path: '/surat-lamaran',
 		category: 'Karir',
-		icon: 'letter',
+		icon: 'Mail',
 		tags: ['lamaran', 'kerja', 'apply'],
 		featured: true,
 		color: 'teal'
@@ -76,7 +76,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Generator Surat Keterangan Kerja standar resmi HRD, lengkap dengan perhitungan masa bakti instan.',
 		path: '/paklaring',
 		category: 'Bisnis & HR',
-		icon: 'work',
+		icon: 'Briefcase',
 		tags: ['pengalaman', 'kerja', 'keterangan'],
 		featured: true,
 		color: 'orange'
@@ -86,7 +86,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Generator MoU Surat Perjanjian Kerja Sama dengan templat pasal-pasal standar yang diakui and siap cetak.',
 		path: '/surat-perjanjian',
 		category: 'Bisnis & HR',
-		icon: 'contract',
+		icon: 'FileSignature',
 		tags: ['kontrak', 'proyek', 'kerjasama'],
 		featured: true,
 		color: 'red'
@@ -96,7 +96,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Draf instan Surat Peringatan (SP1, SP2, SP3) dengan tata bahasa HR yang diakui untuk kedisiplinan karyawan.',
 		path: '/surat-peringatan',
 		category: 'Bisnis & HR',
-		icon: 'warning',
+		icon: 'AlertTriangle',
 		tags: ['sanksi', 'disiplin', 'karyawan'],
 		featured: true,
 		color: 'amber'
@@ -106,7 +106,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Cetak instan Surat Kuasa legal untuk mengurus BPKB, Paspor, atau pencairan dana bank dengan ruang materai.',
 		path: '/surat-kuasa',
 		category: 'Personal & Umum',
-		icon: 'power',
+		icon: 'UserCheck',
 		tags: ['otoritas', 'wakil', 'legal'],
 		featured: true,
 		color: 'cyan'
@@ -116,7 +116,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Susun surat permohonan absen formal untuk atasan atau HRD dalam hitungan detik untuk berbagai keperluan.',
 		path: '/surat-izin',
 		category: 'Personal & Umum',
-		icon: 'calendar',
+		icon: 'Calendar',
 		tags: ['cuti', 'sakit', 'absen'],
 		featured: true,
 		color: 'teal'
@@ -126,7 +126,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Buat struk bukti gajian resmi! Tambah baris pendapatan maupun potongan secara dinamis and cetak A5 bersih.',
 		path: '/slip-gaji',
 		category: 'Bisnis & HR',
-		icon: 'payslip',
+		icon: 'ScrollText',
 		tags: ['slip', 'gaji', 'manajemen'],
 		featured: true,
 		color: 'indigo'
@@ -136,7 +136,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Buat quotation profesional untuk calon klien dengan rincian harga barang atau jasa yang ditawarkan.',
 		path: '/surat-penawaran',
 		category: 'Bisnis & HR',
-		icon: 'offer',
+		icon: 'Handshake',
 		tags: ['penawaran', 'sewa', 'jasa'],
 		color: 'blue'
 	},
@@ -145,7 +145,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Pemesanan barang atau jasa resmi perusahaan dengan format yang profesional and mudah disimpan.',
 		path: '/purchase-order',
 		category: 'Bisnis & HR',
-		icon: 'po',
+		icon: 'ShoppingCart',
 		tags: ['beli', 'order', 'pengadaan'],
 		featured: true,
 		color: 'blue'
@@ -155,7 +155,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Bukti pengiriman barang antar lokasi yang sah and profesional untuk keperluan logistik bisnis.',
 		path: '/surat-jalan',
 		category: 'Bisnis & HR',
-		icon: 'delivery',
+		icon: 'Truck',
 		tags: ['logistic', 'kirim', 'barang'],
 		featured: true,
 		color: 'violet'
@@ -165,7 +165,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Buat kontrak pinjam-meminjam uang bermaterai yang dilengkapi pasal jatuh tempo and jaminan hukum.',
 		path: '/surat-hutang',
 		category: 'Keuangan',
-		icon: 'debt',
+		icon: 'CreditCard',
 		tags: ['pinjam', 'piutang', 'legal'],
 		featured: true,
 		color: 'amber'
@@ -175,7 +175,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Generator Surat Perjanjian Sewa (Rumah/Ruko/Kost) resmi dengan pasal perlindungan pemilik and penyewa.',
 		path: '/surat-sewa',
 		category: 'Bisnis & HR',
-		icon: 'rent',
+		icon: 'Home',
 		tags: ['sewa', 'rumah', 'kontrak'],
 		featured: true,
 		color: 'indigo',
@@ -186,7 +186,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Terbitkan instruksi kerja resmi (SPK) untuk vendor atau freelancer lengkap dengan rincian ruang lingkup.',
 		path: '/surat-perintah-kerja',
 		category: 'Bisnis & HR',
-		icon: 'spk',
+		icon: 'FileEdit',
 		tags: ['perintah', 'kerja', 'proyek'],
 		featured: true,
 		color: 'blue',
@@ -197,7 +197,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Amankan transaksi jual beli aset (motor/mobil/elektronik) dengan pasal jaminan kepemilikan and saksi.',
 		path: '/surat-jual-beli',
 		category: 'Personal & Umum',
-		icon: 'sale',
+		icon: 'ShoppingBag',
 		tags: ['transaksi', 'aset', 'jual'],
 		featured: true,
 		color: 'rose',
@@ -208,7 +208,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Lindungi rahasia bisnis and ide proyek Anda dengan perjanjian standar hukum untuk kolaborasi.',
 		path: '/surat-nda',
 		category: 'Bisnis & HR',
-		icon: 'nda',
+		icon: 'Lock',
 		tags: ['nda', 'secret', 'hukum', 'kerjasama'],
 		featured: true,
 		color: 'indigo',
@@ -219,7 +219,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Generator kontrak PKWT / PKWTT (Tetap) sesuai standar UU Cipta Kerja dengan pasal gaji and sanksi.',
 		path: '/surat-kontrak-kerja',
 		category: 'Bisnis & HR',
-		icon: 'hr',
+		icon: 'Users',
 		tags: ['kontrak', 'kerja', 'karyawan', 'hrd'],
 		featured: true,
 		color: 'blue',
@@ -230,7 +230,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Buat surat pernyataan izin orang tua untuk berbagai keperluan kerja atau sekolah secara otomatis.',
 		path: '/surat-izin-orang-tua',
 		category: 'Personal & Umum',
-		icon: 'parent',
+		icon: 'User',
 		tags: ['izin', 'ortu', 'wali', 'kegiatan'],
 		featured: true,
 		color: 'rose',
@@ -241,7 +241,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Dokumen dasar untuk pengurusan birokrasi warga seperti KTP, Domisili, and urusan administrasi lainnya.',
 		path: '/surat-pengantar-rt-rw',
 		category: 'Personal & Umum',
-		icon: 'citizen',
+		icon: 'MapPin',
 		tags: ['rt', 'rw', 'ktp', 'domisili'],
 		featured: true,
 		color: 'emerald',
@@ -252,7 +252,7 @@ export const toolsRegistry: ToolMetadata[] = [
 		description: 'Template fleksibel untuk berbagai macam pernyataan resmi bermaterai untuk keperluan umum.',
 		path: '/surat-pernyataan',
 		category: 'Personal & Umum',
-		icon: 'statement',
+		icon: 'FileCheck',
 		tags: ['pernyataan', 'janji', 'umum'],
 		featured: true,
 		color: 'slate',
