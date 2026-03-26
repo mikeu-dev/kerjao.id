@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { browser } from '$app/environment';
-	import { toolsRegistry, type ToolMetadata } from '$lib/utils/tools-registry';
+	import { toolsRegistry } from '$lib/utils/tools-registry';
 
 	let isScrolled = $state(false);
 	let isSearchOpen = $state(false);
@@ -251,7 +251,7 @@
 			<div class="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
 				{#if filteredTools.length > 0}
 					<div class="grid grid-cols-1 gap-2">
-						{#each filteredTools as tool}
+						{#each filteredTools as tool (tool.path)}
 							<a 
 								href={tool.path}
 								class="group flex items-center justify-between rounded-2xl p-4 transition-all hover:bg-slate-100 dark:hover:bg-slate-800"

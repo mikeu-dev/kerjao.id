@@ -11,7 +11,7 @@ export const load: PageLoad = async ({ params }) => {
 			content: post.default,
 			meta: post.metadata
 		};
-	} catch (e) {
+	} catch {
 		// If file doesn't exist, throw 404
 		error(404, `Artikel dengan judul "${params.slug}" tidak ditemukan.`);
 	}

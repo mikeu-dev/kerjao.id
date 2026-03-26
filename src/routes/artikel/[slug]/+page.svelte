@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { PageData } from './$types';
 
@@ -22,7 +23,7 @@
 <div class="relative z-10 mx-auto max-w-4xl px-4 pt-32 pb-16 sm:px-6 lg:px-8">
 	<!-- Back Button -->
 	<a
-		href="/artikel"
+		href={resolve('/artikel')}
 		class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
 	>
 		<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -78,7 +79,7 @@
 			secara gratis!
 		</p>
 		<a
-			href="/cv-maker"
+			href={resolve('/cv-maker')}
 			class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
 		>
 			Buat CV Sekarang

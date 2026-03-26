@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import type { PageData } from './$types';
 
@@ -36,9 +37,9 @@
 	<!-- Article Grid -->
 	{#if data.articles.length > 0}
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-			{#each data.articles as article}
+			{#each data.articles as article (article.slug)}
 				<a
-					href={`/artikel/${article.slug}`}
+					href={resolve(`/artikel/${article.slug}`)}
 					class="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-800/60 dark:hover:border-indigo-600"
 				>
 					<div

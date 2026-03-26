@@ -1,4 +1,3 @@
-import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export interface ArticleMeta {
@@ -16,7 +15,7 @@ export const load: PageServerLoad = async () => {
 	const articles: ArticleMeta[] = [];
 
 	for (const path in paths) {
-		const file = paths[path] as any;
+		const file = paths[path] as { metadata: Omit<ArticleMeta, 'slug'> };
 		// Extract filename as slug, e.g., '/src/lib/articles/my-post.md' -> 'my-post'
 		const slug = path.split('/').pop()?.split('.')[0];
 
