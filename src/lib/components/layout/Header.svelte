@@ -5,7 +5,7 @@
 	import { resolve } from '$app/paths';
 	import { toolsRegistry } from '$lib/utils/tools-registry';
 	import ToolIcon from '$lib/components/ui/ToolIcon.svelte';
-	import { Briefcase, Search, ChevronDown, ArrowRight } from 'lucide-svelte';
+	import { Briefcase, Search, ChevronDown, ArrowRight, Files, Sparkles, Building2, CircleDollarSign } from 'lucide-svelte';
 
 	/**
 	 * Bypasses strict route typing for dynamic paths while satisfying the linter.
@@ -124,7 +124,7 @@
 								<div>
 									<div class="mb-5 flex items-center gap-2">
 										<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400">
-											📄
+											<Files class="h-4 w-4" />
 										</div>
 										<h3 class="font-bold tracking-wide text-slate-900 dark:text-white">Surat & Karir</h3>
 									</div>
@@ -134,7 +134,9 @@
 										<a href="/surat-kuasa" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Kuasa</a>
 										<a href="/surat-nda" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat NDA</a>
 										<a href="/surat-pernyataan" class="hover:text-indigo-600 dark:hover:text-indigo-400">Surat Pernyataan</a>
-										<a href="/cv-maker" class="font-bold text-indigo-600">CV ATS ✨</a>
+										<a href="/cv-maker" class="flex items-center gap-1.5 font-bold text-indigo-600">
+											CV ATS <Sparkles class="h-3.5 w-3.5" />
+										</a>
 									</div>
 								</div>
 
@@ -142,7 +144,7 @@
 								<div>
 									<div class="mb-5 flex items-center gap-2">
 										<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400">
-											🏢
+											<Building2 class="h-4 w-4" />
 										</div>
 										<h3 class="font-bold tracking-wide text-slate-900 dark:text-white">Bisnis & HR</h3>
 									</div>
@@ -161,7 +163,7 @@
 								<div>
 									<div class="mb-5 flex items-center gap-2">
 										<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400">
-											💰
+											<CircleDollarSign class="h-4 w-4" />
 										</div>
 										<h3 class="font-bold tracking-wide text-slate-900 dark:text-white">Keuangan</h3>
 									</div>
