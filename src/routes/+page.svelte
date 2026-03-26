@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { toolsRegistry } from '$lib/utils/tools-registry';
+	import type { PageData } from './$types';
+	import { toolsRegistry, type ToolMetadata } from '$lib/utils/tools-registry';
 	import ToolIcon from '$lib/components/ui/ToolIcon.svelte';
 	import { ChevronDown } from 'lucide-svelte';
 
@@ -116,7 +117,10 @@
 		}
 	};
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
+
+	// Filter tools from registry (static)
+	const featuredTools = toolsRegistry.filter((t: ToolMetadata) => t.featured !== false);
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
@@ -201,7 +205,7 @@
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
-			{#each toolsRegistry.filter((t) => t.featured !== false) as tool (tool.path)}
+			{#each featuredTools as tool (tool.path)}
 				{@const colors = colorMap[tool.color || 'slate']}
 				<a
 					href={tool.path}
