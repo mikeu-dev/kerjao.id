@@ -106,7 +106,7 @@
 			Kami terus menambahkan alat baru setiap minggu. Berikan saran alat yang Anda butuhkan!
 		</p>
 		<a
-			href="mailto:halo@kerjao.id"
+			href="mailto:rikiruswandi28@gmail.com"
 			class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
 		>
 			Kirim Saran Alat
