@@ -135,7 +135,7 @@
 
 <!-- Hero Section -->
 <main
-	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-16 pb-20 text-center sm:pt-24 lg:pt-32"
+	class="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-20 pb-16 text-center sm:pt-24 lg:pt-20 lg:pt-32"
 >
 	<!-- Pill Tag -->
 	<div
@@ -152,7 +152,7 @@
 
 	<!-- Headings -->
 	<h1
-		class="mb-8 text-5xl leading-[1.1] font-extrabold tracking-tight drop-shadow-sm sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+		class="mb-6 text-4xl leading-[1.15] font-extrabold tracking-tight drop-shadow-sm sm:text-6xl md:text-7xl lg:text-[5.5rem]"
 	>
 		Tingkatkan <br class="hidden sm:block" />
 		<span
@@ -162,7 +162,7 @@
 	</h1>
 
 	<p
-		class="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-400"
+		class="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-slate-600 sm:mb-12 sm:text-xl dark:text-slate-400"
 	>
 		Kumpulan 24 perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
 		cepat, dan aman. Mulai dari kalkulasi keuangan hingga dokumen HRD dan bisnis instan.
@@ -191,7 +191,7 @@
 <!-- Koleksi Alat Section -->
 <section
 	id="koleksi-alat"
-	class="relative z-10 border-t border-slate-200/60 bg-slate-50/50 py-24 dark:border-slate-800/60 dark:bg-slate-900/20"
+	class="relative z-10 border-t border-slate-200/60 bg-slate-50/50 py-12 sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/20"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
@@ -209,7 +209,7 @@
 				{@const colors = colorMap[tool.color || 'slate']}
 				<a
 					href={tool.path}
-					class="group relative flex flex-col items-start overflow-hidden rounded-3xl border p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:bg-slate-900/10 {colors.border} {colors.bg}"
+					class="group relative flex flex-col items-start overflow-hidden rounded-3xl border p-5 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-8 dark:bg-slate-900/10 {colors.border} {colors.bg}"
 				>
 					<div
 						class="absolute top-0 right-0 -mt-12 -mr-12 h-32 w-32 rounded-full blur-2xl transition-all {colors.accentBg}"
@@ -241,7 +241,7 @@
 
 <!-- Features / Keunggulan Section -->
 <section
-	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-24 backdrop-blur-3xl dark:border-slate-800/60 dark:bg-slate-900/40"
+	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-12 sm:py-24 backdrop-blur-3xl dark:border-slate-800/60 dark:bg-slate-900/40"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
@@ -256,7 +256,7 @@
 		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 			<!-- Card 1 -->
 			<div
-				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-slate-700/60 dark:bg-slate-800/80"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-8 dark:border-slate-700/60 dark:bg-slate-800/80"
 			>
 				<div
 					class="absolute top-0 right-0 -mt-12 -mr-12 h-40 w-40 rounded-full bg-indigo-500/10 blur-2xl transition-all group-hover:bg-indigo-500/20"
@@ -275,7 +275,7 @@
 
 			<!-- Card 2 -->
 			<div
-				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-slate-700/60 dark:bg-slate-800/80"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-8 dark:border-slate-700/60 dark:bg-slate-800/80"
 			>
 				<div
 					class="absolute top-0 right-0 -mt-12 -mr-12 h-40 w-40 rounded-full bg-pink-500/10 blur-2xl transition-all group-hover:bg-pink-500/20"
@@ -294,7 +294,7 @@
 
 			<!-- Card 3 -->
 			<div
-				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-slate-700/60 dark:bg-slate-800/80"
+				class="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-slate-200/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-8 dark:border-slate-700/60 dark:bg-slate-800/80"
 			>
 				<div
 					class="absolute top-0 right-0 -mt-12 -mr-12 h-40 w-40 rounded-full bg-emerald-500/10 blur-2xl transition-all group-hover:bg-emerald-500/20"
@@ -317,7 +317,7 @@
 <!-- Pusat Panduan & Artikel Section -->
 <section
 	id="artikel-panduan"
-	class="relative z-10 border-t border-slate-200/60 bg-slate-50/30 py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
+	class="relative z-10 border-t border-slate-200/60 bg-slate-50/30 py-12 sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="flex flex-col items-center justify-between gap-6 mb-16 md:flex-row lg:mb-20">
@@ -395,10 +395,10 @@
 </section>
 
 <!-- Bottom CTA -->
-<section class="relative z-10 py-24 mb-12">
+<section class="relative z-10 py-12 sm:py-24 mb-6 sm:mb-12">
 	<div class="mx-auto max-w-5xl px-6 lg:px-8">
 		<div
-			class="relative overflow-hidden rounded-[2.5rem] bg-indigo-600 px-8 py-16 text-center shadow-2xl sm:px-16"
+			class="relative overflow-hidden rounded-[2.5rem] bg-indigo-600 px-6 py-12 text-center shadow-2xl sm:px-16 sm:py-16"
 		>
 			<!-- Decorative patterns -->
 			<div class="absolute inset-0 opacity-10">
@@ -429,7 +429,7 @@
 				<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
 					<a
 						href="/semua-alat"
-						class="inline-flex w-full items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-indigo-600 shadow-xl transition-all hover:-translate-y-1 hover:bg-slate-50 sm:w-auto"
+						class="inline-flex w-full items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-indigo-600 shadow-xl transition-all hover:-translate-y-1 hover:bg-slate-50 sm:w-80"
 					>
 						Lihat Semua Perkakas
 					</a>

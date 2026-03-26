@@ -28,7 +28,7 @@
 	keywords="surat resign, pengunduran diri, contoh surat resign, otomatis generator"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 lg:pt-32 pb-12 sm:px-6 lg:px-8">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<!-- We omit the "Kembali ke Beranda" link since the Global Header handles that now! -->

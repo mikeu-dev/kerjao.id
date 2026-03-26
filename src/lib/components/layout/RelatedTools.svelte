@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { toolsRegistry, type ToolMetadata } from '$lib/utils/tools-registry';
-	import { slide } from 'svelte/transition';
+	import { resolve } from '$app/paths';
+	import { toolsRegistry } from '$lib/utils/tools-registry';
 
 	let { currentPath, category }: { currentPath: string; category?: string } = $props();
 
@@ -27,19 +27,19 @@
 	let allSuggestions = $derived([...suggestions, ...backupSuggestions]);
 </script>
 
-<section class="mt-20 border-t border-slate-100 pt-16 dark:border-slate-800 print:hidden">
-	<div class="mb-10 flex items-center justify-between">
+<section class="mt-12 border-t border-slate-100 pt-10 sm:mt-20 sm:pt-16 dark:border-slate-800 print:hidden">
+	<div class="mb-8 flex flex-col items-start justify-between gap-4 sm:mb-10 sm:flex-row sm:items-center">
 		<div>
-			<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Butuh Alat Lainnya?</h2>
-			<p class="mt-1 text-slate-500 dark:text-slate-400">Jelajahi ekosistem alat profesional Kerjao.</p>
+			<h2 class="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">Butuh Alat Lainnya?</h2>
+			<p class="mt-1 text-sm text-slate-500 sm:text-base dark:text-slate-400">Jelajahi ekosistem alat profesional Kerjao.</p>
 		</div>
-		<a href="/" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Lihat Semua Alat →</a>
+		<a href={resolve('/semua-alat')} class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400">Lihat Semua Alat →</a>
 	</div>
 
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-		{#each allSuggestions as tool}
+		{#each allSuggestions as tool (tool.path)}
 			<a 
-				href={tool.path}
+				href={resolve(tool.path)}
 				class="group flex flex-col items-start rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-900/50"
 			>
 				<div class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-inner transition-all group-hover:bg-blue-50 dark:bg-slate-800 dark:group-hover:bg-blue-900/30">

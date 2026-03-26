@@ -57,7 +57,7 @@ Upah: Rp ${(data.gajiPokok + data.tunjanganTetap).toLocaleString('id-ID')}
 	description="Buat kontrak kerja resmi (PKWT/PKWTT) sesuai UU Cipta Kerja. Gratis, otomatis, dan dapat dipersonalisasi dengan branding perusahaan Anda."
 />
 
-<div class="min-h-screen bg-slate-50 pt-32 pb-20 dark:bg-slate-950">
+<div class="min-h-screen bg-slate-50 pt-20 lg:pt-32 pb-20 dark:bg-slate-950">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-12 text-center print:hidden">
 			<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 transition-all dark:text-white sm:text-5xl">

@@ -5,7 +5,7 @@
 	import { resolve } from '$app/paths';
 	import { toolsRegistry } from '$lib/utils/tools-registry';
 	import ToolIcon from '$lib/components/ui/ToolIcon.svelte';
-	import { Briefcase, Search, ChevronDown, ArrowRight, Files, Sparkles, Building2, CircleDollarSign } from 'lucide-svelte';
+	import { Briefcase, Search, ChevronDown, ArrowRight, Files, Sparkles, Building2, CircleDollarSign, Menu, X } from 'lucide-svelte';
 
 	/**
 	 * Bypasses strict route typing for dynamic paths while satisfying the linter.
@@ -15,6 +15,7 @@
 
 	let isScrolled = $state(false);
 	let isSearchOpen = $state(false);
+	let isMobileMenuOpen = $state(false);
 	let searchQuery = $state('');
 
 	let filteredTools = $derived(
@@ -69,10 +70,17 @@
 		}
 	});
 
-	// Prevent scroll when search is open
+	// Prevent scroll when search or mobile menu is open
 	$effect(() => {
 		if (browser) {
-			document.body.style.overflow = isSearchOpen ? 'hidden' : '';
+			document.body.style.overflow = (isSearchOpen || isMobileMenuOpen) ? 'hidden' : '';
+		}
+	});
+
+	// Close mobile menu on navigation
+	$effect(() => {
+		if (page.url.pathname) {
+			isMobileMenuOpen = false;
 		}
 	});
 </script>
@@ -96,12 +104,12 @@
 				kerjao.id
 			</a>
 
-			<!-- Navigation Items -->
-			<div class="flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
-				<a href="/" class="hidden transition-colors hover:text-indigo-600 dark:hover:text-indigo-400 md:block"
+			<!-- Navigation Items (Desktop) -->
+			<div class="hidden items-center gap-6 text-sm font-semibold text-slate-600 md:flex dark:text-slate-300">
+				<a href="/" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 					>Beranda</a
 				>
-				<a href="/artikel" class="hidden transition-colors hover:text-indigo-600 dark:hover:text-indigo-400 sm:block"
+				<a href="/artikel" class="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
 					>Artikel Karir</a
 				>
 
@@ -182,7 +190,10 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<!-- Right Actions (Search & Mobile Toggle) -->
+			<div class="flex items-center gap-3">
 				<!-- Search Trigger -->
 				<button
 					onclick={toggleSearch}
@@ -191,15 +202,73 @@
 				>
 					<Search class="h-5 w-5" />
 				</button>
+
+				<!-- Mobile Menu Toggle -->
+				<button
+					onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
+					class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 transition-all hover:bg-indigo-100 md:hidden dark:bg-indigo-900/30 dark:text-indigo-400"
+					aria-label="Menu"
+				>
+					{#if isMobileMenuOpen}
+						<X class="h-6 w-6" />
+					{:else}
+						<Menu class="h-6 w-6" />
+					{/if}
+				</button>
 			</div>
 		</nav>
 	</div>
 </header>
 
+<!-- Mobile Menu Drawer -->
+{#if isMobileMenuOpen}
+	<div 
+		class="fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm md:hidden"
+		onclick={() => (isMobileMenuOpen = false)}
+		onkeydown={(e) => e.key === 'Escape' && (isMobileMenuOpen = false)}
+		role="button"
+		tabindex="0"
+	></div>
+	
+	<div 
+		class="fixed inset-y-0 right-0 z-50 w-[280px] bg-white p-6 shadow-2xl transition-transform dark:bg-slate-900 md:hidden"
+	>
+		<div class="flex flex-col gap-8">
+			<div class="flex items-center justify-between border-b pb-4 dark:border-slate-800">
+				<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Navigasi</span>
+				<button onclick={() => (isMobileMenuOpen = false)} class="rounded-lg p-2 hover:bg-slate-100 dark:hover:bg-slate-800">
+					<X class="h-5 w-5" />
+				</button>
+			</div>
+
+			<div class="flex flex-col gap-4">
+				<a href="/" class="text-lg font-bold text-slate-900 dark:text-white" onclick={() => (isMobileMenuOpen = false)}>Beranda</a>
+				<a href="/artikel" class="text-lg font-bold text-slate-900 dark:text-white" onclick={() => (isMobileMenuOpen = false)}>Artikel Karir</a>
+				<a href="/semua-alat" class="text-lg font-bold text-indigo-600 dark:text-indigo-400" onclick={() => (isMobileMenuOpen = false)}>Semua Alat</a>
+			</div>
+
+			<div class="border-t pt-6 dark:border-slate-800">
+				<span class="mb-4 block text-xs font-bold uppercase tracking-widest text-slate-400">Kategori Populer</span>
+				<div class="flex flex-col gap-3">
+					<a href="/surat-lamaran" class="flex items-center gap-3 font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-400">
+						<Files class="h-4 w-4" /> Surat Lamaran
+					</a>
+					<a href="/cv-maker" class="flex items-center gap-3 font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-400">
+						<Sparkles class="h-4 w-4" /> CV ATS
+					</a>
+					<a href="/kalkulator-gaji" class="flex items-center gap-3 font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-400">
+						<CircleDollarSign class="h-4 w-4" /> Kalkulator Gaji
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{/if}
+
 <!-- Global Search Modal -->
 {#if isSearchOpen}
 	<div 
-		class="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto px-4 pt-16 sm:pt-24"
+		class="fixed inset-0 z-100 flex items-start justify-center overflow-y-auto px-4 pt-4 sm:pt-24"
 		role="dialog"
 		aria-modal="true"
 	>
