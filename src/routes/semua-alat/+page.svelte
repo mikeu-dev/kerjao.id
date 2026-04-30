@@ -25,7 +25,7 @@
 
 <Meta
 	title="Semua Alat & Generator Profesional - Kerjao.id"
-	description="Lihat semua 24+ koleksi alat karir, bisnis, keuangan, dan personal gratis dari Kerjao.id. Semuanya instan dan berjalan di peramban Anda."
+	description="Lihat semua 25+ koleksi alat karir, bisnis, keuangan, dan personal gratis dari Kerjao.id. Semuanya instan dan berjalan di peramban Anda."
 	keywords="daftar alat kerjao, generator surat, kalkulator gaji, invoice creator"
 />
 

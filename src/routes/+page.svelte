@@ -126,10 +126,10 @@
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 
 <svelte:head>
-	<title>Kerjao.id - 24 Alat Karir & Bisnis Profesional Indonesia</title>
+	<title>Kerjao.id - 25 Alat Karir & Bisnis Profesional Indonesia</title>
 	<meta
 		name="description"
-		content="Kumpulan 24 tools instan, cerdas, dan gratis: Kalkulator Gaji PPh 21, Invoice Generator, Surat Perjanjian, hingga Surat Lamaran siap pakai untuk profesional."
+		content="Kumpulan 25 tools instan, cerdas, dan gratis: Kalkulator Gaji PPh 21, Invoice Generator, Surat Perjanjian, hingga Surat Lamaran siap pakai untuk profesional."
 	/>
 </svelte:head>
 
@@ -164,7 +164,7 @@
 	<p
 		class="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-slate-600 sm:mb-12 sm:text-xl dark:text-slate-400"
 	>
-		Kumpulan 24 perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
+		Kumpulan 25 perkakas cerdas otomatis yang membantumu melangkah di dunia profesional lebih mudah,
 		cepat, dan aman. Mulai dari kalkulasi keuangan hingga dokumen HRD dan bisnis instan.
 	</p>
 
@@ -196,7 +196,7 @@
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
 			<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-				24 Koleksi Perkakas <span class="text-indigo-600 dark:text-indigo-400">Kerjao</span>
+				25 Koleksi Perkakas <span class="text-indigo-600 dark:text-indigo-400">Kerjao</span>
 			</h2>
 			<p class="text-lg text-slate-600 dark:text-slate-400">
 				Pilih alat yang kamu butuhkan hari ini. Semuanya berjalan instan di perambanmu tanpa
@@ -423,7 +423,7 @@
 					Siap Menjadi Lebih Profesional?
 				</h2>
 				<p class="mb-10 text-lg leading-relaxed text-indigo-100 sm:text-xl">
-					Mulai gunakan koleksi 24+ perkakas kami sekarang. 100% Gratis, Tanpa Login, Tanpa Berbagi
+					Mulai gunakan koleksi 25+ perkakas kami sekarang. 100% Gratis, Tanpa Login, Tanpa Berbagi
 					Data Sensitif.
 				</p>
 				<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">

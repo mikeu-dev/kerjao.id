@@ -257,5 +257,16 @@ export const toolsRegistry: ToolMetadata[] = [
 		featured: true,
 		color: 'slate',
 		statusTag: 'Universal'
+	},
+	{
+		name: 'Patungan Makan (Split Bill)',
+		description: 'Bagi tagihan makan bareng teman secara adil. Otomatis bagi diskon dan biaya tambahan secara proporsional.',
+		path: '/patungan-makan',
+		category: 'Keuangan',
+		icon: 'Calculator',
+		tags: ['patungan', 'makan', 'splitbill', 'gofood'],
+		featured: true,
+		color: 'orange',
+		statusTag: 'Baru'
 	}
 ];
