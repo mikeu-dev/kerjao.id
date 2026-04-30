@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { RtRwData } from '$lib/utils/umum';
 
-	let { data, themeColor = '#4f46e5' }: { data: RtRwData; themeColor?: string } = $props();
+	let { data }: { data: RtRwData } = $props();
 
 	const formatDate = (dateStr?: string) => {
 		if (!dateStr) return '.................';

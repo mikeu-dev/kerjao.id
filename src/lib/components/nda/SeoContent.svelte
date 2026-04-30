@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 </script>
 
 <div class="prose max-w-none prose-slate dark:prose-invert">

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PernyataanData } from '$lib/utils/umum';
-	import { slide } from 'svelte/transition';
 
 	let { data = $bindable() }: { data: PernyataanData } = $props();
 </script>

@@ -5,7 +5,7 @@
 	import SeoContent from '$lib/components/nda/SeoContent.svelte';
 	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
-	import { generateNDANumber, type NDAData } from '$lib/utils/nda';
+	import { type NDAData } from '$lib/utils/nda';
 
 	let data = $state<NDAData>({
 		pihak1: { nama: '', perusahaan: '', alamat: '', jabatan: '' },

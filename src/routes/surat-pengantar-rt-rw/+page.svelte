@@ -36,7 +36,9 @@
 		if (saved) {
 			try {
 				data = { ...data, ...JSON.parse(saved) };
-			} catch (e) {}
+			} catch {
+				// Ignore invalid JSON
+			}
 		}
 	});
 
@@ -91,7 +93,7 @@ Keperluan: ${data.keperluan}
 				<div
 					class="sticky top-32 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800"
 				>
-					<RtRwPreview {data} {themeColor} />
+					<RtRwPreview {data} />
 				</div>
 			</div>
 		</div>

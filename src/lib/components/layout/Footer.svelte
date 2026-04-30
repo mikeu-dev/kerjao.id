@@ -41,16 +41,14 @@
 					kerjao.id
 				</a>
 				<p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-					Platform Indonesia yang menyediakan 25+ perkakas karir dan bisnis profesional, 100%
-					gratis dan tanpa login.
+					Platform Indonesia yang menyediakan 25+ perkakas karir dan bisnis profesional, 100% gratis
+					dan tanpa login.
 				</p>
 			</div>
 
 			<!-- Navigasi -->
 			<div>
-				<h3
-					class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white"
-				>
+				<h3 class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white">
 					Navigasi
 				</h3>
 				<ul class="space-y-3 text-sm">
@@ -94,9 +92,7 @@
 
 			<!-- Alat Populer -->
 			<div>
-				<h3
-					class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white"
-				>
+				<h3 class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white">
 					Alat Populer
 				</h3>
 				<ul class="space-y-3 text-sm">
@@ -140,9 +136,7 @@
 
 			<!-- Legal -->
 			<div>
-				<h3
-					class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white"
-				>
+				<h3 class="mb-4 text-xs font-bold tracking-widest text-slate-900 uppercase dark:text-white">
 					Legal
 				</h3>
 				<ul class="space-y-3 text-sm">
@@ -169,9 +163,7 @@
 			class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/50 pt-8 text-xs text-slate-400 sm:flex-row dark:border-slate-800/50"
 		>
 			<p>&copy; {new Date().getFullYear()} kerjao.id. Seluruh hak cipta dilindungi.</p>
-			<p class="text-slate-300 dark:text-slate-600">
-				Dibuat dengan ❤️ di Indonesia
-			</p>
+			<p class="text-slate-300 dark:text-slate-600">Dibuat dengan ❤️ di Indonesia</p>
 		</div>
 	</div>
 </footer>

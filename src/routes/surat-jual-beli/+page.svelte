@@ -5,7 +5,7 @@
 	import SeoContent from '$lib/components/jual-beli/SeoContent.svelte';
 	import RelatedTools from '$lib/components/layout/RelatedTools.svelte';
 	import Meta from '$lib/components/seo/Meta.svelte';
-	import { generateSJBId, type JualBeliData } from '$lib/utils/jual-beli';
+	import { type JualBeliData } from '$lib/utils/jual-beli';
 
 	let data = $state<JualBeliData>({
 		pihak1: { nama: '', nik: '', alamat: '', pekerjaan: '' },

@@ -76,7 +76,7 @@
 							>:
 							<ul class="mt-1 list-inside list-disc">
 								{#if data.proyek.ruangLingkup.length > 0}
-									{#each data.proyek.ruangLingkup as scope}
+									{#each data.proyek.ruangLingkup as scope (scope)}
 										<li>{scope}</li>
 									{/each}
 								{:else}

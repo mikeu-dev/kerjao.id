@@ -56,7 +56,10 @@
 	{#if noindex}
 		<meta name="robots" content="noindex, nofollow" />
 	{:else}
-		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta
+			name="robots"
+			content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+		/>
 	{/if}
 
 	<!-- Open Graph / Facebook -->
@@ -80,5 +83,5 @@
 
 	<!-- Schema.org JSON-LD (dynamic) -->
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	{@html ('<script type="application/ld+json">' + jsonLd + '</script' + '>') }
+	{@html '<script type="application/ld+json">' + jsonLd + '</script' + '>'}
 </svelte:head>

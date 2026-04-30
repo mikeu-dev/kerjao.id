@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-
 	let { onPrint, onCopy }: { onPrint: () => void; onCopy: () => void } = $props();
 
 	let isCopying = $state(false);

@@ -19,7 +19,7 @@
 <div class="flex flex-col gap-8">
 	<!-- Tab Navigation -->
 	<div class="grid grid-cols-3 gap-2 rounded-2xl bg-slate-100 p-1 dark:bg-slate-800/50">
-		{#each sections as section}
+		{#each sections as section (section.id)}
 			<button
 				onclick={() => (activeSection = section.id)}
 				class="flex flex-col items-center gap-1 rounded-xl py-2 text-[10px] font-bold transition-all sm:text-xs

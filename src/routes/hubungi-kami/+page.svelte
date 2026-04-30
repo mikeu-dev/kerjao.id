@@ -41,12 +41,9 @@
 			<span>Hubungi Kami</span>
 		</div>
 
-		<h1
-			class="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl"
-		>
+		<h1 class="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl">
 			Kami Senang Mendengar
-			<span
-				class="bg-linear-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent"
+			<span class="bg-linear-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent"
 				>dari Anda</span
 			>
 		</h1>
@@ -68,9 +65,7 @@
 		<div class="grid gap-12 lg:grid-cols-5">
 			<!-- Contact Info -->
 			<div class="lg:col-span-2">
-				<h2 class="mb-8 text-2xl font-bold text-slate-900 dark:text-white">
-					Informasi Kontak
-				</h2>
+				<h2 class="mb-8 text-2xl font-bold text-slate-900 dark:text-white">Informasi Kontak</h2>
 
 				<div class="space-y-6">
 					<!-- Email -->
@@ -122,34 +117,42 @@
 				</div>
 
 				<!-- FAQ Shortcut -->
-				<div class="mt-10 rounded-2xl border border-slate-200/60 bg-slate-50 p-6 dark:border-slate-700/60 dark:bg-slate-800/60">
+				<div
+					class="mt-10 rounded-2xl border border-slate-200/60 bg-slate-50 p-6 dark:border-slate-700/60 dark:bg-slate-800/60"
+				>
 					<h3 class="mb-3 font-bold text-slate-900 dark:text-white">Pertanyaan Umum</h3>
 					<div class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
 						<details class="group">
-							<summary class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200">
+							<summary
+								class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200"
+							>
 								Apakah Kerjao.id benar-benar gratis?
 							</summary>
 							<p class="mt-2 pl-0">
-								Ya, seluruh 25+ perkakas kami tersedia secara gratis, tanpa biaya langganan,
-								tanpa login, dan tanpa batasan penggunaan.
+								Ya, seluruh 25+ perkakas kami tersedia secara gratis, tanpa biaya langganan, tanpa
+								login, dan tanpa batasan penggunaan.
 							</p>
 						</details>
 						<details class="group">
-							<summary class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200">
+							<summary
+								class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200"
+							>
 								Apakah data saya aman?
 							</summary>
 							<p class="mt-2 pl-0">
-								Sangat aman. Semua pemrosesan dilakukan langsung di peramban (browser) Anda.
-								Tidak ada data yang dikirim ke server kami.
+								Sangat aman. Semua pemrosesan dilakukan langsung di peramban (browser) Anda. Tidak
+								ada data yang dikirim ke server kami.
 							</p>
 						</details>
 						<details class="group">
-							<summary class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200">
+							<summary
+								class="cursor-pointer font-medium text-slate-800 transition-colors hover:text-indigo-600 dark:text-slate-200"
+							>
 								Bagaimana cara melaporkan bug?
 							</summary>
 							<p class="mt-2 pl-0">
-								Gunakan formulir di samping atau kirim email ke kontak@kerjao.id dengan
-								deskripsi masalah dan screenshot jika ada.
+								Gunakan formulir di samping atau kirim email ke kontak@kerjao.id dengan deskripsi
+								masalah dan screenshot jika ada.
 							</p>
 						</details>
 					</div>
@@ -168,12 +171,10 @@
 							>
 								<ToolIcon name="CheckCircle" class="h-10 w-10" />
 							</div>
-							<h3 class="mb-3 text-2xl font-bold text-slate-900 dark:text-white">
-								Terima Kasih!
-							</h3>
+							<h3 class="mb-3 text-2xl font-bold text-slate-900 dark:text-white">Terima Kasih!</h3>
 							<p class="mb-6 max-w-md text-slate-600 dark:text-slate-400">
-								Pesan Anda telah disiapkan. Silakan kirim melalui aplikasi email yang terbuka.
-								Kami akan membalas secepat mungkin.
+								Pesan Anda telah disiapkan. Silakan kirim melalui aplikasi email yang terbuka. Kami
+								akan membalas secepat mungkin.
 							</p>
 							<button
 								onclick={() => (isSubmitted = false)}
@@ -183,9 +184,7 @@
 							</button>
 						</div>
 					{:else}
-						<h2 class="mb-2 text-2xl font-bold text-slate-900 dark:text-white">
-							Kirim Pesan
-						</h2>
+						<h2 class="mb-2 text-2xl font-bold text-slate-900 dark:text-white">Kirim Pesan</h2>
 						<p class="mb-8 text-slate-500">
 							Isi formulir di bawah ini dan kami akan merespons secepatnya.
 						</p>

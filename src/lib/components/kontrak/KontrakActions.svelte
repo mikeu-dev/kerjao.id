@@ -31,7 +31,7 @@
 			Personalasi Warna Dokumen
 		</h4>
 		<div class="flex flex-wrap gap-3">
-			{#each colors as color}
+			{#each colors as color (color.hex)}
 				<button
 					onclick={() => (themeColor = color.hex)}
 					class="group relative flex h-10 w-10 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-90"

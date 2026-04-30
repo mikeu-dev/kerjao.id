@@ -29,7 +29,9 @@
 		if (saved) {
 			try {
 				data = { ...data, ...JSON.parse(saved) };
-			} catch (e) {}
+			} catch {
+				// Ignore invalid JSON
+			}
 		}
 	});
 

@@ -84,12 +84,10 @@
 						🍪
 					</div>
 					<div>
-						<h3 class="text-lg font-bold text-slate-900 dark:text-white">
-							Persetujuan Cookie
-						</h3>
+						<h3 class="text-lg font-bold text-slate-900 dark:text-white">Persetujuan Cookie</h3>
 						<p class="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-							Kami menggunakan cookies untuk analitik dan iklan demi meningkatkan layanan. Data
-							yang Anda masukkan ke perkakas kami tetap <strong>100% diproses di browser</strong>
+							Kami menggunakan cookies untuk analitik dan iklan demi meningkatkan layanan. Data yang
+							Anda masukkan ke perkakas kami tetap <strong>100% diproses di browser</strong>
 							dan tidak pernah dikirim ke server.
 							<a
 								href={localizeHref('/kebijakan-privasi')}
@@ -108,9 +106,7 @@
 						<!-- Essential (always on) -->
 						<div class="flex items-center justify-between">
 							<div>
-								<p class="text-sm font-semibold text-slate-900 dark:text-white">
-									Cookies Esensial
-								</p>
+								<p class="text-sm font-semibold text-slate-900 dark:text-white">Cookies Esensial</p>
 								<p class="text-xs text-slate-500">
 									Diperlukan untuk fungsi dasar (tema, preferensi)
 								</p>
@@ -126,19 +122,11 @@
 						<!-- Analytics -->
 						<label class="flex cursor-pointer items-center justify-between">
 							<div>
-								<p class="text-sm font-semibold text-slate-900 dark:text-white">
-									Cookies Analitik
-								</p>
-								<p class="text-xs text-slate-500">
-									Google Analytics — mengukur performa website
-								</p>
+								<p class="text-sm font-semibold text-slate-900 dark:text-white">Cookies Analitik</p>
+								<p class="text-xs text-slate-500">Google Analytics — mengukur performa website</p>
 							</div>
 							<div class="relative">
-								<input
-									type="checkbox"
-									bind:checked={preferences.analytics}
-									class="peer sr-only"
-								/>
+								<input type="checkbox" bind:checked={preferences.analytics} class="peer sr-only" />
 								<div
 									class="h-6 w-11 rounded-full bg-slate-300 transition-colors peer-checked:bg-indigo-600 dark:bg-slate-600"
 								></div>
@@ -153,9 +141,7 @@
 						<!-- Advertising -->
 						<label class="flex cursor-pointer items-center justify-between">
 							<div>
-								<p class="text-sm font-semibold text-slate-900 dark:text-white">
-									Cookies Iklan
-								</p>
+								<p class="text-sm font-semibold text-slate-900 dark:text-white">Cookies Iklan</p>
 								<p class="text-xs text-slate-500">
 									Google AdSense — menampilkan iklan yang relevan
 								</p>

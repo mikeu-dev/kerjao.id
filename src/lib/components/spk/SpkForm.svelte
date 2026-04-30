@@ -29,7 +29,7 @@
 <div class="flex flex-col gap-8">
 	<!-- Tab Navigation -->
 	<div class="grid grid-cols-4 gap-2 rounded-2xl bg-slate-100 p-1 dark:bg-slate-800/50">
-		{#each sections as section}
+		{#each sections as section (section.id)}
 			<button
 				onclick={() => (activeSection = section.id)}
 				class="flex flex-col items-center gap-1 rounded-xl py-2 text-[10px] font-bold transition-all sm:text-xs
@@ -172,7 +172,7 @@
 						>
 					</div>
 					<div class="mt-3 space-y-2">
-						{#each data.proyek.ruangLingkup as scope, i}
+						{#each data.proyek.ruangLingkup as scope, i (i)}
 							<div
 								class="flex items-center justify-between rounded-lg bg-slate-50 p-2 text-sm dark:bg-slate-800"
 							>
