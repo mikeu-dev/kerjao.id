@@ -1,5 +1,7 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-navigation-without-resolve */
 	import Meta from '$lib/components/seo/Meta.svelte';
+	import { localizeHref } from '$lib/paraglide/runtime';
 </script>
 
 <Meta
@@ -162,7 +164,7 @@
 				</p>
 				<ul>
 					<li><strong>Email:</strong> <a href="mailto:kontak@kerjao.id">kontak@kerjao.id</a></li>
-					<li><strong>Website:</strong> <a href="/hubungi-kami">Halaman Hubungi Kami</a></li>
+					<li><strong>Website:</strong> <a href={localizeHref('/hubungi-kami')}>Halaman Hubungi Kami</a></li>
 				</ul>
 			</article>
 		</div>

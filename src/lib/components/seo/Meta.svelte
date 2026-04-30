@@ -79,5 +79,6 @@
 	<link rel="canonical" href={url} />
 
 	<!-- Schema.org JSON-LD (dynamic) -->
-	{@html `<script type="application/ld+json">${jsonLd}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html ('<script type="application/ld+json">' + jsonLd + '</script' + '>') }
 </svelte:head>

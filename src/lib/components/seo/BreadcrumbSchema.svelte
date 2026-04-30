@@ -22,5 +22,6 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json">${jsonLd}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html ('<script type="application/ld+json">' + jsonLd + '</script' + '>') }
 </svelte:head>

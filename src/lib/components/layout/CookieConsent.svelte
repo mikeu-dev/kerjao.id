@@ -1,6 +1,8 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-navigation-without-resolve */
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	let {
 		onConsentChange
@@ -62,11 +64,11 @@
 
 {#if isVisible}
 	<!-- Backdrop -->
-	<div class="fixed inset-0 z-[9998] bg-slate-900/30 backdrop-blur-sm print:hidden"></div>
+	<div class="fixed inset-0 z-9998 bg-slate-900/30 backdrop-blur-sm print:hidden"></div>
 
 	<!-- Banner -->
 	<div
-		class="fixed inset-x-0 bottom-0 z-[9999] p-4 sm:p-6 print:hidden"
+		class="fixed inset-x-0 bottom-0 z-9999 p-4 sm:p-6 print:hidden"
 		role="dialog"
 		aria-label="Persetujuan Cookie"
 	>
@@ -90,7 +92,7 @@
 							yang Anda masukkan ke perkakas kami tetap <strong>100% diproses di browser</strong>
 							dan tidak pernah dikirim ke server.
 							<a
-								href="/kebijakan-privasi"
+								href={localizeHref('/kebijakan-privasi')}
 								class="font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
 								>Pelajari selengkapnya</a
 							>.

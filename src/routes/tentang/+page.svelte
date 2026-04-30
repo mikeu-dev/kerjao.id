@@ -1,185 +1,104 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-navigation-without-resolve */
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import ToolIcon from '$lib/components/ui/ToolIcon.svelte';
+	import { localizeHref } from '$lib/paraglide/runtime';
 </script>
 
 <Meta
-	title="Tentang Kami - Kerjao.id | Platform Alat Karir & Bisnis Gratis"
-	description="Kenali lebih dekat Kerjao.id — platform Indonesia yang menyediakan 25+ perkakas karir dan bisnis profesional, 100% gratis dan tanpa login."
-	keywords="tentang kerjao, tentang kami, platform karir indonesia, alat bisnis gratis"
+	title="Tentang Kami - Kerjao.id"
+	description="Pelajari lebih lanjut tentang Kerjao.id — platform penyedia perkakas karir dan bisnis profesional gratis untuk masyarakat Indonesia."
+	keywords="tentang kerjao, alat karir gratis, hrd indonesia, alat bisnis"
 />
 
-<!-- Hero -->
-<section class="relative z-10 overflow-hidden px-4 pt-24 pb-16 sm:px-6 sm:pt-32 sm:pb-24 lg:px-8">
-	<div class="mx-auto max-w-4xl text-center">
-		<div
-			class="mb-8 inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-700 dark:border-indigo-400/20 dark:bg-indigo-900/40 dark:text-indigo-300"
-		>
-			<ToolIcon name="Users" class="h-4 w-4" />
-			<span>Tentang Kami</span>
+<!-- Hero Section -->
+<section class="relative z-10 px-4 pt-24 pb-16 sm:px-6 sm:pt-32 sm:pb-24 lg:px-8">
+	<div class="mx-auto max-w-7xl text-center">
+		<div class="mb-6 inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
+			<span class="flex h-2 w-2 rounded-full bg-indigo-600"></span>
+			Tentang Kami
 		</div>
-
-		<h1
-			class="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl md:text-6xl"
-		>
-			Memberdayakan
-			<span
-				class="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-				>Profesional Indonesia</span
-			>
+		<h1 class="mb-8 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl dark:text-white">
+			Memberdayakan <span class="bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Profesional Indonesia</span>
 		</h1>
-
-		<p
-			class="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-400"
-		>
-			Kerjao.id adalah platform digital Indonesia yang menyediakan koleksi perkakas karir dan
-			bisnis profesional secara gratis — dirancang agar siapa saja bisa tampil lebih percaya diri
-			di dunia kerja.
+		<p class="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+			Kerjao.id adalah platform digital Indonesia yang menyediakan koleksi perkakas karir dan bisnis profesional secara gratis — dirancang agar siapa saja bisa tampil lebih percaya diri di dunia kerja.
 		</p>
 	</div>
 </section>
 
-<!-- Misi & Visi -->
-<section
-	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-16 backdrop-blur-3xl sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
->
-	<div class="mx-auto max-w-6xl px-6 lg:px-8">
-		<div class="grid gap-12 md:grid-cols-2">
-			<!-- Misi -->
-			<div
-				class="group relative overflow-hidden rounded-3xl border border-indigo-200/60 bg-white p-8 shadow-sm transition-all hover:shadow-lg sm:p-10 dark:border-indigo-700/40 dark:bg-slate-800/80"
-			>
-				<div
-					class="absolute top-0 right-0 -mt-10 -mr-10 h-32 w-32 rounded-full bg-indigo-500/10 blur-2xl"
-				></div>
-				<div
-					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-500/10 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400"
-				>
-					<ToolIcon name="Target" class="h-7 w-7" />
+<!-- Mission & Vision -->
+<section class="relative z-10 py-16 sm:py-24">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="grid gap-8 md:grid-cols-2">
+			<!-- Mission -->
+			<div class="rounded-3xl border border-slate-200/60 bg-white p-8 shadow-sm transition-all hover:shadow-md dark:border-slate-700/60 dark:bg-slate-800/80">
+				<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+					</svg>
 				</div>
 				<h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-white">Misi Kami</h2>
-				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
-					Menyediakan akses gratis ke perkakas digital profesional bagi seluruh pekerja dan
-					pelaku bisnis di Indonesia. Kami percaya bahwa setiap orang berhak memiliki dokumen
-					yang rapi, kalkulasi yang akurat, dan presentasi yang profesional — tanpa harus
-					membayar layanan mahal atau memiliki keahlian teknis khusus.
+				<p class="text-slate-600 dark:text-slate-400">
+					Mendemokratisasi akses terhadap alat-alat profesional yang biasanya berbayar atau sulit diakses, guna meningkatkan daya saing tenaga kerja Indonesia di kancah global.
 				</p>
 			</div>
 
-			<!-- Visi -->
-			<div
-				class="group relative overflow-hidden rounded-3xl border border-purple-200/60 bg-white p-8 shadow-sm transition-all hover:shadow-lg sm:p-10 dark:border-purple-700/40 dark:bg-slate-800/80"
-			>
-				<div
-					class="absolute top-0 right-0 -mt-10 -mr-10 h-32 w-32 rounded-full bg-purple-500/10 blur-2xl"
-				></div>
-				<div
-					class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 text-purple-600 ring-1 ring-purple-500/10 ring-inset dark:bg-purple-500/10 dark:text-purple-400"
-				>
-					<ToolIcon name="Sparkles" class="h-7 w-7" />
+			<!-- Vision -->
+			<div class="rounded-3xl border border-slate-200/60 bg-white p-8 shadow-sm transition-all hover:shadow-md dark:border-slate-700/60 dark:bg-slate-800/80">
+				<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+					</svg>
 				</div>
 				<h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-white">Visi Kami</h2>
-				<p class="leading-relaxed text-slate-600 dark:text-slate-400">
-					Menjadi platform nomor satu di Indonesia untuk perkakas karir dan bisnis digital
-					yang memberdayakan jutaan profesional — dari fresh graduate hingga pengusaha UMKM —
-					untuk mengelola administrasi kerja dengan efisien, aman, dan estetik.
+				<p class="text-slate-600 dark:text-slate-400">
+					Menjadi pusat ekosistem perkakas karir nomor satu di Indonesia yang mendampingi setiap langkah perjalanan profesional seseorang, dari pencarian kerja hingga manajemen bisnis.
 				</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Keunggulan / Nilai Kami -->
-<section
-	class="relative z-10 border-t border-slate-200/60 bg-slate-50/50 py-16 sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/20"
->
-	<div class="mx-auto max-w-6xl px-6 lg:px-8">
-		<div class="mb-16 text-center">
-			<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-				Nilai yang Kami <span class="text-indigo-600 dark:text-indigo-400">Pegang Teguh</span>
-			</h2>
-			<p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-400">
-				Setiap fitur yang kami bangun didasari oleh prinsip-prinsip berikut.
-			</p>
-		</div>
-
+<!-- Values -->
+<section class="relative z-10 py-16 sm:py-24">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+		<h2 class="mb-12 text-3xl font-bold text-slate-900 dark:text-white">Nilai Utama Kami</h2>
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 			{#each [
-				{
-					icon: 'Shield',
-					title: 'Privasi Mutlak',
-					desc: 'Semua data diproses langsung di peramban (browser) Anda. Tidak ada data sensitif yang dikirim ke server kami. Zero-knowledge by design.',
-					color: 'pink'
-				},
-				{
-					icon: 'Zap',
-					title: 'Gratis Selamanya',
-					desc: 'Seluruh 25+ perkakas kami tersedia tanpa biaya, tanpa login, dan tanpa batasan penggunaan. Kami berkomitmen menjaga aksesibilitas ini.',
-					color: 'emerald'
-				},
-				{
-					icon: 'Scale',
-					title: 'Standar Profesional',
-					desc: 'Dokumen yang dihasilkan mengikuti standar hukum dan format resmi Indonesia — layak untuk dicetak, ditandatangani, dan digunakan secara sah.',
-					color: 'blue'
-				},
-				{
-					icon: 'Globe',
-					title: 'Aksesibilitas',
-					desc: 'Platform kami dirancang responsif dan ringan, bisa diakses dari perangkat apapun — smartphone hingga laptop — kapan saja dan di mana saja.',
-					color: 'amber'
-				},
-				{
-					icon: 'RefreshCw',
-					title: 'Selalu Diperbarui',
-					desc: 'Regulasi dan aturan ketenagakerjaan Indonesia terus berubah. Kami secara rutin memperbarui formula dan template agar selalu relevan.',
-					color: 'violet'
-				},
-				{
-					icon: 'Heart',
-					title: 'Dibuat dengan Hati',
-					desc: 'Setiap detail desain, tata bahasa, dan kalkulasi diuji dengan teliti — karena kami tahu dokumen profesional adalah representasi diri Anda.',
-					color: 'rose'
-				}
-			] as item (item.title)}
-				<div
-					class="group relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/60 dark:bg-slate-800/80"
-				>
-					<div
-						class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-700 ring-1 ring-slate-200/80 ring-inset dark:bg-slate-700/50 dark:text-slate-300 dark:ring-slate-600/50"
-					>
-						<ToolIcon name={item.icon} class="h-6 w-6" />
+				{ icon: 'privacy', title: 'Privasi Utama', desc: 'Data Anda diproses di browser, tidak pernah kami simpan di server.' },
+				{ icon: 'free', title: '100% Gratis', desc: 'Seluruh alat kami dapat digunakan tanpa biaya langganan atau biaya tersembunyi.' },
+				{ icon: 'standard', title: 'Standar Profesional', desc: 'Template kami dirancang mengikuti standar industri dan ramah sistem ATS.' },
+				{ icon: 'instant', title: 'Instan & Cepat', desc: 'Hasilkan dokumen profesional dalam hitungan detik tanpa perlu login.' },
+				{ icon: 'indonesia', title: 'Fokus Indonesia', desc: 'Disesuaikan dengan regulasi dan budaya kerja yang berlaku di Indonesia.' },
+				{ icon: 'simple', title: 'User Friendly', desc: 'Antarmuka yang bersih dan mudah digunakan oleh siapa saja, bahkan pemula.' }
+			] as value (value.title)}
+				<div class="flex flex-col items-center p-6">
+					<div class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+						<ToolIcon name={value.icon} />
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">{item.title}</h3>
-					<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.desc}</p>
+					<h3 class="mb-2 font-bold text-slate-900 dark:text-white">{value.title}</h3>
+					<p class="text-sm text-slate-500 dark:text-slate-400">{value.desc}</p>
 				</div>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<!-- Siapa di Balik Kerjao -->
-<section
-	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-16 backdrop-blur-3xl sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
->
-	<div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
-		<h2 class="mb-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-			Siapa di Balik Kerjao.id?
-		</h2>
-		<div class="prose prose-slate mx-auto max-w-2xl text-lg dark:prose-invert">
-			<p>
-				Kerjao.id dikembangkan oleh tim kecil pengembang dan profesional HR di Indonesia yang
-				melihat kebutuhan nyata akan perkakas karir digital yang mudah, gratis, dan terpercaya.
+<!-- The Team / Story -->
+<section class="relative z-10 overflow-hidden py-16 sm:py-24">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mx-auto max-w-4xl text-center">
+			<h2 class="mb-8 text-3xl font-bold text-slate-900 dark:text-white">Cerita Kami</h2>
+			<p class="mb-6 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+				Kerjao.id lahir dari sebuah keresahan sederhana: banyak profesional muda dan pelaku UMKM yang kesulitan membuat dokumen standar industri (seperti CV ATS atau Invoice Pajak) karena keterbatasan alat atau biaya.
 			</p>
-			<p>
-				Kami menggabungkan pengalaman di bidang teknologi, sumber daya manusia, dan hukum
-				ketenagakerjaan untuk menciptakan platform yang benar-benar bermanfaat bagi masyarakat
-				Indonesia — dari mahasiswa yang baru lulus hingga pengusaha UMKM yang ingin
-				mengurus administrasi bisnis secara mandiri.
+			<p class="mb-6 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+				Kami percaya bahwa kualitas profesional seseorang tidak boleh dibatasi oleh alat yang mereka gunakan. Oleh karena itu, kami membangun Kerjao.id sebagai sebuah "bengkel" digital yang selalu siap sedia membantu siapa pun meningkatkan level profesionalitasnya.
 			</p>
 			<p>
 				Jika Anda memiliki saran, pertanyaan, atau ingin berkolaborasi, jangan ragu untuk
-				<a href="/hubungi-kami" class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
+				<a href={localizeHref('/hubungi-kami')} class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
 					>menghubungi kami</a
 				>.
 			</p>
@@ -191,7 +110,7 @@
 <section class="relative z-10 mb-6 py-12 sm:mb-12 sm:py-16">
 	<div class="mx-auto max-w-4xl px-6 lg:px-8">
 		<div
-			class="relative overflow-hidden rounded-[2rem] bg-indigo-600 px-6 py-12 text-center shadow-2xl sm:px-12 sm:py-14"
+			class="relative overflow-hidden rounded-4xl bg-indigo-600 px-6 py-12 text-center shadow-2xl sm:px-12 sm:py-14"
 		>
 			<div class="absolute inset-0 opacity-10">
 				<svg
@@ -210,7 +129,7 @@
 					25+ perkakas profesional menunggu Anda. Tanpa biaya, tanpa login.
 				</p>
 				<a
-					href="/semua-alat"
+					href={localizeHref('/semua-alat')}
 					class="inline-flex items-center rounded-2xl bg-white px-8 py-4 font-bold text-indigo-600 shadow-xl transition-all hover:-translate-y-1 hover:bg-slate-50"
 				>
 					Jelajahi Semua Alat
