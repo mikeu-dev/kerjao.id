@@ -4,6 +4,7 @@
 	import PatunganResult from '$lib/components/patungan/PatunganResult.svelte';
 	import { calculateSplitBill, type Friend, type Item, type ExtraCost } from '$lib/utils/split-bill';
 	import { Calculator, Share2, Printer, Download, RotateCcw } from 'lucide-svelte';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Swal from 'sweetalert2';
 
 	// Initial data based on user example
@@ -33,7 +34,7 @@
 
 		const text = `Patungan Makan Rincian:\n` + 
 			result.results.map(r => `${r.friendName}: Rp ${format(r.total)}`).join('\n') +
-			` \nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di Kerjao.id`;
+			` \nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di ${PUBLIC_ORIGIN}/patungan-makan`;
 		
 		if (navigator.share) {
 			try {
