@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Plus, Trash2, UserPlus, Users, Utensils, Tag, Camera, LoaderCircle } from 'lucide-svelte';
+	import { Plus, Trash2, UserPlus, Users, Utensils, Tag, Camera, LoaderCircle, X, Receipt } from 'lucide-svelte';
 	import type { Friend, Item, ExtraCost } from '$lib/utils/split-bill';
 	import { parseReceiptText } from '$lib/utils/ocr-parser';
 	import { createWorker } from 'tesseract.js';
@@ -64,12 +64,17 @@
 	let isScanning = $state(false);
 	let scanProgress = $state(0);
 	let scanStatus = $state('');
+	let scannedImage = $state<string | null>(null);
 	let fileInput: HTMLInputElement;
 
 	async function handleScan(event: Event) {
 		const target = event.target as HTMLInputElement;
 		const file = target.files?.[0];
 		if (!file) return;
+
+		// Create preview URL
+		if (scannedImage) URL.revokeObjectURL(scannedImage);
+		scannedImage = URL.createObjectURL(file);
 
 		isScanning = true;
 		scanProgress = 0;
@@ -184,6 +189,30 @@
 			</div>
 		{/if}
 	</div>
+
+	{#if scannedImage && !isScanning}
+		<div class="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900/50">
+			<div class="flex items-center justify-between border-b border-slate-100 px-4 py-3 dark:border-slate-800">
+				<div class="flex items-center gap-2">
+					<Receipt size={18} class="text-orange-500" />
+					<span class="text-sm font-bold text-slate-700 dark:text-slate-200">Gambar Struk Terlampir</span>
+				</div>
+				<button 
+					onclick={() => { URL.revokeObjectURL(scannedImage!); scannedImage = null; }}
+					class="rounded-lg p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800"
+				>
+					<X size={18} />
+				</button>
+			</div>
+			<div class="p-4 flex justify-center bg-slate-50 dark:bg-slate-900/80">
+				<img 
+					src={scannedImage} 
+					alt="Struk yang di-scan" 
+					class="max-h-80 rounded-lg shadow-md ring-1 ring-slate-200 dark:ring-slate-700"
+				/>
+			</div>
+		</div>
+	{/if}
 
 	<!-- Friends Section -->
 	<section class="space-y-4">
