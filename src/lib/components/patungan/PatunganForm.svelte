@@ -61,6 +61,7 @@
 	// OCR Logic
 	let isScanning = $state(false);
 	let scanProgress = $state(0);
+	let scanStatus = $state('');
 	let fileInput: HTMLInputElement;
 
 	async function handleScan(event: Event) {
@@ -72,15 +73,22 @@
 		scanProgress = 0;
 
 		try {
+			scanStatus = 'Menyiapkan sistem AI...';
 			const worker = await createWorker('ind+eng', 1, {
 				logger: (m) => {
 					if (m.status === 'recognizing text') {
+						scanStatus = 'Membaca rincian struk...';
 						scanProgress = Math.round(m.progress * 100);
+					} else if (m.status.includes('loading')) {
+						scanStatus = 'Memuat basis data bahasa...';
+						scanProgress = Math.max(scanProgress, 10);
 					}
 				}
 			});
 
 			const { data: { text } } = await worker.recognize(file);
+			scanProgress = 100;
+			scanStatus = 'Hampir selesai...';
 			await worker.terminate();
 
 			const parsed = parseReceiptText(text);
@@ -135,9 +143,9 @@
 					<Loader2 size={32} class="animate-spin text-orange-500" />
 				</div>
 				<div class="space-y-2">
-					<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Memindai Struk... {scanProgress}%</p>
+					<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">{scanStatus} {scanProgress}%</p>
 					<div class="mx-auto h-2 w-48 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-						<div class="h-full bg-orange-500 transition-all duration-300" style="width: {scanProgress}%"></div>
+						<div class="h-full bg-orange-500 transition-all duration-300 ease-out" style="width: {scanProgress}%"></div>
 					</div>
 				</div>
 			</div>
