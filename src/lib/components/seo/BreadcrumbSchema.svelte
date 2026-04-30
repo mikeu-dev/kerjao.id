@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PUBLIC_ORIGIN } from '$env/static/public';
+	const PUBLIC_ORIGIN = import.meta.env.PUBLIC_ORIGIN || 'https://kerjao.id';
 
 	/**
 	 * Breadcrumb items: array of { name, path } pairs.
