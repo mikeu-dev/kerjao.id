@@ -93,6 +93,7 @@
 	title="Kalkulator Patungan Makan (Split Bill) - Bagi Biaya Adil | Kerjao"
 	description="Hitung bagi biaya makan bareng teman dengan mudah dan adil. Otomatis bagi diskon dan biaya tambahan secara proporsional. Gratis dan tanpa login."
 	keywords="kalkulator patungan, split bill online, bagi biaya makan, hitung patungan gofood grabfood, bagi diskon makanan"
+	ogImage="{PUBLIC_ORIGIN}/patungan-makan-og.png"
 />
 
 <div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 lg:pt-32 pb-12 sm:px-6 lg:px-8">
