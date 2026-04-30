@@ -14,10 +14,15 @@
 	};
 </script>
 
-<div class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm print:p-0 print:shadow-none sm:p-20">
+<div
+	class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm sm:p-20 print:p-0 print:shadow-none"
+>
 	<!-- Header -->
 	<div class="mb-12 text-center">
-		<h1 class="text-xl font-bold uppercase tracking-widest underline decoration-2 underline-offset-8" style="color: {themeColor}">
+		<h1
+			class="text-xl font-bold tracking-widest uppercase underline decoration-2 underline-offset-8"
+			style="color: {themeColor}"
+		>
 			SURAT IZIN ORANG TUA / WALI
 		</h1>
 	</div>
@@ -63,17 +68,21 @@
 		</div>
 		<div class="grid grid-cols-4 gap-2">
 			<span class="font-medium">Tempat/Tgl Lahir</span>
-			<span class="col-span-3">: {data.tempatLahirAnak || '...'}, {formatDate(data.tanggalLahirAnak)}</span>
+			<span class="col-span-3"
+				>: {data.tempatLahirAnak || '...'}, {formatDate(data.tanggalLahirAnak)}</span
+			>
 		</div>
 	</div>
 
 	<!-- Pernyataan -->
 	<div class="space-y-6 text-justify text-xs leading-relaxed sm:text-sm">
 		<p>
-			<strong>{data.tujuanIzin || '.................'}</strong> dan memberikan persetujuan sepenuhnya untuk segala urusan administratif maupun teknis yang menyertainya.
+			<strong>{data.tujuanIzin || '.................'}</strong> dan memberikan persetujuan sepenuhnya
+			untuk segala urusan administratif maupun teknis yang menyertainya.
 		</p>
 		<p>
-			Demikian surat izin ini saya buat dengan sadar dan tanpa paksaan dari pihak manapun, untuk dapat dipergunakan sebagaimana mestinya.
+			Demikian surat izin ini saya buat dengan sadar dan tanpa paksaan dari pihak manapun, untuk
+			dapat dipergunakan sebagaimana mestinya.
 		</p>
 	</div>
 
@@ -82,7 +91,7 @@
 		<div class="space-y-20">
 			<p>{data.lokasi || '.................'}, {formatDate(data.tanggal)}</p>
 			<div class="space-y-1">
-				<p class="font-bold underline uppercase">{data.namaOrtu || '.................'}</p>
+				<p class="font-bold uppercase underline">{data.namaOrtu || '.................'}</p>
 				<p class="text-[10px] text-slate-500">Orang Tua / Wali</p>
 			</div>
 		</div>
@@ -90,7 +99,7 @@
 
 	<!-- Footer Info -->
 	<div class="mt-12 border-t border-slate-100 pt-8 print:hidden">
-		<p class="text-[10px] italic text-slate-400">
+		<p class="text-[10px] text-slate-400 italic">
 			*Surat izin ini biasanya ditempeli Materai Rp10.000 untuk keperluan hukum yang lebih formal.
 		</p>
 	</div>

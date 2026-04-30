@@ -36,7 +36,9 @@
 		if (saved) {
 			try {
 				data = { ...data, ...JSON.parse(saved) };
-			} catch (e) { console.error(e); }
+			} catch (e) {
+				console.error(e);
+			}
 		}
 	});
 
@@ -55,15 +57,17 @@ Tujuan: ${data.tujuanIzin}
 	}
 </script>
 
-<Meta 
+<Meta
 	title="Generator Surat Izin Orang Tua Online & Gratis - Kerjao.id"
 	description="Buat surat izin orang tua untuk melamar kerja, kegiatan sekolah, atau izin lainnya secara otomatis. Mudah, cepat, dan siap cetak."
 />
 
-<div class="min-h-screen bg-slate-50 pt-20 lg:pt-32 pb-20 dark:bg-slate-950">
+<div class="min-h-screen bg-slate-50 pt-20 pb-20 lg:pt-32 dark:bg-slate-950">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-12 text-center print:hidden">
-			<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 transition-all dark:text-white sm:text-5xl">
+			<h1
+				class="text-4xl font-extrabold tracking-tight text-slate-900 transition-all sm:text-5xl dark:text-white"
+			>
 				Izin <span style="color: {themeColor}">Orang Tua</span>
 			</h1>
 			<p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
@@ -74,16 +78,20 @@ Tujuan: ${data.tujuanIzin}
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
 			<!-- Col Left: Form -->
 			<div class="space-y-8 print:hidden">
-				<div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+				<div
+					class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none"
+				>
 					<IzinOrtuForm bind:data />
 				</div>
-				
+
 				<KontrakActions onPrint={handlePrint} onCopy={handleCopy} bind:themeColor />
 			</div>
 
 			<!-- Col Right: Preview -->
 			<div class="relative">
-				<div class="sticky top-32 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800">
+				<div
+					class="sticky top-32 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800"
+				>
 					<IzinOrtuPreview {data} {themeColor} />
 				</div>
 			</div>

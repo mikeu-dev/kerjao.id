@@ -34,11 +34,15 @@
 	onMount(() => {
 		const saved = localStorage.getItem(STORAGE_KEY);
 		if (saved) {
-			try { data = { ...data, ...JSON.parse(saved) }; } catch (e) {}
+			try {
+				data = { ...data, ...JSON.parse(saved) };
+			} catch (e) {}
 		}
 	});
 
-	function handlePrint() { window.print(); }
+	function handlePrint() {
+		window.print();
+	}
 
 	async function handleCopy() {
 		const text = `
@@ -52,15 +56,17 @@ Keperluan: ${data.keperluan}
 	}
 </script>
 
-<Meta 
+<Meta
 	title="Generator Surat Pengantar RT/RW Online & Gratis - Kerjao.id"
 	description="Buat surat pengantar RT/RW resmi untuk urus KTP, domisili, atau keperluan birokrasi lainnya secara instan dan gratis."
 />
 
-<div class="min-h-screen bg-slate-50 pt-20 lg:pt-32 pb-20 dark:bg-slate-950">
+<div class="min-h-screen bg-slate-50 pt-20 pb-20 lg:pt-32 dark:bg-slate-950">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-12 text-center print:hidden">
-			<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 transition-all dark:text-white sm:text-5xl">
+			<h1
+				class="text-4xl font-extrabold tracking-tight text-slate-900 transition-all sm:text-5xl dark:text-white"
+			>
 				Pengantar <span style="color: {themeColor}">RT/RW</span>
 			</h1>
 			<p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
@@ -71,16 +77,20 @@ Keperluan: ${data.keperluan}
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
 			<!-- Col Left: Form -->
 			<div class="space-y-8 print:hidden">
-				<div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+				<div
+					class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none"
+				>
 					<RtRwForm bind:data />
 				</div>
-				
+
 				<KontrakActions onPrint={handlePrint} onCopy={handleCopy} bind:themeColor />
 			</div>
 
 			<!-- Col Right: Preview -->
 			<div class="relative">
-				<div class="sticky top-32 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800">
+				<div
+					class="sticky top-32 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800"
+				>
 					<RtRwPreview {data} {themeColor} />
 				</div>
 			</div>

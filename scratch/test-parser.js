@@ -1,6 +1,8 @@
-
 function parseReceiptText(text) {
-	const lines = text.split('\n').map((l) => l.trim()).filter((l) => l.length > 5);
+	const lines = text
+		.split('\n')
+		.map((l) => l.trim())
+		.filter((l) => l.length > 5);
 	const items = [];
 	const extras = [];
 
@@ -9,8 +11,13 @@ function parseReceiptText(text) {
 
 	for (const line of lines) {
 		const lowerLine = line.toLowerCase();
-		
-		if (lowerLine.includes('total') || lowerLine.includes('subtotal') || lowerLine.includes('tunai') || lowerLine.includes('kembali')) {
+
+		if (
+			lowerLine.includes('total') ||
+			lowerLine.includes('subtotal') ||
+			lowerLine.includes('tunai') ||
+			lowerLine.includes('kembali')
+		) {
 			continue;
 		}
 
@@ -71,7 +78,8 @@ const result = parseReceiptText(sampleText);
 console.log('Items:', JSON.stringify(result.items, null, 2));
 console.log('Extras:', JSON.stringify(result.extras, null, 2));
 
-const grandTotal = result.items.reduce((acc, i) => acc + (i.price * i.quantity), 0) + 
-                  result.extras.reduce((acc, e) => acc + e.amount, 0);
+const grandTotal =
+	result.items.reduce((acc, i) => acc + i.price * i.quantity, 0) +
+	result.extras.reduce((acc, e) => acc + e.amount, 0);
 
 console.log('Calculated Grand Total:', grandTotal);

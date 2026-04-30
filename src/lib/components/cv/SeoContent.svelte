@@ -14,8 +14,8 @@
 	</p>
 	<ul>
 		<li>
-			<strong>Parsing Data 100% Akurat:</strong> Nama, tanggal pengalaman kerja, dan kata kunci
-			kompetensi (keywords) akan terserap sempurna ke dalam database rekrutmen perusahaan.
+			<strong>Parsing Data 100% Akurat:</strong> Nama, tanggal pengalaman kerja, dan kata kunci kompetensi
+			(keywords) akan terserap sempurna ke dalam database rekrutmen perusahaan.
 		</li>
 		<li>
 			<strong>Kenyamanan Kognitif Rekruter:</strong> HRD manusia hanya memiliki waktu rata-rata 6

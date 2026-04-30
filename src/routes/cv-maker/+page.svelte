@@ -35,7 +35,7 @@
 	keywords="cv ats friendly, buat cv online, generator cv gratis, harvard style resume"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 lg:pt-32 pb-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:pt-32">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<div

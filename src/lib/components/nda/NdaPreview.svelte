@@ -17,13 +17,19 @@
 	};
 </script>
 
-<div class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm print:p-0 print:shadow-none sm:p-16">
+<div
+	class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm sm:p-16 print:p-0 print:shadow-none"
+>
 	<!-- Header -->
 	<div class="mb-12 text-center">
-		<h1 class="text-xl font-bold uppercase tracking-widest underline decoration-2 underline-offset-8">
+		<h1
+			class="text-xl font-bold tracking-widest uppercase underline decoration-2 underline-offset-8"
+		>
 			{t.header}
 		</h1>
-		<p class="mt-4 text-xs font-medium text-slate-400">({data.lang === 'en' ? 'Non-Disclosure Agreement' : 'Dokumen Kerahasiaan'})</p>
+		<p class="mt-4 text-xs font-medium text-slate-400">
+			({data.lang === 'en' ? 'Non-Disclosure Agreement' : 'Dokumen Kerahasiaan'})
+		</p>
 	</div>
 
 	<!-- Intro -->
@@ -42,8 +48,13 @@
 			<div class="flex-1">
 				<p class="font-bold uppercase">{data.pihak1.perusahaan || '(First Party Name)'}</p>
 				<p class="mt-1">
-					{data.lang === 'en' ? 'Located at' : 'Beralamat di'} {data.pihak1.alamat || '.................'}, {data.lang === 'en' ? 'represented by' : 'dalam hal ini diwakili oleh'}
-					{data.pihak1.nama || '.................'}. {data.lang === 'en' ? 'Hereinafter referred to as' : 'Selanjutnya disebut sebagai'}
+					{data.lang === 'en' ? 'Located at' : 'Beralamat di'}
+					{data.pihak1.alamat || '.................'}, {data.lang === 'en'
+						? 'represented by'
+						: 'dalam hal ini diwakili oleh'}
+					{data.pihak1.nama || '.................'}. {data.lang === 'en'
+						? 'Hereinafter referred to as'
+						: 'Selanjutnya disebut sebagai'}
 					<strong>"{t.p1}"</strong>.
 				</p>
 			</div>
@@ -54,8 +65,13 @@
 			<div class="flex-1">
 				<p class="font-bold uppercase">{data.pihak2.perusahaan || '(Second Party Name)'}</p>
 				<p class="mt-1">
-					{data.lang === 'en' ? 'Located at' : 'Beralamat di'} {data.pihak2.alamat || '.................'}, {data.lang === 'en' ? 'represented by' : 'dalam hal ini diwakili oleh'}
-					{data.pihak2.nama || '.................'}. {data.lang === 'en' ? 'Hereinafter referred to as' : 'Selanjutnya disebut sebagai'}
+					{data.lang === 'en' ? 'Located at' : 'Beralamat di'}
+					{data.pihak2.alamat || '.................'}, {data.lang === 'en'
+						? 'represented by'
+						: 'dalam hal ini diwakili oleh'}
+					{data.pihak2.nama || '.................'}. {data.lang === 'en'
+						? 'Hereinafter referred to as'
+						: 'Selanjutnya disebut sebagai'}
 					<strong>"{t.p2}"</strong>.
 				</p>
 			</div>
@@ -71,7 +87,7 @@
 		</p>
 
 		<div>
-			<h3 class="font-bold border-b mb-2 pb-1 uppercase">{t.pasal1}</h3>
+			<h3 class="mb-2 border-b pb-1 font-bold uppercase">{t.pasal1}</h3>
 			<p>
 				{data.lang === 'en'
 					? 'Confidential Information includes, but is not limited to, technical data, trade secrets, business plans, financial information, marketing strategies, product designs, customer lists, and other information declared as secret or which should reasonably be considered secret by the Receiving Party.'
@@ -80,7 +96,7 @@
 		</div>
 
 		<div>
-			<h3 class="font-bold border-b mb-2 pb-1 uppercase">{t.pasal2}</h3>
+			<h3 class="mb-2 border-b pb-1 font-bold uppercase">{t.pasal2}</h3>
 			<p>
 				{data.lang === 'en'
 					? 'The Receiving Party agrees to: (a) maintain the confidentiality of Confidential Information with the same high level of care as when maintaining its own confidential information; (b) use Confidential Information solely for the purposes stated in this Agreement; (c) not disclose Confidential Information to third parties without the prior written consent of the Disclosing Party.'
@@ -89,7 +105,7 @@
 		</div>
 
 		<div>
-			<h3 class="font-bold border-b mb-2 pb-1 uppercase">{t.pasal4}</h3>
+			<h3 class="mb-2 border-b pb-1 font-bold uppercase">{t.pasal4}</h3>
 			<p>
 				{data.lang === 'en'
 					? `These confidentiality obligations will be effective from the date of signing this agreement and remain in force for **${data.jangkaWaktu || '.................'}** after the termination of discussions or cooperation between the Parties.`
@@ -97,10 +113,12 @@
 			</p>
 		</div>
 
-		<div class="rounded-lg bg-slate-50 p-4 border-l-4 border-slate-900">
-			<p class="font-bold mb-1 italic">{data.lang === 'en' ? 'Legal Disclaimer:' : 'Disclaimer Hukum:'}</p>
+		<div class="rounded-lg border-l-4 border-slate-900 bg-slate-50 p-4">
+			<p class="mb-1 font-bold italic">
+				{data.lang === 'en' ? 'Legal Disclaimer:' : 'Disclaimer Hukum:'}
+			</p>
 			<p class="text-[9px] text-slate-500 italic">
-				{data.lang === 'en' 
+				{data.lang === 'en'
 					? 'This document is generated automatically by Kerjao.id for informational purposes. The Parties are advised to consult with legal counsel to ensure compliance with relevant jurisdictions.'
 					: 'Dokumen ini dihasilkan secara otomatis oleh Kerjao.id untuk tujuan informasi. Para Pihak disarankan untuk berkonsultasi dengan ahli hukum guna memastikan kepatuhan terhadap yurisdiksi terkait.'}
 			</p>
@@ -112,24 +130,32 @@
 		<div class="space-y-4">
 			<p class="font-bold">{t.p1}</p>
 			{#if data.ttdPihak1}
-				<img src={data.ttdPihak1} alt="TTD Pihak 1" class="mx-auto block h-16 w-32 object-contain grayscale" />
+				<img
+					src={data.ttdPihak1}
+					alt="TTD Pihak 1"
+					class="mx-auto block h-16 w-32 object-contain grayscale"
+				/>
 			{:else}
 				<div class="h-16 w-32"></div>
 			{/if}
 			<div class="space-y-1">
-				<p class="font-bold underline uppercase">{data.pihak1.nama || '.................'}</p>
+				<p class="font-bold uppercase underline">{data.pihak1.nama || '.................'}</p>
 				<p class="text-[10px] text-slate-500">{data.pihak1.perusahaan || 'Disclosing Party'}</p>
 			</div>
 		</div>
 		<div class="space-y-4">
 			<p class="font-bold">{t.p2}</p>
 			{#if data.ttdPihak2}
-				<img src={data.ttdPihak2} alt="TTD Pihak 2" class="mx-auto block h-16 w-32 object-contain grayscale" />
+				<img
+					src={data.ttdPihak2}
+					alt="TTD Pihak 2"
+					class="mx-auto block h-16 w-32 object-contain grayscale"
+				/>
 			{:else}
 				<div class="h-16 w-32"></div>
 			{/if}
 			<div class="space-y-1">
-				<p class="font-bold underline uppercase">{data.pihak2.nama || '.................'}</p>
+				<p class="font-bold uppercase underline">{data.pihak2.nama || '.................'}</p>
 				<p class="text-[10px] text-slate-500">{data.pihak2.perusahaan || 'Receiving Party'}</p>
 			</div>
 		</div>

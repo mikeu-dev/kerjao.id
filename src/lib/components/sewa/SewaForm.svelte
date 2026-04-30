@@ -33,7 +33,7 @@
 				onclick={() => (activeSection = section.id)}
 				class="flex flex-col items-center gap-1 rounded-xl py-2 text-[10px] font-bold transition-all sm:text-xs
                 {activeSection === section.id
-					? 'bg-white shadow-sm text-indigo-600 dark:bg-slate-700 dark:text-indigo-400'
+					? 'bg-white text-indigo-600 shadow-sm dark:bg-slate-700 dark:text-indigo-400'
 					: 'text-slate-500 hover:text-slate-700 dark:text-slate-400'}"
 			>
 				<span>{section.icon}</span>
@@ -47,46 +47,102 @@
 	<div class="space-y-6">
 		{#if activeSection === 'pihak1'}
 			<div in:slide={{ axis: 'y' }} class="space-y-4">
-				<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Data Pemilik Properti</h3>
+				<h3 class="text-sm font-bold tracking-wider text-slate-400 uppercase">
+					Data Pemilik Properti
+				</h3>
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<div class="space-y-2">
-						<label for="p1-nama" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Nama Lengkap</label>
-						<input id="p1-nama" type="text" bind:value={data.pihak1.nama} placeholder="Contoh: Budi Santoso" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+						<label for="p1-nama" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Nama Lengkap</label
+						>
+						<input
+							id="p1-nama"
+							type="text"
+							bind:value={data.pihak1.nama}
+							placeholder="Contoh: Budi Santoso"
+							class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						/>
 					</div>
 					<div class="space-y-2">
-						<label for="p1-nik" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Nomor NIK (KTP)</label>
-						<input id="p1-nik" type="text" bind:value={data.pihak1.nik} placeholder="16 digit angka KTP" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+						<label for="p1-nik" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Nomor NIK (KTP)</label
+						>
+						<input
+							id="p1-nik"
+							type="text"
+							bind:value={data.pihak1.nik}
+							placeholder="16 digit angka KTP"
+							class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						/>
 					</div>
 				</div>
 				<div class="space-y-2">
-					<label for="p1-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Alamat Domisili</label>
-					<input id="p1-alamat" type="text" bind:value={data.pihak1.alamat} placeholder="Sesuai KTP" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+					<label for="p1-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+						>Alamat Domisili</label
+					>
+					<input
+						id="p1-alamat"
+						type="text"
+						bind:value={data.pihak1.alamat}
+						placeholder="Sesuai KTP"
+						class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+					/>
 				</div>
 			</div>
 		{:else if activeSection === 'pihak2'}
 			<div in:slide={{ axis: 'y' }} class="space-y-4">
-				<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Data Penyewa</h3>
+				<h3 class="text-sm font-bold tracking-wider text-slate-400 uppercase">Data Penyewa</h3>
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<div class="space-y-2">
-						<label for="p2-nama" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Nama Calon Penyewa</label>
-						<input id="p2-nama" type="text" bind:value={data.pihak2.nama} placeholder="Nama Penyewa" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+						<label for="p2-nama" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Nama Calon Penyewa</label
+						>
+						<input
+							id="p2-nama"
+							type="text"
+							bind:value={data.pihak2.nama}
+							placeholder="Nama Penyewa"
+							class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						/>
 					</div>
 					<div class="space-y-2">
-						<label for="p2-nik" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Nomor NIK (KTP)</label>
-						<input id="p2-nik" type="text" bind:value={data.pihak2.nik} placeholder="NIK Penyewa" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+						<label for="p2-nik" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Nomor NIK (KTP)</label
+						>
+						<input
+							id="p2-nik"
+							type="text"
+							bind:value={data.pihak2.nik}
+							placeholder="NIK Penyewa"
+							class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						/>
 					</div>
 				</div>
 				<div class="space-y-2">
-					<label for="p2-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Alamat Asal Penyewa</label>
-					<input id="p2-alamat" type="text" bind:value={data.pihak2.alamat} placeholder="Alamat sesuai KTP penyewa" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+					<label for="p2-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+						>Alamat Asal Penyewa</label
+					>
+					<input
+						id="p2-alamat"
+						type="text"
+						bind:value={data.pihak2.alamat}
+						placeholder="Alamat sesuai KTP penyewa"
+						class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+					/>
 				</div>
 			</div>
 		{:else if activeSection === 'properti'}
 			<div in:slide={{ axis: 'y' }} class="space-y-4">
-				<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Objek Properti</h3>
+				<h3 class="text-sm font-bold tracking-wider text-slate-400 uppercase">Objek Properti</h3>
 				<div class="space-y-2">
-					<label for="prop-jenis" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Tipe Properti</label>
-					<select id="prop-jenis" bind:value={data.properti.jenis} class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
+					<label for="prop-jenis" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+						>Tipe Properti</label
+					>
+					<select
+						id="prop-jenis"
+						bind:value={data.properti.jenis}
+						class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+					>
 						<option value="Rumah">Rumah Tinggal</option>
 						<option value="Ruko">Ruko / Kios</option>
 						<option value="Apartemen">Unit Apartemen</option>
@@ -94,52 +150,109 @@
 					</select>
 				</div>
 				<div class="space-y-2">
-					<label for="prop-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Alamat Lengkap Properti yang Disewakan</label>
-					<textarea id="prop-alamat" bind:value={data.properti.alamat} placeholder="Contoh: Perumahan Indah Blok A No 12, Jakarta" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" rows="3"></textarea>
+					<label for="prop-alamat" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+						>Alamat Lengkap Properti yang Disewakan</label
+					>
+					<textarea
+						id="prop-alamat"
+						bind:value={data.properti.alamat}
+						placeholder="Contoh: Perumahan Indah Blok A No 12, Jakarta"
+						class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						rows="3"
+					></textarea>
 				</div>
 				<div class="space-y-2">
-					<label for="prop-fasilitas" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Fasilitas Tambahan (Opsional)</label>
-					<input id="prop-fasilitas" type="text" bind:value={data.properti.fasilitas} placeholder="Misal: AC 2 Unit, Gordyn, Springbed" class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+					<label
+						for="prop-fasilitas"
+						class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+						>Fasilitas Tambahan (Opsional)</label
+					>
+					<input
+						id="prop-fasilitas"
+						type="text"
+						bind:value={data.properti.fasilitas}
+						placeholder="Misal: AC 2 Unit, Gordyn, Springbed"
+						class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+					/>
 				</div>
 			</div>
 		{:else if activeSection === 'kontrak'}
 			<div in:slide={{ axis: 'y' }} class="space-y-4">
-				<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Detail Sewa & Kontrak</h3>
+				<h3 class="text-sm font-bold tracking-wider text-slate-400 uppercase">
+					Detail Sewa & Kontrak
+				</h3>
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<div class="space-y-2">
-						<label for="kon-nilai" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Harga Sewa (IDR)</label>
+						<label for="kon-nilai" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Harga Sewa (IDR)</label
+						>
 						<div class="relative">
-							<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">Rp</span>
-							<input id="kon-nilai" type="number" bind:value={data.kontrak.nilaiSewa} placeholder="0" class="w-full rounded-xl border-slate-200 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+							<span class="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400">Rp</span>
+							<input
+								id="kon-nilai"
+								type="number"
+								bind:value={data.kontrak.nilaiSewa}
+								placeholder="0"
+								class="w-full rounded-xl border-slate-200 bg-white py-2.5 pr-4 pl-10 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+							/>
 						</div>
 					</div>
 					<div class="space-y-2">
-						<label for="kon-jaminan" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Pagu Deposit (Jaminan)</label>
+						<label
+							for="kon-jaminan"
+							class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Pagu Deposit (Jaminan)</label
+						>
 						<div class="relative">
-							<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">Rp</span>
-							<input id="kon-jaminan" type="number" bind:value={data.kontrak.uangJaminan} placeholder="0" class="w-full rounded-xl border-slate-200 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+							<span class="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400">Rp</span>
+							<input
+								id="kon-jaminan"
+								type="number"
+								bind:value={data.kontrak.uangJaminan}
+								placeholder="0"
+								class="w-full rounded-xl border-slate-200 bg-white py-2.5 pr-4 pl-10 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+							/>
 						</div>
 					</div>
 				</div>
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<div class="space-y-2">
-						<label for="kon-durasi" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Lama Sewa</label>
+						<label for="kon-durasi" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Lama Sewa</label
+						>
 						<div class="flex gap-2">
-							<input id="kon-durasi" type="number" bind:value={data.kontrak.durasi} class="w-20 rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
-							<select bind:value={data.kontrak.satuanDurasi} class="flex-1 rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
+							<input
+								id="kon-durasi"
+								type="number"
+								bind:value={data.kontrak.durasi}
+								class="w-20 rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+							/>
+							<select
+								bind:value={data.kontrak.satuanDurasi}
+								class="flex-1 rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+							>
 								<option value="Tahun">Tahun</option>
 								<option value="Bulan">Bulan</option>
 							</select>
 						</div>
 					</div>
 					<div class="space-y-2">
-						<label for="kon-mulai" class="text-xs font-semibold text-slate-600 dark:text-slate-300">Tanggal Mulai</label>
-						<input id="kon-mulai" type="date" bind:value={data.kontrak.tanggalMulai} class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+						<label for="kon-mulai" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+							>Tanggal Mulai</label
+						>
+						<input
+							id="kon-mulai"
+							type="date"
+							bind:value={data.kontrak.tanggalMulai}
+							class="w-full rounded-xl border-slate-200 bg-white px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+						/>
 					</div>
 				</div>
 				<div class="rounded-xl bg-indigo-50 p-3 dark:bg-indigo-900/20">
-					<p class="text-[10px] text-indigo-700 dark:text-indigo-300 lg:text-xs">
-						Kontrak akan otomatis berakhir pada: <strong>{data.kontrak.tanggalSelesai || '-'}</strong>
+					<p class="text-[10px] text-indigo-700 lg:text-xs dark:text-indigo-300">
+						Kontrak akan otomatis berakhir pada: <strong
+							>{data.kontrak.tanggalSelesai || '-'}</strong
+						>
 					</p>
 				</div>
 			</div>

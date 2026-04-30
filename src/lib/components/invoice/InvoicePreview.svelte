@@ -138,7 +138,7 @@
 	</div>
 
 	<!-- Notes & Payment Details -->
-	<div class="flex flex-col gap-8 text-sm sm:flex-row mb-12">
+	<div class="mb-12 flex flex-col gap-8 text-sm sm:flex-row">
 		{#if data.paymentInfo}
 			<div class="flex-1">
 				<div class="mb-2 text-xs font-bold tracking-wider text-slate-400 uppercase">
@@ -166,8 +166,14 @@
 	{#if data.signature}
 		<div class="flex flex-col items-center sm:items-end">
 			<div class="w-48 text-center">
-				<p class="mb-2 text-xs font-bold text-slate-400 uppercase">{data.lang === 'en' ? 'Authorized By' : 'Hormat Kami'}</p>
-				<img src={data.signature} alt="Signature" class="mx-auto block h-20 w-40 object-contain grayscale" />
+				<p class="mb-2 text-xs font-bold text-slate-400 uppercase">
+					{data.lang === 'en' ? 'Authorized By' : 'Hormat Kami'}
+				</p>
+				<img
+					src={data.signature}
+					alt="Signature"
+					class="mx-auto block h-20 w-40 object-contain grayscale"
+				/>
 				<div class="mt-2 border-t border-slate-200 pt-1">
 					<p class="font-bold text-slate-900">{data.vendorName || '(Vendor Name)'}</p>
 				</div>

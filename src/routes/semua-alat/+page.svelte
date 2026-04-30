@@ -29,7 +29,7 @@
 	keywords="daftar alat kerjao, generator surat, kalkulator gaji, invoice creator"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 lg:pt-32 pb-24 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 pb-24 sm:px-6 lg:px-8 lg:pt-32">
 	<!-- Header -->
 	<div class="mb-16 text-center">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -78,12 +78,14 @@
 								{tool.name}
 							</h3>
 
-							<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+							<p
+								class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400"
+							>
 								{tool.description}
 							</p>
 
 							<div
-								class="mt-auto flex items-center text-xs font-bold text-indigo-600 transition-opacity opacity-0 group-hover:opacity-100 dark:text-indigo-400"
+								class="mt-auto flex items-center text-xs font-bold text-indigo-600 opacity-0 transition-opacity group-hover:opacity-100 dark:text-indigo-400"
 							>
 								Gunakan Alat
 								<ArrowRight class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />

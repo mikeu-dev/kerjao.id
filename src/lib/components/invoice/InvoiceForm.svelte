@@ -5,7 +5,7 @@
 	let { data = $bindable() }: { data: InvoiceData } = $props();
 
 	if (!data.lang) data.lang = 'id';
-// ... rest of functions
+	// ... rest of functions
 
 	function addItem() {
 		data.items = [
@@ -31,21 +31,25 @@
 			<h3 class="font-bold text-slate-800 dark:text-white">Detail Invoice</h3>
 			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Atribut penagihan Anda.</p>
 		</div>
-		
+
 		<div class="mb-4">
 			<div class="mb-1.5 block text-xs font-semibold text-slate-500 uppercase">Bahasa Dokumen</div>
-			<div class="flex gap-2 max-w-[300px]">
-				<button 
+			<div class="flex max-w-[300px] gap-2">
+				<button
 					type="button"
-					onclick={() => data.lang = 'id'}
-					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'id' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
+					onclick={() => (data.lang = 'id')}
+					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'id'
+						? 'bg-indigo-600 text-white shadow-lg'
+						: 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
 				>
 					🇮🇩 ID
 				</button>
-				<button 
+				<button
 					type="button"
-					onclick={() => data.lang = 'en'}
-					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'en' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
+					onclick={() => (data.lang = 'en')}
+					class="flex-1 rounded-xl py-2 text-xs font-bold transition-all {data.lang === 'en'
+						? 'bg-indigo-600 text-white shadow-lg'
+						: 'bg-slate-100 text-slate-600 dark:bg-slate-800'}"
 				>
 					🇺🇸 EN
 				</button>

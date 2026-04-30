@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let { value = $bindable(''), label = 'Tanda Tangan' }: { value: string | undefined; label?: string } = $props();
+	let {
+		value = $bindable(''),
+		label = 'Tanda Tangan'
+	}: { value: string | undefined; label?: string } = $props();
 
 	let canvas: HTMLCanvasElement;
 	let ctx: CanvasRenderingContext2D | null;
@@ -63,7 +66,9 @@
 
 <div class="space-y-2">
 	<div class="flex items-center justify-between">
-		<label for="sig-pad" class="text-xs font-semibold text-slate-600 dark:text-slate-300">{label}</label>
+		<label for="sig-pad" class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+			>{label}</label
+		>
 		<button
 			type="button"
 			onclick={clear}
@@ -73,7 +78,9 @@
 		</button>
 	</div>
 
-	<div class="relative overflow-hidden rounded-xl border-2 border-dashed border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
+	<div
+		class="relative overflow-hidden rounded-xl border-2 border-dashed border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900"
+	>
 		<canvas
 			bind:this={canvas}
 			id="sig-pad"
@@ -88,11 +95,13 @@
 			ontouchend={stopDrawing}
 			class="h-[120px] w-full cursor-crosshair touch-none sm:h-[150px]"
 		></canvas>
-        
-        {#if !value}
-            <div class="pointer-events-none absolute inset-0 flex items-center justify-center text-[10px] text-slate-300 uppercase tracking-widest">
-                Gambar Tanda Tangan Di Sini
-            </div>
-        {/if}
+
+		{#if !value}
+			<div
+				class="pointer-events-none absolute inset-0 flex items-center justify-center text-[10px] tracking-widest text-slate-300 uppercase"
+			>
+				Gambar Tanda Tangan Di Sini
+			</div>
+		{/if}
 	</div>
 </div>

@@ -6,7 +6,8 @@
 
 	const colorMap = {
 		rose: {
-			border: 'border-rose-300/80 hover:border-rose-400 dark:border-rose-700/80 dark:hover:border-rose-600',
+			border:
+				'border-rose-300/80 hover:border-rose-400 dark:border-rose-700/80 dark:hover:border-rose-600',
 			bg: 'bg-rose-50/30 dark:bg-rose-900/10',
 			iconBg: 'bg-rose-100 dark:bg-rose-500/20',
 			iconText: 'text-rose-600 dark:text-rose-400',
@@ -16,7 +17,8 @@
 			tag: 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-red-200'
 		},
 		indigo: {
-			border: 'border-indigo-200/80 hover:border-indigo-400 dark:border-indigo-700/80 dark:hover:border-indigo-600',
+			border:
+				'border-indigo-200/80 hover:border-indigo-400 dark:border-indigo-700/80 dark:hover:border-indigo-600',
 			bg: 'bg-indigo-50/20 dark:bg-indigo-900/10',
 			iconBg: 'bg-indigo-50 dark:bg-indigo-500/10',
 			iconText: 'text-indigo-600 dark:text-indigo-400',
@@ -26,7 +28,8 @@
 			tag: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200'
 		},
 		blue: {
-			border: 'border-blue-200/80 hover:border-blue-400 dark:border-blue-700/80 dark:bg-blue-900/10 dark:hover:border-blue-600',
+			border:
+				'border-blue-200/80 hover:border-blue-400 dark:border-blue-700/80 dark:bg-blue-900/10 dark:hover:border-blue-600',
 			bg: 'bg-blue-50/20 dark:bg-blue-900/10',
 			iconBg: 'bg-blue-50 dark:bg-blue-500/10',
 			iconText: 'text-blue-600 dark:text-blue-400',
@@ -36,7 +39,8 @@
 			tag: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
 		},
 		emerald: {
-			border: 'border-emerald-200/80 hover:border-emerald-400 dark:border-emerald-700/80 dark:bg-emerald-900/10 dark:hover:border-emerald-600',
+			border:
+				'border-emerald-200/80 hover:border-emerald-400 dark:border-emerald-700/80 dark:bg-emerald-900/10 dark:hover:border-emerald-600',
 			bg: 'bg-emerald-50/20 dark:bg-emerald-900/10',
 			iconBg: 'bg-emerald-50 dark:bg-emerald-500/10',
 			iconText: 'text-emerald-600 dark:text-emerald-400',
@@ -46,7 +50,8 @@
 			tag: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200'
 		},
 		orange: {
-			border: 'border-orange-200/80 hover:border-orange-400 dark:border-orange-700/80 dark:bg-orange-900/10 dark:hover:border-orange-600',
+			border:
+				'border-orange-200/80 hover:border-orange-400 dark:border-orange-700/80 dark:bg-orange-900/10 dark:hover:border-orange-600',
 			bg: 'bg-orange-50/20 dark:bg-orange-900/10',
 			iconBg: 'bg-orange-50 dark:bg-orange-500/10',
 			iconText: 'text-orange-600 dark:text-orange-400',
@@ -56,7 +61,8 @@
 			tag: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
 		},
 		teal: {
-			border: 'border-teal-200/80 hover:border-teal-400 dark:border-teal-700/80 dark:bg-teal-900/10 dark:hover:border-teal-600',
+			border:
+				'border-teal-200/80 hover:border-teal-400 dark:border-teal-700/80 dark:bg-teal-900/10 dark:hover:border-teal-600',
 			bg: 'bg-teal-50/20 dark:bg-teal-900/10',
 			iconBg: 'bg-teal-50 dark:bg-teal-500/10',
 			iconText: 'text-teal-600 dark:text-teal-400',
@@ -66,7 +72,8 @@
 			tag: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200'
 		},
 		red: {
-			border: 'border-red-200/80 hover:border-red-400 dark:border-red-700/80 dark:bg-red-900/10 dark:hover:border-red-600',
+			border:
+				'border-red-200/80 hover:border-red-400 dark:border-red-700/80 dark:bg-red-900/10 dark:hover:border-red-600',
 			bg: 'bg-red-50/20 dark:bg-red-900/10',
 			iconBg: 'bg-red-50 dark:bg-red-500/10',
 			iconText: 'text-red-600 dark:text-red-400',
@@ -76,7 +83,8 @@
 			tag: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
 		},
 		amber: {
-			border: 'border-amber-200/80 hover:border-amber-400 dark:border-amber-700/80 dark:bg-amber-900/10 dark:hover:border-amber-600',
+			border:
+				'border-amber-200/80 hover:border-amber-400 dark:border-amber-700/80 dark:bg-amber-900/10 dark:hover:border-amber-600',
 			bg: 'bg-amber-50/20 dark:bg-amber-900/10',
 			iconBg: 'bg-amber-50 dark:bg-amber-500/10',
 			iconText: 'text-amber-600 dark:text-amber-400',
@@ -86,7 +94,8 @@
 			tag: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200'
 		},
 		cyan: {
-			border: 'border-cyan-200/80 hover:border-cyan-400 dark:border-cyan-700/80 dark:bg-cyan-900/10 dark:hover:border-cyan-600',
+			border:
+				'border-cyan-200/80 hover:border-cyan-400 dark:border-cyan-700/80 dark:bg-cyan-900/10 dark:hover:border-cyan-600',
 			bg: 'bg-cyan-50/20 dark:bg-cyan-900/10',
 			iconBg: 'bg-cyan-50 dark:bg-cyan-500/10',
 			iconText: 'text-cyan-600 dark:text-cyan-400',
@@ -96,7 +105,8 @@
 			tag: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200'
 		},
 		violet: {
-			border: 'border-violet-200/80 hover:border-violet-400 dark:border-violet-700/80 dark:bg-violet-900/10 dark:hover:border-violet-600',
+			border:
+				'border-violet-200/80 hover:border-violet-400 dark:border-violet-700/80 dark:bg-violet-900/10 dark:hover:border-violet-600',
 			bg: 'bg-violet-50/20 dark:bg-violet-900/10',
 			iconBg: 'bg-violet-50 dark:bg-violet-500/10',
 			iconText: 'text-violet-600 dark:text-violet-400',
@@ -106,7 +116,8 @@
 			tag: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200'
 		},
 		slate: {
-			border: 'border-slate-200/80 hover:border-slate-400 dark:border-slate-700/80 dark:bg-slate-900/10 dark:hover:border-slate-600',
+			border:
+				'border-slate-200/80 hover:border-slate-400 dark:border-slate-700/80 dark:bg-slate-900/10 dark:hover:border-slate-600',
 			bg: 'bg-slate-50/20 dark:bg-slate-900/10',
 			iconBg: 'bg-slate-50 dark:bg-slate-500/10',
 			iconText: 'text-slate-600 dark:text-slate-400',
@@ -241,7 +252,7 @@
 
 <!-- Features / Keunggulan Section -->
 <section
-	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-12 sm:py-24 backdrop-blur-3xl dark:border-slate-800/60 dark:bg-slate-900/40"
+	class="relative z-10 border-t border-slate-200/60 bg-white/40 py-12 backdrop-blur-3xl sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto mb-16 max-w-2xl text-center lg:mb-20">
@@ -320,9 +331,11 @@
 	class="relative z-10 border-t border-slate-200/60 bg-slate-50/30 py-12 sm:py-24 dark:border-slate-800/60 dark:bg-slate-900/40"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
-		<div class="flex flex-col items-center justify-between gap-6 mb-16 md:flex-row lg:mb-20">
+		<div class="mb-16 flex flex-col items-center justify-between gap-6 md:flex-row lg:mb-20">
 			<div class="max-w-2xl text-center md:text-left">
-				<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+				<h2
+					class="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white"
+				>
 					Pusat Panduan & <span class="text-indigo-600 dark:text-indigo-400">Wawasan Karir</span>
 				</h2>
 				<p class="text-lg text-slate-600 dark:text-slate-400">
@@ -332,10 +345,10 @@
 			</div>
 			<a
 				href="/artikel"
-				class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-indigo-600 bg-white border border-indigo-100 rounded-2xl shadow-sm transition-all hover:bg-indigo-50 hover:border-indigo-200 dark:bg-slate-800 dark:border-slate-700 dark:text-indigo-400 dark:hover:bg-slate-700"
+				class="inline-flex items-center gap-2 rounded-2xl border border-indigo-100 bg-white px-6 py-3 text-sm font-semibold text-indigo-600 shadow-sm transition-all hover:border-indigo-200 hover:bg-indigo-50 dark:border-slate-700 dark:bg-slate-800 dark:text-indigo-400 dark:hover:bg-slate-700"
 			>
 				Lihat Semua Artikel
-				<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
@@ -362,29 +375,29 @@
 						</div>
 					{:else}
 						<div
-							class="aspect-video w-full flex items-center justify-center bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30"
+							class="flex aspect-video w-full items-center justify-center bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30"
 						>
-							<ToolIcon name="FileText" class="w-12 h-12 text-indigo-200 dark:text-indigo-900" />
+							<ToolIcon name="FileText" class="h-12 w-12 text-indigo-200 dark:text-indigo-900" />
 						</div>
 					{/if}
 					<div class="p-8">
-						<div class="flex items-center gap-3 mb-4 text-sm font-medium text-slate-500">
-							<span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-700/50"
+						<div class="mb-4 flex items-center gap-3 text-sm font-medium text-slate-500">
+							<span class="rounded-lg bg-slate-100 px-2.5 py-1 dark:bg-slate-700/50"
 								>{new Date(article.date).toLocaleDateString('id-ID', {
 									year: 'numeric',
 									month: 'long',
 									day: 'numeric'
 								})}</span
 							>
-							<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+							<span class="h-1 w-1 rounded-full bg-slate-300"></span>
 							<span>Panduan Karir</span>
 						</div>
 						<h3
-							class="mb-3 text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+							class="mb-3 text-xl leading-snug font-bold text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
 						>
 							{article.title}
 						</h3>
-						<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+						<p class="line-clamp-3 leading-relaxed text-slate-600 dark:text-slate-400">
 							{article.description}
 						</p>
 					</div>
@@ -395,7 +408,7 @@
 </section>
 
 <!-- Bottom CTA -->
-<section class="relative z-10 py-12 sm:py-24 mb-6 sm:mb-12">
+<section class="relative z-10 mb-6 py-12 sm:mb-12 sm:py-24">
 	<div class="mx-auto max-w-5xl px-6 lg:px-8">
 		<div
 			class="relative overflow-hidden rounded-[2.5rem] bg-indigo-600 px-6 py-12 text-center shadow-2xl sm:px-16 sm:py-16"
@@ -403,14 +416,14 @@
 			<!-- Decorative patterns -->
 			<div class="absolute inset-0 opacity-10">
 				<svg
-					class="absolute top-0 left-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2 text-white"
+					class="absolute top-0 left-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 text-white"
 					fill="currentColor"
 					viewBox="0 0 100 100"
 				>
 					<circle cx="50" cy="50" r="40" />
 				</svg>
 				<svg
-					class="absolute bottom-0 right-0 w-96 h-96 translate-x-1/3 translate-y-1/3 text-white"
+					class="absolute right-0 bottom-0 h-96 w-96 translate-x-1/3 translate-y-1/3 text-white"
 					fill="currentColor"
 					viewBox="0 0 100 100"
 				>

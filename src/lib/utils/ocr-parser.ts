@@ -13,7 +13,10 @@ export function parseReceiptText(text: string): {
 	items: ScannedItem[];
 	extras: ScannedExtra[];
 } {
-	const lines = text.split('\n').map((l) => l.trim()).filter((l) => l.length > 5);
+	const lines = text
+		.split('\n')
+		.map((l) => l.trim())
+		.filter((l) => l.length > 5);
 	const items: ScannedItem[] = [];
 	const extras: ScannedExtra[] = [];
 
@@ -23,9 +26,14 @@ export function parseReceiptText(text: string): {
 
 	for (const line of lines) {
 		const lowerLine = line.toLowerCase();
-		
+
 		// Skip total/subtotal lines to avoid double counting
-		if (lowerLine.includes('total') || lowerLine.includes('subtotal') || lowerLine.includes('tunai') || lowerLine.includes('kembali')) {
+		if (
+			lowerLine.includes('total') ||
+			lowerLine.includes('subtotal') ||
+			lowerLine.includes('tunai') ||
+			lowerLine.includes('kembali')
+		) {
 			continue;
 		}
 
@@ -67,7 +75,7 @@ export function parseReceiptText(text: string): {
 		} else {
 			// If quantity > 1, the price from receipt is usually the total for that line
 			const unitPrice = quantity > 1 ? Math.round(price / quantity) : price;
-			
+
 			items.push({
 				name,
 				price: unitPrice,

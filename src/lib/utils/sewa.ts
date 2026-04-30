@@ -31,7 +31,11 @@ export function generateSewaId() {
 	return Math.random().toString(36).substring(2, 9);
 }
 
-export function calculateEndDate(startDate: string, duration: number, unit: 'Tahun' | 'Bulan'): string {
+export function calculateEndDate(
+	startDate: string,
+	duration: number,
+	unit: 'Tahun' | 'Bulan'
+): string {
 	if (!startDate) return '';
 	const date = new Date(startDate);
 	if (unit === 'Tahun') {

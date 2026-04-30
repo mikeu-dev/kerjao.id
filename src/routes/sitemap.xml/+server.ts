@@ -2,11 +2,7 @@ import { toolsRegistry } from '$lib/utils/tools-registry';
 
 export async function GET() {
 	const toolPaths = toolsRegistry.map((tool) => tool.path);
-	const staticPages = [
-		'',
-		'/artikel',
-		...toolPaths
-	];
+	const staticPages = ['', '/artikel', ...toolPaths];
 
 	// Fetch dynamic articles for sitemap
 	const articlePaths = import.meta.glob('/src/lib/articles/*.{md,svx}', { eager: true });

@@ -2,7 +2,12 @@
 	import Meta from '$lib/components/seo/Meta.svelte';
 	import PatunganForm from '$lib/components/patungan/PatunganForm.svelte';
 	import PatunganResult from '$lib/components/patungan/PatunganResult.svelte';
-	import { calculateSplitBill, type Friend, type Item, type ExtraCost } from '$lib/utils/split-bill';
+	import {
+		calculateSplitBill,
+		type Friend,
+		type Item,
+		type ExtraCost
+	} from '$lib/utils/split-bill';
 	import { Calculator, Share2, Printer, Download, RotateCcw } from 'lucide-svelte';
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Swal from 'sweetalert2';
@@ -27,12 +32,15 @@
 	let result = $derived(calculateSplitBill(items, friends, extraCosts));
 
 	async function shareResults() {
-		const format = (v: number) => new Intl.NumberFormat('id-ID', { 
-			minimumFractionDigits: 0, 
-			maximumFractionDigits: 0 
-		}).format(Math.round(v));
+		const format = (v: number) =>
+			new Intl.NumberFormat('id-ID', {
+				minimumFractionDigits: 0,
+				maximumFractionDigits: 0
+			}).format(Math.round(v));
 
-		const rincianText = result.results.map(r => `${r.friendName}: Rp ${format(r.total)}`).join('\n');
+		const rincianText = result.results
+			.map((r) => `${r.friendName}: Rp ${format(r.total)}`)
+			.join('\n');
 		const baseText = `Patungan Makan Rincian:\n${rincianText}\n\nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di:`;
 		const shareUrl = `${PUBLIC_ORIGIN}/patungan-makan`;
 
@@ -96,7 +104,7 @@
 	ogImage="{PUBLIC_ORIGIN}/patungan-makan-og.png"
 />
 
-<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 lg:pt-32 pb-12 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:pt-32">
 	<!-- Header -->
 	<div class="mb-12 text-center print:hidden">
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -106,9 +114,10 @@
 			>
 		</h1>
 		<p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600 sm:text-xl dark:text-slate-400">
-			Bagi tagihan pesanan makanan berkelompok secara adil. Diskon dan biaya tambahan dibagi secara proporsional.
+			Bagi tagihan pesanan makanan berkelompok secara adil. Diskon dan biaya tambahan dibagi secara
+			proporsional.
 		</p>
-		
+
 		<div
 			class="animate-fade-in mt-6 inline-flex items-center rounded-full border border-orange-500/20 bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700 shadow-sm ring-1 ring-orange-500/10 ring-inset dark:border-orange-400/20 dark:bg-orange-900/40 dark:text-orange-300"
 		>
@@ -139,9 +148,9 @@
 						</div>
 						<h2 class="text-xl font-bold text-slate-900 dark:text-white">Rincian Pesanan</h2>
 					</div>
-					<button 
+					<button
 						onclick={resetData}
-						class="flex items-center gap-1 text-xs font-semibold text-rose-500 hover:text-rose-600 transition-colors"
+						class="flex items-center gap-1 text-xs font-semibold text-rose-500 transition-colors hover:text-rose-600"
 					>
 						<RotateCcw size={14} />
 						Reset
@@ -152,14 +161,14 @@
 
 			<!-- Quick Actions -->
 			<div class="hidden grid-cols-2 gap-4 md:grid">
-				<button 
+				<button
 					onclick={() => window.print()}
 					class="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white py-3 font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
 				>
 					<Printer size={18} />
 					Cetak Hasil
 				</button>
-				<button 
+				<button
 					onclick={shareResults}
 					class="flex items-center justify-center gap-2 rounded-2xl bg-orange-500 py-3 font-semibold text-white shadow-lg shadow-orange-500/25 transition-all hover:bg-orange-600 active:scale-95"
 				>
@@ -187,17 +196,17 @@
 
 				<PatunganResult {...result} />
 			</div>
-			
+
 			<!-- Mobile Actions -->
 			<div class="grid grid-cols-2 gap-4 md:hidden print:hidden">
-				<button 
+				<button
 					onclick={() => window.print()}
 					class="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white py-3 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
 				>
 					<Printer size={18} />
 					Cetak
 				</button>
-				<button 
+				<button
 					onclick={shareResults}
 					class="flex items-center justify-center gap-2 rounded-2xl bg-orange-500 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/25"
 				>
@@ -210,21 +219,35 @@
 
 	<!-- SEO/Info Content -->
 	<div class="mx-auto mt-20 max-w-4xl print:hidden">
-		<article class="prose prose-slate dark:prose-invert max-w-none rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+		<article
+			class="prose max-w-none rounded-3xl border border-slate-200 bg-white p-8 shadow-sm prose-slate dark:border-slate-700 dark:bg-slate-800 dark:prose-invert"
+		>
 			<h2>Cara Menggunakan Kalkulator Patungan Makan</h2>
 			<p>
-				Seringkali saat memesan makanan lewat aplikasi (seperti GoFood, GrabFood, atau ShopeeFood), kita kesulitan membagi total biaya karena adanya biaya layanan, ongkos kirim, dan potongan diskon yang cukup besar. Kalkulator ini dirancang untuk membagi biaya tersebut secara <strong>proporsional</strong>.
+				Seringkali saat memesan makanan lewat aplikasi (seperti GoFood, GrabFood, atau ShopeeFood),
+				kita kesulitan membagi total biaya karena adanya biaya layanan, ongkos kirim, dan potongan
+				diskon yang cukup besar. Kalkulator ini dirancang untuk membagi biaya tersebut secara <strong
+					>proporsional</strong
+				>.
 			</p>
-			
+
 			<h3>Kenapa harus proporsional?</h3>
 			<p>
-				Bayangkan Anda memesan makanan seharga Rp 10.000 dan teman Anda memesan Rp 90.000 (total Rp 100.000). Jika ada biaya layanan Rp 10.000, membaginya rata (Rp 5.000 masing-masing) tentu tidak adil. Dengan sistem proporsional, Anda hanya menanggung 10% dari biaya tersebut (Rp 1.000) dan teman Anda 90% (Rp 9.000).
+				Bayangkan Anda memesan makanan seharga Rp 10.000 dan teman Anda memesan Rp 90.000 (total Rp
+				100.000). Jika ada biaya layanan Rp 10.000, membaginya rata (Rp 5.000 masing-masing) tentu
+				tidak adil. Dengan sistem proporsional, Anda hanya menanggung 10% dari biaya tersebut (Rp
+				1.000) dan teman Anda 90% (Rp 9.000).
 			</p>
 
 			<ul>
 				<li><strong>Daftar Teman:</strong> Tambahkan semua orang yang ikut memesan.</li>
-				<li><strong>Item Pesanan:</strong> Masukkan nama menu, harga satuan, dan jumlahnya. Klik nama teman untuk menandai siapa saja yang ikut memakan menu tersebut.</li>
-				<li><strong>Biaya & Diskon:</strong> Masukkan biaya tambahan (positif) atau voucher diskon (negatif).</li>
+				<li>
+					<strong>Item Pesanan:</strong> Masukkan nama menu, harga satuan, dan jumlahnya. Klik nama teman
+					untuk menandai siapa saja yang ikut memakan menu tersebut.
+				</li>
+				<li>
+					<strong>Biaya & Diskon:</strong> Masukkan biaya tambahan (positif) atau voucher diskon (negatif).
+				</li>
 			</ul>
 		</article>
 	</div>

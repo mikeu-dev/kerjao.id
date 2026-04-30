@@ -14,10 +14,15 @@
 	};
 </script>
 
-<div class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm print:p-0 print:shadow-none sm:p-20">
+<div
+	class="mx-auto max-w-[800px] bg-white p-12 text-slate-900 shadow-sm sm:p-20 print:p-0 print:shadow-none"
+>
 	<!-- Title -->
 	<div class="mb-12 text-center">
-		<h1 class="text-xl font-bold uppercase tracking-widest underline decoration-2 underline-offset-8" style="color: {themeColor}">
+		<h1
+			class="text-xl font-bold tracking-widest uppercase underline decoration-2 underline-offset-8"
+			style="color: {themeColor}"
+		>
 			{data.judul || 'SURAT PERNYATAAN'}
 		</h1>
 	</div>
@@ -45,12 +50,18 @@
 
 	<!-- Isi -->
 	<div class="mb-12 text-justify text-xs leading-relaxed whitespace-pre-wrap sm:text-sm">
-		<p>{data.isi || '................................................................................................................................................................................................................................................'}</p>
+		<p>
+			{data.isi ||
+				'................................................................................................................................................................................................................................................'}
+		</p>
 	</div>
 
 	<!-- Closing -->
 	<div class="mb-8 text-justify text-xs leading-relaxed sm:text-sm">
-		<p>Demikian surat pernyataan ini saya buat dengan sebenar-benarnya tanpa paksaan dari pihak manapun, untuk dapat dipergunakan sebagaimana mestinya.</p>
+		<p>
+			Demikian surat pernyataan ini saya buat dengan sebenar-benarnya tanpa paksaan dari pihak
+			manapun, untuk dapat dipergunakan sebagaimana mestinya.
+		</p>
 	</div>
 
 	<!-- Signatures -->
@@ -58,8 +69,12 @@
 		<div class="space-y-24">
 			<p>{data.lokasi || '.................'}, {formatDate(data.tanggal)}</p>
 			<div class="space-y-2">
-				<div class="mx-auto h-8 w-24 border border-dashed border-slate-300 text-[8px] flex items-center justify-center text-slate-300">MATERAI 10.000</div>
-				<p class="font-bold underline uppercase">{data.nama || '.................'}</p>
+				<div
+					class="mx-auto flex h-8 w-24 items-center justify-center border border-dashed border-slate-300 text-[8px] text-slate-300"
+				>
+					MATERAI 10.000
+				</div>
+				<p class="font-bold uppercase underline">{data.nama || '.................'}</p>
 			</div>
 		</div>
 	</div>

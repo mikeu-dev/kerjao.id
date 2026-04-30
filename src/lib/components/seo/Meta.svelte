@@ -8,7 +8,13 @@
 		keywords = 'karir, hrd, bisnis, indonesia, gratis, online',
 		ogImage = `${PUBLIC_ORIGIN}/og-image.png`,
 		type = 'website'
-	}: { title?: string; description?: string; keywords?: string; ogImage?: string; type?: string } = $props();
+	}: {
+		title?: string;
+		description?: string;
+		keywords?: string;
+		ogImage?: string;
+		type?: string;
+	} = $props();
 
 	let url = $derived(`${PUBLIC_ORIGIN}${$page.url.pathname}`);
 </script>

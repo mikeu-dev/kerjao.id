@@ -20,7 +20,7 @@
 	keywords={`artikel karir, ${meta.title.toLowerCase()}, kerjao blog`}
 />
 
-<div class="relative z-10 mx-auto max-w-4xl px-4 pt-20 lg:pt-32 pb-16 sm:px-6 lg:px-8">
+<div class="relative z-10 mx-auto max-w-4xl px-4 pt-20 pb-16 sm:px-6 lg:px-8 lg:pt-32">
 	<!-- Back Button -->
 	<a
 		href={resolve('/artikel')}
