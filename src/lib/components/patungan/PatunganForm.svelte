@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { Plus, Trash2, UserPlus, Users, Utensils, Tag } from 'lucide-svelte';
+	import { Plus, Trash2, UserPlus, Users, Utensils, Tag, Camera, Loader2 } from 'lucide-svelte';
 	import type { Friend, Item, ExtraCost } from '$lib/utils/split-bill';
+	import { parseReceiptText } from '$lib/utils/ocr-parser';
+	import { createWorker } from 'tesseract.js';
 
 	let { 
 		friends = $bindable([]), 
@@ -55,9 +57,109 @@
 			return item;
 		});
 	}
+
+	// OCR Logic
+	let isScanning = $state(false);
+	let scanProgress = $state(0);
+	let fileInput: HTMLInputElement;
+
+	async function handleScan(event: Event) {
+		const target = event.target as HTMLInputElement;
+		const file = target.files?.[0];
+		if (!file) return;
+
+		isScanning = true;
+		scanProgress = 0;
+
+		try {
+			const worker = await createWorker('ind+eng', 1, {
+				logger: (m) => {
+					if (m.status === 'recognizing text') {
+						scanProgress = Math.round(m.progress * 100);
+					}
+				}
+			});
+
+			const { data: { text } } = await worker.recognize(file);
+			await worker.terminate();
+
+			const parsed = parseReceiptText(text);
+
+			// Add parsed items to existing list
+			if (parsed.items.length > 0 || parsed.extras.length > 0) {
+				const newItems = parsed.items.map(pi => ({
+					id: crypto.randomUUID(),
+					name: pi.name,
+					price: pi.price,
+					quantity: pi.quantity,
+					assignedTo: []
+				}));
+
+				const newExtras = parsed.extras.map(pe => ({
+					id: crypto.randomUUID(),
+					name: pe.name,
+					amount: pe.amount
+				}));
+
+				items = [...items, ...newItems];
+				extraCosts = [...extraCosts, ...newExtras];
+				
+				alert(`Berhasil memindai ${parsed.items.length} item dan ${parsed.extras.length} biaya tambahan.`);
+			} else {
+				alert('Maaf, sistem tidak berhasil mendeteksi item dari gambar tersebut. Pastikan gambar struk terlihat jelas.');
+			}
+		} catch (err) {
+			console.error('OCR Error:', err);
+			alert('Terjadi kesalahan saat memproses gambar.');
+		} finally {
+			isScanning = false;
+			target.value = ''; // Reset input
+		}
+	}
 </script>
 
 <div class="space-y-10">
+	<!-- OCR Scan Section -->
+	<div class="relative overflow-hidden rounded-3xl border-2 border-dashed border-slate-200 bg-slate-50/50 p-6 text-center transition-all hover:border-orange-300 dark:border-slate-800 dark:bg-slate-900/30">
+		<input 
+			type="file" 
+			accept="image/*" 
+			class="hidden" 
+			bind:this={fileInput} 
+			onchange={handleScan}
+		/>
+		
+		{#if isScanning}
+			<div class="space-y-4">
+				<div class="flex justify-center">
+					<Loader2 size={32} class="animate-spin text-orange-500" />
+				</div>
+				<div class="space-y-2">
+					<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Memindai Struk... {scanProgress}%</p>
+					<div class="mx-auto h-2 w-48 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+						<div class="h-full bg-orange-500 transition-all duration-300" style="width: {scanProgress}%"></div>
+					</div>
+				</div>
+			</div>
+		{:else}
+			<div class="flex flex-col items-center gap-3">
+				<div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400">
+					<Camera size={24} />
+				</div>
+				<div>
+					<h4 class="text-base font-bold text-slate-900 dark:text-white">Scan Struk Otomatis</h4>
+					<p class="text-xs text-slate-500 dark:text-slate-400">Unggah foto struk untuk mengisi daftar pesanan secara otomatis</p>
+				</div>
+				<button 
+					onclick={() => fileInput.click()}
+					class="mt-2 rounded-xl bg-orange-500 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-orange-500/20 transition-all hover:bg-orange-600 active:scale-95"
+				>
+					Pilih Gambar Struk
+				</button>
+			</div>
+		{/if}
+	</div>
+
 	<!-- Friends Section -->
 	<section class="space-y-4">
 		<div class="flex items-center justify-between">
