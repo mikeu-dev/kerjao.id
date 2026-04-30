@@ -1,8 +1,10 @@
+import { PUBLIC_ORIGIN } from '$env/static/public';
+
 export async function GET() {
 	return new Response(
 		`User-agent: *
 Allow: /
-Sitemap: https://kerjao.id/sitemap.xml
+Sitemap: ${PUBLIC_ORIGIN}/sitemap.xml
 `,
 		{
 			headers: {

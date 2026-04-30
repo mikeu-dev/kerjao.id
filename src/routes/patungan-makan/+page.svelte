@@ -9,7 +9,7 @@
 		type ExtraCost
 	} from '$lib/utils/split-bill';
 	import { Calculator, Share2, Printer, Download, RotateCcw } from 'lucide-svelte';
-	const PUBLIC_ORIGIN = import.meta.env.PUBLIC_ORIGIN || 'https://kerjao.id';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Swal from 'sweetalert2';
 
 	// Initial data based on user example

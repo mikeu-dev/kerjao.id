@@ -1,4 +1,5 @@
 import { toolsRegistry } from '$lib/utils/tools-registry';
+import { PUBLIC_ORIGIN } from '$env/static/public';
 
 export async function GET() {
 	const toolPaths = toolsRegistry.map((tool) => tool.path);
@@ -44,7 +45,7 @@ export async function GET() {
 		.map(
 			(page) => `
   <url>
-    <loc>https://kerjao.id${page.path}</loc>
+    <loc>${PUBLIC_ORIGIN}${page.path}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
