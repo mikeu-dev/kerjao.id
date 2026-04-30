@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 
 	let {
 		title = 'Kerjao.id - Alat Karir & Bisnis Profesional',
 		description = 'Kumpulan perkakas instan, cerdas, dan gratis untuk karir profesionalmu.',
 		keywords = 'karir, hrd, bisnis, indonesia, gratis, online',
-		ogImage = 'https://kerjao.id/og-image.png',
+		ogImage = `${PUBLIC_ORIGIN}/og-image.png`,
 		type = 'website'
 	}: { title?: string; description?: string; keywords?: string; ogImage?: string; type?: string } = $props();
 
-	let url = $derived(`https://kerjao.id${$page.url.pathname}`);
+	let url = $derived(`${PUBLIC_ORIGIN}${$page.url.pathname}`);
 </script>
 
 <svelte:head>
