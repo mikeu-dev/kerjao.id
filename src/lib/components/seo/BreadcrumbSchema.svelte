@@ -1,0 +1,26 @@
+<script lang="ts">
+	import { PUBLIC_ORIGIN } from '$env/static/public';
+
+	/**
+	 * Breadcrumb items: array of { name, path } pairs.
+	 * Example: [{ name: 'Beranda', path: '/' }, { name: 'Kalkulator Gaji', path: '/kalkulator-gaji' }]
+	 */
+	let { items }: { items: { name: string; path: string }[] } = $props();
+
+	let jsonLd = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'BreadcrumbList',
+			itemListElement: items.map((item, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: item.name,
+				item: `${PUBLIC_ORIGIN}${item.path}`
+			}))
+		})
+	);
+</script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${jsonLd}</script>`}
+</svelte:head>

@@ -6,11 +6,28 @@
 
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import CookieConsent from '$lib/components/layout/CookieConsent.svelte';
+	import GoogleAnalytics from '$lib/components/seo/GoogleAnalytics.svelte';
 
 	let { children } = $props();
+
+	// Cookie consent state
+	let analyticsConsent = $state(false);
+
+	function handleConsentChange(consent: { analytics: boolean; advertising: boolean }) {
+		analyticsConsent = consent.analytics;
+	}
+
+	// GA Measurement ID — set via env or leave empty to disable
+	const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+
+<!-- Google Analytics (loads only with consent) -->
+{#if GA_ID}
+	<GoogleAnalytics measurementId={GA_ID} consent={analyticsConsent} />
+{/if}
 
 <div
 	class="relative flex min-h-screen flex-col overflow-hidden bg-slate-50 font-sans text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50 print:bg-white print:text-black"
@@ -36,6 +53,9 @@
 
 	<Footer />
 </div>
+
+<!-- Cookie Consent Banner -->
+<CookieConsent onConsentChange={handleConsentChange} />
 
 <div style="display:none">
 	{#each locales as locale (locale)}

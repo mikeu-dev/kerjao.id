@@ -1,0 +1,19 @@
+{
+	"name": "Kerjao.id - Alat Karir & Bisnis Profesional",
+	"short_name": "Kerjao",
+	"description": "Platform Indonesia yang menyediakan 25+ perkakas karir dan bisnis profesional secara gratis.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#f8fafc",
+	"theme_color": "#6366f1",
+	"lang": "id",
+	"icons": [
+		{
+			"src": "/og-image.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		}
+	],
+	"categories": ["business", "productivity", "utilities"]
+}
