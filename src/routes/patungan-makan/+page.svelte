@@ -4,6 +4,7 @@
 	import PatunganResult from '$lib/components/patungan/PatunganResult.svelte';
 	import { calculateSplitBill, type Friend, type Item, type ExtraCost } from '$lib/utils/split-bill';
 	import { Calculator, Share2, Printer, Download, RotateCcw } from 'lucide-svelte';
+	import Swal from 'sweetalert2';
 
 	// Initial data based on user example
 	let friends = $state<Friend[]>([
@@ -47,11 +48,29 @@
 	}
 
 	function resetData() {
-		if (confirm('Apakah Anda yakin ingin menghapus semua data hitungan?')) {
-			friends = [{ id: 'f1', name: 'Saya' }];
-			items = [];
-			extraCosts = [];
-		}
+		Swal.fire({
+			title: 'Hapus Semua Data?',
+			text: 'Seluruh rincian pesanan dan teman akan dihapus.',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#f97316',
+			cancelButtonColor: '#64748b',
+			confirmButtonText: 'Ya, Hapus!',
+			cancelButtonText: 'Batal'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				friends = [{ id: 'f1', name: 'Saya' }];
+				items = [];
+				extraCosts = [];
+				Swal.fire({
+					title: 'Terhapus!',
+					text: 'Semua data telah dibersihkan.',
+					icon: 'success',
+					timer: 1500,
+					showConfirmButton: false
+				});
+			}
+		});
 	}
 </script>
 

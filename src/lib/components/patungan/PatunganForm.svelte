@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Plus, Trash2, UserPlus, Users, Utensils, Tag, Camera, Loader2 } from 'lucide-svelte';
+	import { Plus, Trash2, UserPlus, Users, Utensils, Tag, Camera, LoaderCircle } from 'lucide-svelte';
 	import type { Friend, Item, ExtraCost } from '$lib/utils/split-bill';
 	import { parseReceiptText } from '$lib/utils/ocr-parser';
 	import { createWorker } from 'tesseract.js';
 	import { tick } from 'svelte';
+	import Swal from 'sweetalert2';
 
 	let { 
 		friends = $bindable([]), 
@@ -63,7 +64,6 @@
 	let isScanning = $state(false);
 	let scanProgress = $state(0);
 	let scanStatus = $state('');
-	let scanResult = $state<{ type: 'success' | 'error', message: string } | null>(null);
 	let fileInput: HTMLInputElement;
 
 	async function handleScan(event: Event) {
@@ -91,13 +91,12 @@
 			const { data: { text } } = await worker.recognize(file);
 			scanProgress = 100;
 			scanStatus = 'Selesai!';
-			await tick(); // Ensure progress bar shows 100%
+			await tick();
 			
 			await worker.terminate();
 
 			const parsed = parseReceiptText(text);
 
-			// Add parsed items to existing list
 			if (parsed.items.length > 0 || parsed.extras.length > 0) {
 				const newItems = parsed.items.map(pi => ({
 					id: crypto.randomUUID(),
@@ -116,30 +115,30 @@
 				items = [...items, ...newItems];
 				extraCosts = [...extraCosts, ...newExtras];
 				
-				scanResult = { 
-					type: 'success', 
-					message: `Berhasil memindai ${parsed.items.length} item.` 
-				};
+				Swal.fire({
+					title: 'Scan Berhasil!',
+					text: `Menemukan ${parsed.items.length} item pesanan.`,
+					icon: 'success',
+					confirmButtonColor: '#f97316'
+				});
 			} else {
-				scanResult = { 
-					type: 'error', 
-					message: 'Tidak ada item terdeteksi. Pastikan foto struk jelas.' 
-				};
+				Swal.fire({
+					title: 'Gagal Mendeteksi',
+					text: 'Sistem tidak menemukan item. Coba foto lebih jelas.',
+					icon: 'warning',
+					confirmButtonColor: '#f97316'
+				});
 			}
 		} catch (err) {
 			console.error('OCR Error:', err);
-			scanResult = { 
-				type: 'error', 
-				message: 'Terjadi kesalahan saat memproses gambar.' 
-			};
+			Swal.fire({
+				title: 'Error',
+				text: 'Terjadi kesalahan saat memproses gambar.',
+				icon: 'error'
+			});
 		} finally {
 			isScanning = false;
-			target.value = ''; // Reset input
-			
-			// Clear result notification after 3 seconds
-			setTimeout(() => {
-				scanResult = null;
-			}, 3000);
+			target.value = '';
 		}
 	}
 </script>
@@ -158,7 +157,7 @@
 		{#if isScanning}
 			<div class="space-y-4">
 				<div class="flex justify-center">
-					<Loader2 size={32} class="animate-spin text-orange-500" />
+					<LoaderCircle size={32} class="animate-spin text-orange-500" />
 				</div>
 				<div class="space-y-2">
 					<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">{scanStatus} {scanProgress}%</p>
@@ -166,19 +165,6 @@
 						<div class="h-full bg-orange-500 transition-all duration-500 ease-out" style="width: {scanProgress}%"></div>
 					</div>
 				</div>
-			</div>
-		{:else if scanResult}
-			<div class="animate-in fade-in zoom-in duration-300 flex flex-col items-center gap-2">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full {scanResult.type === 'success' ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}">
-					{#if scanResult.type === 'success'}
-						<Plus size={20} class="rotate-45" /> <!-- Or any check icon, but I'll use simple icons -->
-					{:else}
-						<Tag size={20} />
-					{/if}
-				</div>
-				<p class="text-sm font-bold {scanResult.type === 'success' ? 'text-emerald-600' : 'text-rose-600'}">
-					{scanResult.message}
-				</p>
 			</div>
 		{:else}
 			<div class="flex flex-col items-center gap-3">
