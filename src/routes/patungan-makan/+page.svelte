@@ -32,24 +32,33 @@
 			maximumFractionDigits: 0 
 		}).format(Math.round(v));
 
-		const text = `Patungan Makan Rincian:\n` + 
-			result.results.map(r => `${r.friendName}: Rp ${format(r.total)}`).join('\n') +
-			` \nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di ${PUBLIC_ORIGIN}/patungan-makan`;
-		
+		const rincianText = result.results.map(r => `${r.friendName}: Rp ${format(r.total)}`).join('\n');
+		const baseText = `Patungan Makan Rincian:\n${rincianText}\n\nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di:`;
+		const shareUrl = `${PUBLIC_ORIGIN}/patungan-makan`;
+
 		if (navigator.share) {
 			try {
 				await navigator.share({
 					title: 'Hasil Patungan Makan',
-					text: text,
-					url: window.location.href
+					text: baseText,
+					url: shareUrl
 				});
 			} catch (err) {
-				console.error('Error sharing:', err);
+				if ((err as Error).name !== 'AbortError') {
+					console.error('Error sharing:', err);
+				}
 			}
 		} else {
 			// Fallback copy to clipboard
-			navigator.clipboard.writeText(text);
-			alert('Rincian berhasil disalin ke clipboard!');
+			const fullText = `${baseText} ${shareUrl}`;
+			navigator.clipboard.writeText(fullText);
+			Swal.fire({
+				title: 'Tersalin!',
+				text: 'Rincian berhasil disalin ke clipboard.',
+				icon: 'success',
+				timer: 2000,
+				showConfirmButton: false
+			});
 		}
 	}
 
