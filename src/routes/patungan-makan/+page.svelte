@@ -26,9 +26,14 @@
 	let result = $derived(calculateSplitBill(items, friends, extraCosts));
 
 	async function shareResults() {
+		const format = (v: number) => new Intl.NumberFormat('id-ID', { 
+			minimumFractionDigits: 0, 
+			maximumFractionDigits: 0 
+		}).format(Math.round(v));
+
 		const text = `Patungan Makan Rincian:\n` + 
-			result.results.map(r => `${r.friendName}: Rp ${r.total.toLocaleString('id-ID')}`).join('\n') +
-			` \nTotal: Rp ${result.grandTotal.toLocaleString('id-ID')}\nHitung otomatis di Kerjao.id`;
+			result.results.map(r => `${r.friendName}: Rp ${format(r.total)}`).join('\n') +
+			` \nTotal: Rp ${format(result.grandTotal)}\nHitung otomatis di Kerjao.id`;
 		
 		if (navigator.share) {
 			try {
