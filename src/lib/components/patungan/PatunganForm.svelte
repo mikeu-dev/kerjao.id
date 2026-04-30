@@ -3,6 +3,7 @@
 	import type { Friend, Item, ExtraCost } from '$lib/utils/split-bill';
 	import { parseReceiptText } from '$lib/utils/ocr-parser';
 	import { createWorker } from 'tesseract.js';
+	import { tick } from 'svelte';
 
 	let { 
 		friends = $bindable([]), 
@@ -62,6 +63,7 @@
 	let isScanning = $state(false);
 	let scanProgress = $state(0);
 	let scanStatus = $state('');
+	let scanResult = $state<{ type: 'success' | 'error', message: string } | null>(null);
 	let fileInput: HTMLInputElement;
 
 	async function handleScan(event: Event) {
@@ -88,7 +90,9 @@
 
 			const { data: { text } } = await worker.recognize(file);
 			scanProgress = 100;
-			scanStatus = 'Hampir selesai...';
+			scanStatus = 'Selesai!';
+			await tick(); // Ensure progress bar shows 100%
+			
 			await worker.terminate();
 
 			const parsed = parseReceiptText(text);
@@ -112,16 +116,30 @@
 				items = [...items, ...newItems];
 				extraCosts = [...extraCosts, ...newExtras];
 				
-				alert(`Berhasil memindai ${parsed.items.length} item dan ${parsed.extras.length} biaya tambahan.`);
+				scanResult = { 
+					type: 'success', 
+					message: `Berhasil memindai ${parsed.items.length} item.` 
+				};
 			} else {
-				alert('Maaf, sistem tidak berhasil mendeteksi item dari gambar tersebut. Pastikan gambar struk terlihat jelas.');
+				scanResult = { 
+					type: 'error', 
+					message: 'Tidak ada item terdeteksi. Pastikan foto struk jelas.' 
+				};
 			}
 		} catch (err) {
 			console.error('OCR Error:', err);
-			alert('Terjadi kesalahan saat memproses gambar.');
+			scanResult = { 
+				type: 'error', 
+				message: 'Terjadi kesalahan saat memproses gambar.' 
+			};
 		} finally {
 			isScanning = false;
 			target.value = ''; // Reset input
+			
+			// Clear result notification after 3 seconds
+			setTimeout(() => {
+				scanResult = null;
+			}, 3000);
 		}
 	}
 </script>
@@ -145,9 +163,22 @@
 				<div class="space-y-2">
 					<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">{scanStatus} {scanProgress}%</p>
 					<div class="mx-auto h-2 w-48 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-						<div class="h-full bg-orange-500 transition-all duration-300 ease-out" style="width: {scanProgress}%"></div>
+						<div class="h-full bg-orange-500 transition-all duration-500 ease-out" style="width: {scanProgress}%"></div>
 					</div>
 				</div>
+			</div>
+		{:else if scanResult}
+			<div class="animate-in fade-in zoom-in duration-300 flex flex-col items-center gap-2">
+				<div class="flex h-10 w-10 items-center justify-center rounded-full {scanResult.type === 'success' ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}">
+					{#if scanResult.type === 'success'}
+						<Plus size={20} class="rotate-45" /> <!-- Or any check icon, but I'll use simple icons -->
+					{:else}
+						<Tag size={20} />
+					{/if}
+				</div>
+				<p class="text-sm font-bold {scanResult.type === 'success' ? 'text-emerald-600' : 'text-rose-600'}">
+					{scanResult.message}
+				</p>
 			</div>
 		{:else}
 			<div class="flex flex-col items-center gap-3">
