@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	const PUBLIC_ORIGIN = import.meta.env.PUBLIC_ORIGIN || 'https://kerjao.id';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 
 	let {
 		title = 'Kerjao.id - Alat Karir & Bisnis Profesional',
