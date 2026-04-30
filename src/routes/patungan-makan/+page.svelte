@@ -3,7 +3,7 @@
 	import PatunganForm from '$lib/components/patungan/PatunganForm.svelte';
 	import PatunganResult from '$lib/components/patungan/PatunganResult.svelte';
 	import { calculateSplitBill, type Friend, type Item, type ExtraCost } from '$lib/utils/split-bill';
-	import { Calculator, Share2, Printer, Download } from 'lucide-svelte';
+	import { Calculator, Share2, Printer, Download, RotateCcw } from 'lucide-svelte';
 
 	// Initial data based on user example
 	let friends = $state<Friend[]>([
@@ -43,6 +43,14 @@
 			// Fallback copy to clipboard
 			navigator.clipboard.writeText(text);
 			alert('Rincian berhasil disalin ke clipboard!');
+		}
+	}
+
+	function resetData() {
+		if (confirm('Apakah Anda yakin ingin menghapus semua data hitungan?')) {
+			friends = [{ id: 'f1', name: 'Saya' }];
+			items = [];
+			extraCosts = [];
 		}
 	}
 </script>
@@ -87,13 +95,22 @@
 			<div
 				class="rounded-3xl border border-slate-200/60 bg-white/60 p-6 shadow-xl shadow-slate-200/20 backdrop-blur-xl sm:p-8 dark:border-slate-700/60 dark:bg-slate-800/60 dark:shadow-none"
 			>
-				<div class="mb-8 flex items-center gap-3">
-					<div
-						class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400"
-					>
-						<Calculator size={20} />
+				<div class="mb-8 flex items-center justify-between">
+					<div class="flex items-center gap-3">
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400"
+						>
+							<Calculator size={20} />
+						</div>
+						<h2 class="text-xl font-bold text-slate-900 dark:text-white">Rincian Pesanan</h2>
 					</div>
-					<h2 class="text-xl font-bold text-slate-900 dark:text-white">Rincian Pesanan</h2>
+					<button 
+						onclick={resetData}
+						class="flex items-center gap-1 text-xs font-semibold text-rose-500 hover:text-rose-600 transition-colors"
+					>
+						<RotateCcw size={14} />
+						Reset
+					</button>
 				</div>
 				<PatunganForm bind:friends bind:items bind:extraCosts />
 			</div>
